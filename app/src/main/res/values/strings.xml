@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Health and Fitness App</string>
+    <string name="login">Login</string>
+    <string name="health_and_fitness_app">Health And Fitness App</string>
+    <string name="enter_email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">SignUp</string>
+    <string name="google">Google</string>
+    <string name="facebook">Facebook</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="username">Username</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="register">Register</string>
+</resources>

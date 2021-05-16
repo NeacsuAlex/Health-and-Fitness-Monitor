@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.LoginFragment">
+    tools:context=".fragments.LoginFragment"
+    android:background="@drawable/ic_login_background">
 
 
     <TextView
@@ -12,7 +13,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/health_and_fitness_app"
+        android:textColor="@color/white"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +28,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="@string/login"
-        android:textColorLink="#2196F3"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,6 +47,7 @@
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/enter_email"
+        android:textColorHint="@color/raven"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,6 +66,7 @@
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
+        android:textColorHint="@color/raven"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,6 +79,7 @@
         android:layout_marginTop="12dp"
         android:text="@string/forgot_password"
         android:textStyle="bold"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/inputPassword"
         app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
 
@@ -86,6 +93,8 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:text="@string/login"
+        android:textStyle="bold"
+        android:background="@drawable/button_login_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/forgotPasswordView" />
@@ -109,7 +118,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
-            android:text="@string/don_t_have_an_account" />
+            android:text="@string/don_t_have_an_account"
+            android:textColor="@color/raven"/>
 
         <TextView
             android:id="@+id/registerView"
@@ -119,7 +129,9 @@
             android:layout_marginLeft="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
-            android:text="@string/sign_up" />
+            android:text="@string/sign_up"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
 
     </LinearLayout>
 
@@ -133,6 +145,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="@string/google"
+        android:textStyle="bold"
+        android:background="@drawable/button_login_bg"
         app:layout_constraintBottom_toBottomOf="@+id/facebookButton"
         app:layout_constraintEnd_toStartOf="@+id/facebookButton"
         app:layout_constraintHorizontal_bias="0.5"
@@ -150,6 +164,8 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:text="@string/facebook"
+        android:textStyle="bold"
+        android:background="@drawable/button_login_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/googleButton"

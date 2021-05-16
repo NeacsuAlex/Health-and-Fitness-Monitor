@@ -6,14 +6,23 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.healthandfitnessapp.R;
 import com.example.healthandfitnessapp.interfaces.ActivityFragmentLoginCommunication;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -34,6 +43,9 @@ public class ResetPasswordFragment extends Fragment {
     private ActivityFragmentLoginCommunication activityFragmentLoginCommunication;
     private TextView register;
     private Button resetPasswordButton;
+    private EditText email;
+    private FirebaseAuth mAuth;
+
     public ResetPasswordFragment() {
         // Required empty public constructor
     }
@@ -73,6 +85,24 @@ public class ResetPasswordFragment extends Fragment {
 
         register = view.findViewById(R.id.registerPView);
         resetPasswordButton = view.findViewById(R.id.resetPasswordButton);
+        email = view.findViewById(R.id.inputEmailForgotP);
+        mAuth = FirebaseAuth.getInstance();
+
+        resetPasswordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String txtEmail = email.getText().toString().trim();
+
+                if (TextUtils.isEmpty(txtEmail)) {
+                    Toast.makeText(getContext(), "Empty credentials!", Toast.LENGTH_SHORT).show();
+                } else {
+                    resetPassword(txtEmail);
+                    if (activityFragmentLoginCommunication != null) {
+                        activityFragmentLoginCommunication.openLoginFragment();
+                    }
+                }
+            }
+        });
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,6 +114,18 @@ public class ResetPasswordFragment extends Fragment {
         });
 
         return view;
+    }
+
+    private void resetPassword(String emailAddress) {
+        mAuth.sendPasswordResetEmail(emailAddress)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Log.d(TAG, "Email sent.");
+                        }
+                    }
+                });
     }
 
     @Override

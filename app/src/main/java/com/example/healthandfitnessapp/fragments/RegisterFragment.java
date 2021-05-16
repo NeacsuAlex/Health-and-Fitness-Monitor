@@ -107,7 +107,7 @@ public class RegisterFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 String txtUsername = username.getText().toString();
-                String txtEmail = email.getText().toString();
+                String txtEmail = email.getText().toString().trim();
                 String txtPassword = password.getText().toString();
                 String txtCPassword = confirmPassword.getText().toString();
 

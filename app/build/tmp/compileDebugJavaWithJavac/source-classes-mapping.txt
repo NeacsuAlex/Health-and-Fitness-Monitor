@@ -2,12 +2,6 @@ com/example/healthandfitnessapp/services/LocationService.java
  com.example.healthandfitnessapp.services.LocationService
 com/example/healthandfitnessapp/interfaces/ActivityFragmentLoginCommunication.java
  com.example.healthandfitnessapp.interfaces.ActivityFragmentLoginCommunication
-com/example/healthandfitnessapp/activities/RegisterActivity.java
- com.example.healthandfitnessapp.activities.RegisterActivity
- com.example.healthandfitnessapp.activities.RegisterActivity$1
- com.example.healthandfitnessapp.activities.RegisterActivity$2
- com.example.healthandfitnessapp.activities.RegisterActivity$3
- com.example.healthandfitnessapp.activities.RegisterActivity$4
 com/example/healthandfitnessapp/fragments/LoginFragment.java
  com.example.healthandfitnessapp.fragments.LoginFragment
  com.example.healthandfitnessapp.fragments.LoginFragment$1
@@ -15,6 +9,8 @@ com/example/healthandfitnessapp/fragments/LoginFragment.java
  com.example.healthandfitnessapp.fragments.LoginFragment$3
  com.example.healthandfitnessapp.fragments.LoginFragment$4
  com.example.healthandfitnessapp.fragments.LoginFragment$5
+ com.example.healthandfitnessapp.fragments.LoginFragment$6
+ com.example.healthandfitnessapp.fragments.LoginFragment$7
 com/example/healthandfitnessapp/fragments/RegisterFragment.java
  com.example.healthandfitnessapp.fragments.RegisterFragment
  com.example.healthandfitnessapp.fragments.RegisterFragment$1
@@ -34,3 +30,5 @@ com/example/healthandfitnessapp/BuildConfig.java
 com/example/healthandfitnessapp/fragments/ResetPasswordFragment.java
  com.example.healthandfitnessapp.fragments.ResetPasswordFragment
  com.example.healthandfitnessapp.fragments.ResetPasswordFragment$1
+ com.example.healthandfitnessapp.fragments.ResetPasswordFragment$2
+ com.example.healthandfitnessapp.fragments.ResetPasswordFragment$3

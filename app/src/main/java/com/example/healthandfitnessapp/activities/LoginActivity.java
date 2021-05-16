@@ -63,7 +63,7 @@ public class LoginActivity extends AppCompatActivity implements ActivityFragment
         String tag = ResetPasswordFragment.class.getName();
         FragmentTransaction addTransaction = transaction.replace(
                 R.id.login_frame_layout, ResetPasswordFragment.newInstance("", ""), tag
-        );
+        ).addToBackStack(null);
 
         addTransaction.commit();
     }

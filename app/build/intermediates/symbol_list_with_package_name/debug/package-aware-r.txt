@@ -1768,6 +1768,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_settings
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2134,6 +2135,11 @@ id mtrl_view_tag_bottom_padding
 id multiply
 id name
 id name_layout
+id nav_chat
+id nav_message
+id nav_profile
+id nav_send
+id nav_share
 id navigation_header_container
 id never
 id noScroll
@@ -2504,6 +2510,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+menu drawer_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals fui_error_weak_password

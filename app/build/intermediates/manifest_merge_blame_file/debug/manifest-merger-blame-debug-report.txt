@@ -374,49 +374,55 @@
 197-->[com.google.firebase:firebase-auth:20.0.4] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\c1a200cb6c68d9b57facffe3ea593b22\jetified-firebase-auth-20.0.4\AndroidManifest.xml:78:17-109
 198                android:value="com.google.firebase.components.ComponentRegistrar" />
 198-->[com.google.firebase:firebase-auth:20.0.4] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\c1a200cb6c68d9b57facffe3ea593b22\jetified-firebase-auth-20.0.4\AndroidManifest.xml:79:17-82
-199            <!--
-200                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
-201                clients to use it as well, by defining this registrar in their own core/common library.
-202            -->
-203            <meta-data
-203-->[com.google.firebase:firebase-common:19.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\699006460de6e9ab56681dcb27aa7b88\jetified-firebase-common-19.5.0\AndroidManifest.xml:43:13-45:85
-204                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
-204-->[com.google.firebase:firebase-common:19.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\699006460de6e9ab56681dcb27aa7b88\jetified-firebase-common-19.5.0\AndroidManifest.xml:44:17-121
-205                android:value="com.google.firebase.components.ComponentRegistrar" />
-205-->[com.google.firebase:firebase-common:19.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\699006460de6e9ab56681dcb27aa7b88\jetified-firebase-common-19.5.0\AndroidManifest.xml:45:17-82
-206        </service>
-207
-208        <activity
-208-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\006ec24c4d1cbf59a5dc616b50c69611\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
-209            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-209-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\006ec24c4d1cbf59a5dc616b50c69611\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
-210            android:exported="false"
-210-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\006ec24c4d1cbf59a5dc616b50c69611\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
-211            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-211-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\006ec24c4d1cbf59a5dc616b50c69611\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
-212
-213        <provider
-213-->[com.google.firebase:firebase-common:19.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\699006460de6e9ab56681dcb27aa7b88\jetified-firebase-common-19.5.0\AndroidManifest.xml:26:9-31:39
-214            android:name="com.google.firebase.provider.FirebaseInitProvider"
-214-->[com.google.firebase:firebase-common:19.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\699006460de6e9ab56681dcb27aa7b88\jetified-firebase-common-19.5.0\AndroidManifest.xml:27:13-77
-215            android:authorities="com.example.healthandfitnessapp.firebaseinitprovider"
-215-->[com.google.firebase:firebase-common:19.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\699006460de6e9ab56681dcb27aa7b88\jetified-firebase-common-19.5.0\AndroidManifest.xml:28:13-72
-216            android:directBootAware="true"
-216-->[com.google.firebase:firebase-common:19.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\699006460de6e9ab56681dcb27aa7b88\jetified-firebase-common-19.5.0\AndroidManifest.xml:29:13-43
-217            android:exported="false"
-217-->[com.google.firebase:firebase-common:19.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\699006460de6e9ab56681dcb27aa7b88\jetified-firebase-common-19.5.0\AndroidManifest.xml:30:13-37
-218            android:initOrder="100" />
-218-->[com.google.firebase:firebase-common:19.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\699006460de6e9ab56681dcb27aa7b88\jetified-firebase-common-19.5.0\AndroidManifest.xml:31:13-36
-219        <provider
-219-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\5a29b4a01c238328d67d4e74c0823673\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:23:9-27:43
-220            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-220-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\5a29b4a01c238328d67d4e74c0823673\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:24:13-79
-221            android:authorities="com.example.healthandfitnessapp.lifecycle-process"
-221-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\5a29b4a01c238328d67d4e74c0823673\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:25:13-69
-222            android:exported="false"
-222-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\5a29b4a01c238328d67d4e74c0823673\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:26:13-37
-223            android:multiprocess="true" />
-223-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\5a29b4a01c238328d67d4e74c0823673\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:27:13-40
-224    </application>
-225
-226</manifest>
+199            <meta-data
+199-->[com.google.firebase:firebase-database:19.7.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\761ee20c56295e54bf5598e4e88e9124\jetified-firebase-database-19.7.0\AndroidManifest.xml:32:13-34:85
+200                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+200-->[com.google.firebase:firebase-database:19.7.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\761ee20c56295e54bf5598e4e88e9124\jetified-firebase-database-19.7.0\AndroidManifest.xml:33:17-109
+201                android:value="com.google.firebase.components.ComponentRegistrar" />
+201-->[com.google.firebase:firebase-database:19.7.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\761ee20c56295e54bf5598e4e88e9124\jetified-firebase-database-19.7.0\AndroidManifest.xml:34:17-82
+202            <!--
+203                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
+204                clients to use it as well, by defining this registrar in their own core/common library.
+205            -->
+206            <meta-data
+206-->[com.google.firebase:firebase-common:19.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\699006460de6e9ab56681dcb27aa7b88\jetified-firebase-common-19.5.0\AndroidManifest.xml:43:13-45:85
+207                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+207-->[com.google.firebase:firebase-common:19.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\699006460de6e9ab56681dcb27aa7b88\jetified-firebase-common-19.5.0\AndroidManifest.xml:44:17-121
+208                android:value="com.google.firebase.components.ComponentRegistrar" />
+208-->[com.google.firebase:firebase-common:19.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\699006460de6e9ab56681dcb27aa7b88\jetified-firebase-common-19.5.0\AndroidManifest.xml:45:17-82
+209        </service>
+210
+211        <activity
+211-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\006ec24c4d1cbf59a5dc616b50c69611\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
+212            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+212-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\006ec24c4d1cbf59a5dc616b50c69611\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
+213            android:exported="false"
+213-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\006ec24c4d1cbf59a5dc616b50c69611\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
+214            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+214-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\006ec24c4d1cbf59a5dc616b50c69611\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
+215
+216        <provider
+216-->[com.google.firebase:firebase-common:19.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\699006460de6e9ab56681dcb27aa7b88\jetified-firebase-common-19.5.0\AndroidManifest.xml:26:9-31:39
+217            android:name="com.google.firebase.provider.FirebaseInitProvider"
+217-->[com.google.firebase:firebase-common:19.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\699006460de6e9ab56681dcb27aa7b88\jetified-firebase-common-19.5.0\AndroidManifest.xml:27:13-77
+218            android:authorities="com.example.healthandfitnessapp.firebaseinitprovider"
+218-->[com.google.firebase:firebase-common:19.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\699006460de6e9ab56681dcb27aa7b88\jetified-firebase-common-19.5.0\AndroidManifest.xml:28:13-72
+219            android:directBootAware="true"
+219-->[com.google.firebase:firebase-common:19.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\699006460de6e9ab56681dcb27aa7b88\jetified-firebase-common-19.5.0\AndroidManifest.xml:29:13-43
+220            android:exported="false"
+220-->[com.google.firebase:firebase-common:19.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\699006460de6e9ab56681dcb27aa7b88\jetified-firebase-common-19.5.0\AndroidManifest.xml:30:13-37
+221            android:initOrder="100" />
+221-->[com.google.firebase:firebase-common:19.5.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\699006460de6e9ab56681dcb27aa7b88\jetified-firebase-common-19.5.0\AndroidManifest.xml:31:13-36
+222        <provider
+222-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\5a29b4a01c238328d67d4e74c0823673\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:23:9-27:43
+223            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+223-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\5a29b4a01c238328d67d4e74c0823673\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:24:13-79
+224            android:authorities="com.example.healthandfitnessapp.lifecycle-process"
+224-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\5a29b4a01c238328d67d4e74c0823673\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:25:13-69
+225            android:exported="false"
+225-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\5a29b4a01c238328d67d4e74c0823673\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:26:13-37
+226            android:multiprocess="true" />
+226-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\5a29b4a01c238328d67d4e74c0823673\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:27:13-40
+227    </application>
+228
+229</manifest>

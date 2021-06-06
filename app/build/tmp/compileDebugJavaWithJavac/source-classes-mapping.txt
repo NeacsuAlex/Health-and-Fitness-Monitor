@@ -17,6 +17,8 @@ com/example/healthandfitnessapp/fragments/RegisterFragment.java
  com.example.healthandfitnessapp.fragments.RegisterFragment$2
  com.example.healthandfitnessapp.fragments.RegisterFragment$3
  com.example.healthandfitnessapp.fragments.RegisterFragment$4
+com/example/healthandfitnessapp/models/User.java
+ com.example.healthandfitnessapp.models.User
 com/example/healthandfitnessapp/activities/HomeActivity.java
  com.example.healthandfitnessapp.activities.HomeActivity
  com.example.healthandfitnessapp.activities.HomeActivity$1

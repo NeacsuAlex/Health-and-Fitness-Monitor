@@ -4,8 +4,16 @@
         "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\layout\\activity_home.xml"
     },
     {
+        "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_settings.png.flat",
+        "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_settings.png"
+    },
+    {
         "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_login_background.png.flat",
         "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_login_background.png"
+    },
+    {
+        "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_settings.png.flat",
+        "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_settings.png"
     },
     {
         "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
@@ -52,8 +60,16 @@
         "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\menu_drawer_menu.xml.flat",
+        "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\menu\\drawer_menu.xml"
+    },
+    {
         "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_settings.png.flat",
+        "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_settings.png"
     },
     {
         "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
@@ -96,8 +112,20 @@
         "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_settings.png.flat",
+        "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_settings.png"
+    },
+    {
+        "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_settings.png.flat",
+        "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_settings.png"
+    },
+    {
         "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
         "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_settings.png.flat",
+        "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_settings.png"
     },
     {
         "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_login_background.xml.flat",
@@ -130,5 +158,9 @@
     {
         "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_login_background.png.flat",
         "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_login_background.png"
+    },
+    {
+        "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_settings.xml.flat",
+        "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_settings.xml"
     }
 ]

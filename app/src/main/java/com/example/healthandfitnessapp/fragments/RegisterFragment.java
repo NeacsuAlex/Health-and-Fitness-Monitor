@@ -18,10 +18,13 @@ import android.widget.Toast;
 
 import com.example.healthandfitnessapp.R;
 import com.example.healthandfitnessapp.interfaces.ActivityFragmentLoginCommunication;
+import com.example.healthandfitnessapp.models.User;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -47,6 +50,7 @@ public class RegisterFragment extends Fragment {
     private Button registerButton;
     private TextView login;
     private FirebaseAuth mAuth;
+    private DatabaseReference mDatabase;
 
     public RegisterFragment() {
         // Required empty public constructor
@@ -93,6 +97,7 @@ public class RegisterFragment extends Fragment {
         login = view.findViewById(R.id.loginView);
 
         mAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,7 +122,7 @@ public class RegisterFragment extends Fragment {
                 } else if (txtCPassword.length() < 6 || !txtCPassword.equals(txtPassword)) {
                     Toast.makeText(getContext(), "Password too short or invalid password!", Toast.LENGTH_SHORT).show();
                 } else {
-                    registerUser(txtEmail, txtPassword);
+                    registerUser(txtUsername, txtEmail, txtPassword);
                 }
             }
         });
@@ -125,11 +130,15 @@ public class RegisterFragment extends Fragment {
         return view;
     }
 
-    private void registerUser(final String email, String password) {
+    private void registerUser(String username, String email, String password) {
 
         mAuth.createUserWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
+                User user = new User(username,email,0L,0L,0L,0L,0L);
+                String userID=mAuth.getUid();
+                mDatabase.child("users").child(userID).setValue(user);
+
                 if (activityFragmentLoginCommunication != null) {
                     activityFragmentLoginCommunication.openLoginFragment();
                 }

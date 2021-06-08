@@ -209,6 +209,10 @@
         </service>
 
         <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.example.healthandfitnessapp.com.squareup.picasso"
+            android:exported="false" />
+        <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
             android:authorities="com.example.healthandfitnessapp.firebaseinitprovider"
             android:directBootAware="true"

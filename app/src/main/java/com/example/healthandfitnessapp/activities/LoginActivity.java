@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import com.example.healthandfitnessapp.R;
+import com.example.healthandfitnessapp.fragments.ExercisesFragment;
 import com.example.healthandfitnessapp.fragments.LoginFragment;
 import com.example.healthandfitnessapp.fragments.RegisterFragment;
 import com.example.healthandfitnessapp.fragments.ResetPasswordFragment;
@@ -47,9 +48,9 @@ public class LoginActivity extends AppCompatActivity implements ActivityFragment
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        String tag = RegisterFragment.class.getName();
+        String tag = ExercisesFragment.class.getName();
         FragmentTransaction addTransaction = transaction.replace(
-                R.id.login_frame_layout, RegisterFragment.newInstance("", ""), tag
+                R.id.login_frame_layout, ExercisesFragment.newInstance("", ""), tag
         );
 
         addTransaction.commit();

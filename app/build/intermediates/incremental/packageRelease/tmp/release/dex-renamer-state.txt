@@ -1,4 +1,0 @@
-#Mon Jun 07 19:57:09 EEST 2021
-base.0=E\:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

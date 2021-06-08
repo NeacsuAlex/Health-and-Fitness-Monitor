@@ -2007,6 +2007,10 @@ id fill_horizontal
 id fill_vertical
 id filled
 id fitToContents
+id fitnessDetailTextView
+id fitnessImageView
+id fitnessTextView
+id fitness_list
 id fixed
 id flip
 id floating
@@ -2292,6 +2296,7 @@ id textinput_prefix_text
 id textinput_suffix_text
 id ticker
 id time
+id timeTextView
 id title
 id titleDividerNoCustom
 id title_template
@@ -2414,6 +2419,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_exercices
 layout fragment_login
 layout fragment_register
 layout fragment_reset_password
@@ -2443,6 +2449,7 @@ layout fui_register_email_layout
 layout fui_welcome_back_email_link_prompt_layout
 layout fui_welcome_back_idp_prompt_layout
 layout fui_welcome_back_password_prompt_layout
+layout item_fitness
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -2591,6 +2598,9 @@ string facebook
 string facebook_application_id
 string facebook_login_protocol_scheme
 string firebase_web_host
+string fitness_image_text
+string fitness_message
+string fitness_time_test
 string forgot_password
 string fui_accessibility_logo
 string fui_auto_verified

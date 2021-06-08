@@ -2,30 +2,30 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single" android:id="@+id/group1">
         <item
-            android:id="@+id/nav_message"
+            android:id="@+id/nav_statistics"
             android:icon="@drawable/ic_settings"
-            android:title="Message" />
+            android:title="Statistics" />
         <item
-            android:id="@+id/nav_chat"
+            android:id="@+id/nav_exercices"
             android:icon="@drawable/ic_settings"
-            android:title="Chat" />
+            android:title="Exercices" />
         <item
-            android:id="@+id/nav_profile"
+            android:id="@+id/nav_achievements"
             android:icon="@drawable/ic_settings"
-            android:title="Profile" />
+            android:title="Achievements" />
+
     </group>
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
+    <group android:checkableBehavior="single" android:id="@+id/group2">
+        <item
+                android:id="@+id/nav_settings"
                 android:icon="@drawable/ic_settings"
-                android:title="Share" />
+                android:title="Settings" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_help"
                 android:icon="@drawable/ic_settings"
-                android:title="Send" />
-        </menu>
-    </item>
+                android:title="Help and feedback" />
+
+    </group>
 </menu>

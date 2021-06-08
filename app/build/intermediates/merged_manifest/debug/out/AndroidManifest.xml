@@ -28,7 +28,6 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Design.NoActionBar" >
-        <activity android:name="com.example.healthandfitnessapp.activities.HomeActivity" />
         <activity android:name="com.example.healthandfitnessapp.activities.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,6 +35,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.healthandfitnessapp.activities.HomeActivity" />
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -208,17 +208,18 @@
                 android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
 
-        <activity
-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
             android:authorities="com.example.healthandfitnessapp.firebaseinitprovider"
             android:directBootAware="true"
             android:exported="false"
             android:initOrder="100" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
         <provider
             android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
             android:authorities="com.example.healthandfitnessapp.lifecycle-process"

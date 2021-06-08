@@ -1977,6 +1977,7 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id drawer_layout
 id dropdown_menu
 id dynamic
 id easeIn
@@ -2013,6 +2014,7 @@ id forever
 id forgotPasswordTextView
 id forgotPasswordView
 id forgotTextView
+id fragment_container
 id fragment_phone
 id fragment_register_email
 id frameLayout
@@ -2022,6 +2024,8 @@ id gone
 id googleButton
 id graph
 id graph_wrap
+id group1
+id group2
 id group_divider
 id grouping
 id groups
@@ -2135,11 +2139,12 @@ id mtrl_view_tag_bottom_padding
 id multiply
 id name
 id name_layout
-id nav_chat
-id nav_message
-id nav_profile
-id nav_send
-id nav_share
+id nav_achievements
+id nav_exercices
+id nav_help
+id nav_settings
+id nav_statistics
+id nav_view
 id navigation_header_container
 id never
 id noScroll
@@ -2291,6 +2296,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toolbar
 id top
 id topPanel
 id top_level_view
@@ -2311,6 +2317,8 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id user_email
+id user_name
 id view_offset_helper
 id visible
 id welcome_back_email_link_body
@@ -2477,6 +2485,7 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
+layout nav_header
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -2740,6 +2749,8 @@ string mtrl_picker_toggle_to_calendar_input_mode
 string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
+string navigation_drawer_close
+string navigation_drawer_open
 string password
 string password_reset_text
 string password_toggle_content_description
@@ -2762,6 +2773,8 @@ style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
 style Animation_Design_BottomSheetDialog
 style Animation_MaterialComponents_BottomSheetDialog
+style AppTheme
+style AppTheme_NoActionBar
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog

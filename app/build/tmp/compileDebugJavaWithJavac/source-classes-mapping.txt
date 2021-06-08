@@ -25,6 +25,7 @@ com/example/healthandfitnessapp/activities/HomeActivity.java
  com.example.healthandfitnessapp.activities.HomeActivity$2
  com.example.healthandfitnessapp.activities.HomeActivity$3
  com.example.healthandfitnessapp.activities.HomeActivity$4
+ com.example.healthandfitnessapp.activities.HomeActivity$5
 com/example/healthandfitnessapp/activities/LoginActivity.java
  com.example.healthandfitnessapp.activities.LoginActivity
 com/example/healthandfitnessapp/BuildConfig.java

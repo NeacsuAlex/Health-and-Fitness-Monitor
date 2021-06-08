@@ -1,8 +1,13 @@
 package com.example.healthandfitnessapp.activities;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -14,6 +19,8 @@ import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
@@ -22,7 +29,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.healthandfitnessapp.R;
+import com.example.healthandfitnessapp.models.User;
 import com.example.healthandfitnessapp.services.LocationService;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Formatter;
 import java.util.Locale;
@@ -35,6 +52,14 @@ public class HomeActivity extends AppCompatActivity implements LocationListener 
     Chronometer chronometer;
     Button startChronometer, pauseChronometer, stopChronometer;
     boolean isChronometerRunning, pausePressed;
+    private DrawerLayout drawerLayout;
+
+    private FirebaseAuth mAuth;
+    private DatabaseReference mDatabase;
+
+    TextView userName;
+    TextView userEmail;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,8 +76,47 @@ public class HomeActivity extends AppCompatActivity implements LocationListener 
         pauseChronometer=(Button)findViewById(R.id.pause_timer);
         stopChronometer=(Button)findViewById(R.id.stop_timer);
 
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        View headerView = navigationView.getHeaderView(0);
+        userName = (TextView) headerView.findViewById(R.id.user_name);
+        userEmail = (TextView) headerView.findViewById(R.id.user_email);
+
         isChronometerRunning=false;
         pausePressed=false;
+
+        navigationView.bringToFront();
+        Toolbar toolbar=findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        drawerLayout=findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        drawerLayout.closeDrawer(GravityCompat.START);
+
+        mAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("users");
+
+        mDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User user=new User();
+                for(DataSnapshot key:snapshot.getChildren())
+                {
+                    if(key.getKey().equals(mAuth.getUid()))
+                    {
+                        user=key.getValue(User.class);
+                        break;
+                    }
+                }
+                userName.setText(user.username);
+                userEmail.setText(user.email);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.M&& checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED)
         {
@@ -96,7 +160,7 @@ public class HomeActivity extends AppCompatActivity implements LocationListener 
         });
     }
 
-   @Override
+    @Override
     public void onLocationChanged(Location location) {
         if(location!=null)
         {
@@ -232,5 +296,17 @@ public class HomeActivity extends AppCompatActivity implements LocationListener 
         pauseChronometer.setText("Pause");
         chronometer.stop();
         isChronometerRunning=false;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(drawerLayout.isDrawerOpen(GravityCompat.START))
+        {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }
+        else
+        {
+            super.onBackPressed();
+        }
     }
 }

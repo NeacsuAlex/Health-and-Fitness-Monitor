@@ -1,30 +1,32 @@
 package com.example.healthandfitnessapp.fragments;
 
+import android.content.ActivityNotFoundException;
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.example.healthandfitnessapp.R;
 import com.example.healthandfitnessapp.adapters.MyAdapter;
+import com.example.healthandfitnessapp.interfaces.OnItemsClickedListener;
 import com.example.healthandfitnessapp.models.FitnessProgramme;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -33,7 +35,7 @@ import java.util.ArrayList;
  * Use the {@link ExercisesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ExercisesFragment extends Fragment {
+public class ExercisesFragment extends Fragment implements OnItemsClickedListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -46,6 +48,8 @@ public class ExercisesFragment extends Fragment {
     private View view;
     private ArrayList<FitnessProgramme> elements = new ArrayList<>();
     private MyAdapter myAdapter = null;
+    private DatabaseReference mDatabase;
+    private TextView durationText;
 
     public ExercisesFragment() {
         // Required empty public constructor
@@ -84,54 +88,54 @@ public class ExercisesFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_exercices, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.fitness_list);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL,false);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL, false);
+
+        durationText=view.findViewById(R.id.durationText);
         elements.clear();
-        getPhotos();
+        mDatabase = FirebaseDatabase.getInstance().getReference("fitness");
+        getImageData();
         myAdapter = new MyAdapter(this.elements);
+        Toast.makeText(this.getContext(),"salam",Toast.LENGTH_LONG).show();
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(this.myAdapter);
         recyclerView.post(() -> myAdapter.notifyDataSetChanged());
+
         return view;
     }
 
-    void getPhotos() {
-        RequestQueue queue = Volley.newRequestQueue(getContext());
-        String url = "https://jsonplaceholder.typicode.com" + "/photos?" + "albumId" + "=" + 1;
-        StringRequest getAlbumsRequest = new StringRequest(
-                Request.Method.GET,
-                url,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            handlePhotosResponse(response);
-                        } catch (JSONException exception) {
-                            exception.printStackTrace();
-                        }
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getContext(), "PHOTO ERROR", Toast.LENGTH_LONG).show();
-                    }
+    private void getImageData() {
+        mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    FitnessProgramme fitnessProgramme = snapshot.getValue(FitnessProgramme.class);
+                    elements.add(fitnessProgramme);
+                    myAdapter.notifyDataSetChanged();
                 }
-        );
-        queue.add(getAlbumsRequest);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 
-    void handlePhotosResponse(String response) throws JSONException {
-        JSONArray photosJSONArray = new JSONArray(response);
-        for (int index = 0; index < photosJSONArray.length(); ++index) {
-            JSONObject userPostJSON = (JSONObject) photosJSONArray.get(index);
-            int id = userPostJSON.getInt("id");
-            String title = userPostJSON.getString("title");
-            String url = userPostJSON.getString("url");
-            String thumbnailUrl = userPostJSON.getString("thumbnailUrl");
-            FitnessProgramme fitnessProgramme = new FitnessProgramme(title, url, url,thumbnailUrl,thumbnailUrl,thumbnailUrl);
-            this.elements.add(fitnessProgramme);
-
+    public void watchYoutubeVideo(String id) {
+        Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + id));
+        Intent webIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("http://www.youtube.com/watch?v=" + id));
+        try {
+            startActivity(appIntent);
+        } catch (ActivityNotFoundException ex) {
+            startActivity(webIntent);
         }
-        myAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onItemClick(FitnessProgramme fitnessProgramme) {
+        durationText.setText("AAAAAAAAAAHHHHHH");
+        Log.e("as","adasdsa");
+        Toast.makeText(this.getContext(),"salam",Toast.LENGTH_LONG).show();
     }
 }

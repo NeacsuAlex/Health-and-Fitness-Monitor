@@ -1025,6 +1025,7 @@ color common_google_signin_btn_text_light_disabled
 color common_google_signin_btn_text_light_focused
 color common_google_signin_btn_text_light_pressed
 color common_google_signin_btn_tint
+color dark_blue
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1736,6 +1737,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable dotted
 drawable fui_ic_anonymous_white_24dp
 drawable fui_ic_apple_white_24dp
 drawable fui_ic_check_circle_black_128dp
@@ -1759,7 +1761,10 @@ drawable fui_idp_button_background_twitter
 drawable fui_idp_button_background_yahoo
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_achievement
 drawable ic_clock_black_24dp
+drawable ic_exercises
+drawable ic_feedback
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -1769,6 +1774,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_settings
+drawable ic_statistics
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1809,6 +1815,7 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
+id FitnessProgrammeTitleTextView
 id LinearLayout
 id META
 id NO_DEBUG
@@ -1964,6 +1971,7 @@ id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
 id dialog_button
+id difficultyTextView
 id dimensions
 id direct
 id disableHome
@@ -1979,6 +1987,8 @@ id dragStart
 id dragUp
 id drawer_layout
 id dropdown_menu
+id durationText
+id durationTextView
 id dynamic
 id easeIn
 id easeInOut
@@ -2007,9 +2017,12 @@ id fill_horizontal
 id fill_vertical
 id filled
 id fitToContents
+id fitnessButton
+id fitnessDescriptionTextView
 id fitnessDetailTextView
 id fitnessImageView
 id fitnessTextView
+id fitnessTitleTextView
 id fitness_list
 id fixed
 id flip
@@ -2181,6 +2194,7 @@ id phone_number
 id pin
 id position
 id postLayout
+id programmeOverviewTextView
 id progress_circular
 id progress_horizontal
 id radio
@@ -2285,6 +2299,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView8
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2588,7 +2603,11 @@ string common_signin_button_text
 string common_signin_button_text_long
 string confirm_password
 string default_web_client_id
+string difficulty
+string difficulty_text
 string don_t_have_an_account
+string duration
+string duration_text
 string enter_email
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
@@ -2768,12 +2787,16 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string programme_details
+string programme_overview
 string project_id
 string register
 string reset_password
 string search_menu_title
 string sign_up
+string start_programme
 string status_bar_notification_info_overflow
+string title_fitness
 string username
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

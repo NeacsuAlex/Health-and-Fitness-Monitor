@@ -69,7 +69,7 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             super(view);
             textDetail = view.findViewById(R.id.fitnessDetailTextView);
             textTime = view.findViewById(R.id.timeTextView);
-            fitnessImage=view.findViewById(R.id.fitnessImageView);
+            fitnessImage = view.findViewById(R.id.fitnessImageView);
             this.view = view;
         }
 
@@ -79,8 +79,17 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             textTime.setText(fitnessProgramme.duration);
             String imageViewUrl = fitnessProgramme.urlThumbnail;
             Picasso picasso = Picasso.get();
-            picasso.load(imageViewUrl).resize(Constants.IMAGE_WIDTH, Constants.IMAGE_HEIGHT).into(fitnessImage);
+            picasso.load(imageViewUrl).into(fitnessImage);
             view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (onItemsClickedListener != null) {
+                        onItemsClickedListener.onItemClick(fitnessProgramme);
+                        notifyItemChanged(getAdapterPosition());
+                    }
+                }
+            });
+            fitnessImage.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if (onItemsClickedListener != null) {

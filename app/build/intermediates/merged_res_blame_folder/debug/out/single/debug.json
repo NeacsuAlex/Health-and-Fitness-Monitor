@@ -40,6 +40,10 @@
         "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\menu\\drawer_menu.xml"
     },
     {
+        "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_statistics.xml.flat",
+        "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\layout\\fragment_statistics.xml"
+    },
+    {
         "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
         "source": "E:\\Health-and-Fitness-Monitor\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
     },

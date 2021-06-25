@@ -2417,6 +2417,7 @@ layout design_text_input_start_icon
 layout fragment_login
 layout fragment_register
 layout fragment_reset_password
+layout fragment_statistics
 layout fui_activity_invisible
 layout fui_activity_register_email
 layout fui_activity_register_phone

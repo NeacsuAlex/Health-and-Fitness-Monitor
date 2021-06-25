@@ -1,4 +1,7 @@
-#Fri Jun 25 20:19:19 EEST 2021
-base.0=E\:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Fri Jun 25 21:00:53 EEST 2021
+base.0=E\:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
+base.1=E\:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex

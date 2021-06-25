@@ -11,13 +11,12 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
 
 import com.example.healthandfitnessapp.R;
-import com.example.healthandfitnessapp.activities.HomeActivity;
-import com.example.healthandfitnessapp.activities.LoginActivity;
 
 public class NotificationService extends AppCompatActivity {
+
+    private SoundService soundService=new SoundService();
 
     public NotificationService()
     {
@@ -32,7 +31,7 @@ public class NotificationService extends AppCompatActivity {
                 .setContentTitle(title)
                 .setContentText(message)
                 .setAutoCancel(true)
-                .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
+                .setSound(soundService.playSound(RingtoneManager.TYPE_NOTIFICATION))
                 .setContentIntent(pendingIntent);
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

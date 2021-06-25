@@ -4,6 +4,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import com.example.healthandfitnessapp.R;
 import com.example.healthandfitnessapp.fragments.LoginFragment;
@@ -11,11 +13,13 @@ import com.example.healthandfitnessapp.fragments.RegisterFragment;
 import com.example.healthandfitnessapp.fragments.ResetPasswordFragment;
 import com.example.healthandfitnessapp.interfaces.ActivityFragmentLoginCommunication;
 import com.example.healthandfitnessapp.services.NotificationService;
+import com.example.healthandfitnessapp.services.SoundService;
 
 
 public class LoginActivity extends AppCompatActivity implements ActivityFragmentLoginCommunication {
 
     private NotificationService notificationService=new NotificationService();
+    private SoundService soundService=new SoundService();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +40,6 @@ public class LoginActivity extends AppCompatActivity implements ActivityFragment
 
     @Override
     public void openLoginFragment() {
-
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         String tag = LoginFragment.class.getName();
@@ -49,7 +52,6 @@ public class LoginActivity extends AppCompatActivity implements ActivityFragment
 
     @Override
     public void openRegisterFragment() {
-
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         String tag = RegisterFragment.class.getName();

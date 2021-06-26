@@ -18,7 +18,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.healthandfitnessapp.R;
+import com.example.healthandfitnessapp.activities.LoginActivity;
 import com.example.healthandfitnessapp.interfaces.ActivityFragmentLoginCommunication;
+import com.example.healthandfitnessapp.services.NotificationService;
+import com.example.healthandfitnessapp.services.SoundService;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;

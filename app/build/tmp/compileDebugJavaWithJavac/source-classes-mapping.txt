@@ -26,28 +26,37 @@ com/example/healthandfitnessapp/activities/HomeActivity.java
  com.example.healthandfitnessapp.activities.HomeActivity$3
  com.example.healthandfitnessapp.activities.HomeActivity$4
  com.example.healthandfitnessapp.activities.HomeActivity$5
+com/example/healthandfitnessapp/fragments/StatisticsFragment.java
+ com.example.healthandfitnessapp.fragments.StatisticsFragment
 com/example/healthandfitnessapp/fragments/ResetPasswordFragment.java
  com.example.healthandfitnessapp.fragments.ResetPasswordFragment
  com.example.healthandfitnessapp.fragments.ResetPasswordFragment$1
  com.example.healthandfitnessapp.fragments.ResetPasswordFragment$2
  com.example.healthandfitnessapp.fragments.ResetPasswordFragment$3
-com/example/healthandfitnessapp/adapters/MyAdapter.java
- com.example.healthandfitnessapp.adapters.MyAdapter
- com.example.healthandfitnessapp.adapters.MyAdapter$FitnessProgrammeViewHolder
+com/example/healthandfitnessapp/services/NotificationService.java
+ com.example.healthandfitnessapp.services.NotificationService
+com/example/healthandfitnessapp/models/BMI.java
+ com.example.healthandfitnessapp.models.BMI
+ com.example.healthandfitnessapp.models.BMI$BMI_Category
+com/example/healthandfitnessapp/fragments/ExercisesFragment.java
+ com.example.healthandfitnessapp.fragments.ExercisesFragment
+ com.example.healthandfitnessapp.fragments.ExercisesFragment$1
+ com.example.healthandfitnessapp.fragments.ExercisesFragment$2
 com/example/healthandfitnessapp/services/LocationService.java
  com.example.healthandfitnessapp.services.LocationService
+com/example/healthandfitnessapp/services/SoundService.java
+ com.example.healthandfitnessapp.services.SoundService
 com/example/healthandfitnessapp/interfaces/ActivityFragmentLoginCommunication.java
  com.example.healthandfitnessapp.interfaces.ActivityFragmentLoginCommunication
 com/example/healthandfitnessapp/VolleyConfigSingleton.java
  com.example.healthandfitnessapp.VolleyConfigSingleton
  com.example.healthandfitnessapp.VolleyConfigSingleton$1
-com/example/healthandfitnessapp/interfaces/OnItemsClickedListener.java
- com.example.healthandfitnessapp.interfaces.OnItemsClickedListener
-com/example/healthandfitnessapp/BuildConfig.java
- com.example.healthandfitnessapp.BuildConfig
-com/example/healthandfitnessapp/fragments/ExercisesFragment.java
- com.example.healthandfitnessapp.fragments.ExercisesFragment
- com.example.healthandfitnessapp.fragments.ExercisesFragment$1
- com.example.healthandfitnessapp.fragments.ExercisesFragment$2
 com/example/healthandfitnessapp/activities/LoginActivity.java
  com.example.healthandfitnessapp.activities.LoginActivity
+com/example/healthandfitnessapp/BuildConfig.java
+ com.example.healthandfitnessapp.BuildConfig
+com/example/healthandfitnessapp/interfaces/OnItemsClickedListener.java
+ com.example.healthandfitnessapp.interfaces.OnItemsClickedListener
+com/example/healthandfitnessapp/adapters/MyAdapter.java
+ com.example.healthandfitnessapp.adapters.MyAdapter
+ com.example.healthandfitnessapp.adapters.MyAdapter$FitnessProgrammeViewHolder

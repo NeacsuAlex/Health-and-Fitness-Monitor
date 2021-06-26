@@ -17,14 +17,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.healthandfitnessapp.R;
+import com.example.healthandfitnessapp.activities.LoginActivity;
 import com.example.healthandfitnessapp.interfaces.ActivityFragmentLoginCommunication;
 import com.example.healthandfitnessapp.models.User;
+import com.example.healthandfitnessapp.services.NotificationService;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import static com.firebase.ui.auth.AuthUI.getApplicationContext;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -51,6 +55,8 @@ public class RegisterFragment extends Fragment {
     private TextView login;
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
+
+    private NotificationService notificationService=new NotificationService();
 
     public RegisterFragment() {
         // Required empty public constructor
@@ -140,7 +146,7 @@ public class RegisterFragment extends Fragment {
                 mDatabase.child("users").child(userID).setValue(user);
 
                 if (activityFragmentLoginCommunication != null) {
-                    activityFragmentLoginCommunication.openLoginFragment();
+                   activityFragmentLoginCommunication.openLoginFragment();
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {

@@ -23,9 +23,6 @@ com/example/healthandfitnessapp/activities/HomeActivity.java
  com.example.healthandfitnessapp.activities.HomeActivity
  com.example.healthandfitnessapp.activities.HomeActivity$1
  com.example.healthandfitnessapp.activities.HomeActivity$2
- com.example.healthandfitnessapp.activities.HomeActivity$3
- com.example.healthandfitnessapp.activities.HomeActivity$4
- com.example.healthandfitnessapp.activities.HomeActivity$5
 com/example/healthandfitnessapp/fragments/StatisticsFragment.java
  com.example.healthandfitnessapp.fragments.StatisticsFragment
 com/example/healthandfitnessapp/fragments/ResetPasswordFragment.java
@@ -33,6 +30,14 @@ com/example/healthandfitnessapp/fragments/ResetPasswordFragment.java
  com.example.healthandfitnessapp.fragments.ResetPasswordFragment$1
  com.example.healthandfitnessapp.fragments.ResetPasswordFragment$2
  com.example.healthandfitnessapp.fragments.ResetPasswordFragment$3
+com/example/healthandfitnessapp/fragments/AchievementsFragment.java
+ com.example.healthandfitnessapp.fragments.AchievementsFragment
+com/example/healthandfitnessapp/fragments/TravelFragment.java
+ com.example.healthandfitnessapp.fragments.TravelFragment
+ com.example.healthandfitnessapp.fragments.TravelFragment$1
+ com.example.healthandfitnessapp.fragments.TravelFragment$2
+ com.example.healthandfitnessapp.fragments.TravelFragment$3
+ com.example.healthandfitnessapp.fragments.TravelFragment$4
 com/example/healthandfitnessapp/services/NotificationService.java
  com.example.healthandfitnessapp.services.NotificationService
 com/example/healthandfitnessapp/models/BMI.java
@@ -42,10 +47,12 @@ com/example/healthandfitnessapp/fragments/ExercisesFragment.java
  com.example.healthandfitnessapp.fragments.ExercisesFragment
  com.example.healthandfitnessapp.fragments.ExercisesFragment$1
  com.example.healthandfitnessapp.fragments.ExercisesFragment$2
-com/example/healthandfitnessapp/services/LocationService.java
- com.example.healthandfitnessapp.services.LocationService
+com/example/healthandfitnessapp/interfaces/ActivityFragmentHomeComunication.java
+ com.example.healthandfitnessapp.interfaces.ActivityFragmentHomeComunication
 com/example/healthandfitnessapp/services/SoundService.java
  com.example.healthandfitnessapp.services.SoundService
+com/example/healthandfitnessapp/services/LocationService.java
+ com.example.healthandfitnessapp.services.LocationService
 com/example/healthandfitnessapp/interfaces/ActivityFragmentLoginCommunication.java
  com.example.healthandfitnessapp.interfaces.ActivityFragmentLoginCommunication
 com/example/healthandfitnessapp/VolleyConfigSingleton.java

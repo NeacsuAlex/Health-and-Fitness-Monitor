@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,8 +42,8 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view;
         view = inflater.inflate(R.layout.item_fitness, parent, false);
-        FitnessProgrammeViewHolder artistViewHolder = new FitnessProgrammeViewHolder(view);
-        return artistViewHolder;
+        FitnessProgrammeViewHolder fitnessProgrammeViewHolder = new FitnessProgrammeViewHolder(view);
+        return fitnessProgrammeViewHolder;
 
     }
 
@@ -73,29 +74,16 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             this.view = view;
         }
 
-
         void bind(FitnessProgramme fitnessProgramme) {
             textDetail.setText(fitnessProgramme.title);
             textTime.setText(fitnessProgramme.duration);
             String imageViewUrl = fitnessProgramme.urlThumbnail;
             Picasso picasso = Picasso.get();
             picasso.load(imageViewUrl).into(fitnessImage);
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (onItemsClickedListener != null) {
-                        onItemsClickedListener.onItemClick(fitnessProgramme);
-                        notifyItemChanged(getAdapterPosition());
-                    }
-                }
-            });
-            fitnessImage.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (onItemsClickedListener != null) {
-                        onItemsClickedListener.onItemClick(fitnessProgramme);
-                        notifyItemChanged(getAdapterPosition());
-                    }
+            view.setOnClickListener(v -> {
+               if (onItemsClickedListener != null) {
+                    onItemsClickedListener.onItemClick(fitnessProgramme);
+                    notifyItemChanged(getAdapterPosition());
                 }
             });
         }

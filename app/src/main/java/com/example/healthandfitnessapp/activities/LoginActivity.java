@@ -27,7 +27,6 @@ public class LoginActivity extends AppCompatActivity implements ActivityFragment
         Intent intent = new Intent(this, HomeActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
-        finish();
     }
 
     @Override
@@ -36,9 +35,9 @@ public class LoginActivity extends AppCompatActivity implements ActivityFragment
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         String tag = LoginFragment.class.getName();
-        FragmentTransaction addTransaction = transaction.replace(
+        FragmentTransaction addTransaction = transaction.add(
                 R.id.login_frame_layout, LoginFragment.newInstance("", ""), tag
-        );
+        ).addToBackStack(null);
 
         addTransaction.commit();
     }
@@ -51,7 +50,7 @@ public class LoginActivity extends AppCompatActivity implements ActivityFragment
         String tag = ExercisesFragment.class.getName();
         FragmentTransaction addTransaction = transaction.replace(
                 R.id.login_frame_layout, ExercisesFragment.newInstance("", ""), tag
-        );
+        ).addToBackStack(null);
 
         addTransaction.commit();
     }

@@ -1,7 +1,6 @@
 package com.example.healthandfitnessapp.fragments;
 
 import android.content.ActivityNotFoundException;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,11 +14,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.healthandfitnessapp.R;
 import com.example.healthandfitnessapp.adapters.MyAdapter;
+import com.example.healthandfitnessapp.constants.Constants;
 import com.example.healthandfitnessapp.interfaces.OnItemsClickedListener;
 import com.example.healthandfitnessapp.models.FitnessProgramme;
 import com.google.firebase.database.DataSnapshot;
@@ -27,6 +32,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -48,8 +57,13 @@ public class ExercisesFragment extends Fragment implements OnItemsClickedListene
     private View view;
     private ArrayList<FitnessProgramme> elements = new ArrayList<>();
     private MyAdapter myAdapter = null;
+    private FitnessProgramme selectedFitnessProgramme;
     private DatabaseReference mDatabase;
+    private TextView fitnessTitleText;
+    private TextView fitnessDescriptionText;
     private TextView durationText;
+    private TextView difficultyText;
+    private Button startProgrammeButton;
 
     public ExercisesFragment() {
         // Required empty public constructor
@@ -90,17 +104,38 @@ public class ExercisesFragment extends Fragment implements OnItemsClickedListene
         RecyclerView recyclerView = view.findViewById(R.id.fitness_list);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL, false);
 
-        durationText=view.findViewById(R.id.durationText);
+        durationText =view.findViewById(R.id.durationText);
+        fitnessTitleText =view.findViewById(R.id.fitnessTitleTextView);
+        fitnessDescriptionText =view.findViewById(R.id.fitnessDescriptionTextView);
+        difficultyText =view.findViewById(R.id.difficultyTextView);
+        startProgrammeButton=view.findViewById(R.id.fitnessButton);
+
         elements.clear();
         mDatabase = FirebaseDatabase.getInstance().getReference("fitness");
         getImageData();
-        myAdapter = new MyAdapter(this.elements);
-        Toast.makeText(this.getContext(),"salam",Toast.LENGTH_LONG).show();
+        myAdapter = new MyAdapter(this.elements,this);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(this.myAdapter);
         recyclerView.post(() -> myAdapter.notifyDataSetChanged());
 
+        startProgrammeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (selectedFitnessProgramme != null) {
+                    watchYoutubeVideo(selectedFitnessProgramme.urlVideo);
+                }
+            }
+        });
+
         return view;
+    }
+
+    private void setFirstFitnessProgramme() {
+        selectedFitnessProgramme=elements.get(0);
+        durationText.setText(selectedFitnessProgramme.duration);
+        fitnessTitleText.setText(selectedFitnessProgramme.title);
+        fitnessDescriptionText.setText(selectedFitnessProgramme.description);
+        difficultyText.setText(selectedFitnessProgramme.difficulty);
     }
 
     private void getImageData() {
@@ -112,6 +147,7 @@ public class ExercisesFragment extends Fragment implements OnItemsClickedListene
                     elements.add(fitnessProgramme);
                     myAdapter.notifyDataSetChanged();
                 }
+                setFirstFitnessProgramme();
             }
 
             @Override
@@ -134,8 +170,44 @@ public class ExercisesFragment extends Fragment implements OnItemsClickedListene
 
     @Override
     public void onItemClick(FitnessProgramme fitnessProgramme) {
-        durationText.setText("AAAAAAAAAAHHHHHH");
-        Log.e("as","adasdsa");
-        Toast.makeText(this.getContext(),"salam",Toast.LENGTH_LONG).show();
+        durationText.setText(fitnessProgramme.duration);
+        fitnessTitleText.setText(fitnessProgramme.title);
+        fitnessDescriptionText.setText(fitnessProgramme.description);
+        difficultyText.setText(fitnessProgramme.difficulty);
+        selectedFitnessProgramme=fitnessProgramme;
+    }
+
+    private void getDefaultComments() throws InterruptedException {
+        RequestQueue queue = Volley.newRequestQueue(requireContext());
+        String url = Constants.DEFAULT_FITNESS_URL;
+        StringRequest getAlbumsRequest = new StringRequest(
+                Request.Method.GET,
+                url,
+                response -> {
+                    try {
+                        handleCommentsResponse(response);
+                    } catch (JSONException exception) {
+                        Log.e(Constants.DEFAULT_FITNESS_LOG_ERROR, exception.getMessage());
+                    }
+                },
+                error -> Toast.makeText(getContext(), Constants.DEFAULT_FITNESS_LOADING_ERROR, Toast.LENGTH_SHORT).show()
+        );
+        queue.add(getAlbumsRequest);
+    }
+
+    private void handleCommentsResponse(String response) throws JSONException {
+        JSONArray fitnessJSONArray = new JSONArray(response);
+        for (int index = 0; index < fitnessJSONArray.length(); ++index) {
+            JSONObject fitnessJSON = (JSONObject) fitnessJSONArray.get(index);
+            String description = fitnessJSON.getString("description");
+            String duration = fitnessJSON.getString("duration");
+            String title = fitnessJSON.getString("title");
+            String urlThumbnail = fitnessJSON.getString("urlThumbnail");
+            String urlVideo = fitnessJSON.getString("urlVideo");
+            String difficulty = fitnessJSON.getString("difficulty");
+            FitnessProgramme fitnessProgramme=new FitnessProgramme(title,description,urlVideo,urlThumbnail,duration,difficulty);
+            elements.add(fitnessProgramme);
+        }
+        myAdapter.notifyDataSetChanged();
     }
 }

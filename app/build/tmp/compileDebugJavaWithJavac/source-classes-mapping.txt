@@ -34,8 +34,6 @@ com/example/healthandfitnessapp/fragments/ResetPasswordFragment.java
 com/example/healthandfitnessapp/adapters/MyAdapter.java
  com.example.healthandfitnessapp.adapters.MyAdapter
  com.example.healthandfitnessapp.adapters.MyAdapter$FitnessProgrammeViewHolder
- com.example.healthandfitnessapp.adapters.MyAdapter$FitnessProgrammeViewHolder$1
- com.example.healthandfitnessapp.adapters.MyAdapter$FitnessProgrammeViewHolder$2
 com/example/healthandfitnessapp/services/LocationService.java
  com.example.healthandfitnessapp.services.LocationService
 com/example/healthandfitnessapp/interfaces/ActivityFragmentLoginCommunication.java
@@ -50,5 +48,6 @@ com/example/healthandfitnessapp/BuildConfig.java
 com/example/healthandfitnessapp/fragments/ExercisesFragment.java
  com.example.healthandfitnessapp.fragments.ExercisesFragment
  com.example.healthandfitnessapp.fragments.ExercisesFragment$1
+ com.example.healthandfitnessapp.fragments.ExercisesFragment$2
 com/example/healthandfitnessapp/activities/LoginActivity.java
  com.example.healthandfitnessapp.activities.LoginActivity

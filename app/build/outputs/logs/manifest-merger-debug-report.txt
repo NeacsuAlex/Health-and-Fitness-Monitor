@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-30:12
+ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-34:12
 MERGED from [com.firebaseui:firebase-ui-auth:6.4.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\3f4158eb6f71e7f1d9e52d8196e72fa0\jetified-firebase-ui-auth-6.4.0\AndroidManifest.xml:2:1-109:12
 MERGED from [com.google.android.gms:play-services-auth:19.0.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\f8fafe74bec2cea1d64427dd42e57854\jetified-play-services-auth-19.0.0\AndroidManifest.xml:17:1-40:12
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\b208d6ea08496dd3beca41ca248863fa\material-1.3.0\AndroidManifest.xml:17:1-24:12
@@ -68,20 +68,20 @@ MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\alexn\.gradle\caches
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\86aa7fcb6f12855a4b953477a2672233\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\6320adba18b4d4720bd8695f5fffc52f\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\126fd7248f78719ccc6ed2d6585226da\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-34:12
 	package
 		ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:3:5-46
 		INJECTED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml
 		INJECTED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml
-		ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-30:12
+		ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-34:12
 		INJECTED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml
-		ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-30:12
+		ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-34:12
 		INJECTED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:11-69
@@ -126,7 +126,7 @@ ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidMa
 	android:name
 		ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:13:19-63
 application
-ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:15:5-29:19
+ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:15:5-33:19
 MERGED from [com.firebaseui:firebase-ui-auth:6.4.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\3f4158eb6f71e7f1d9e52d8196e72fa0\jetified-firebase-ui-auth-6.4.0\AndroidManifest.xml:15:5-107:19
 MERGED from [com.firebaseui:firebase-ui-auth:6.4.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\3f4158eb6f71e7f1d9e52d8196e72fa0\jetified-firebase-ui-auth-6.4.0\AndroidManifest.xml:15:5-107:19
 MERGED from [com.google.android.gms:play-services-auth:19.0.0] C:\Users\alexn\.gradle\caches\transforms-2\files-2.1\f8fafe74bec2cea1d64427dd42e57854\jetified-play-services-auth-19.0.0\AndroidManifest.xml:22:5-38:19
@@ -180,23 +180,31 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\alexn\.gradle\
 	android:theme
 		ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:21:9-56
 activity#com.example.healthandfitnessapp.activities.LoginActivity
-ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:22:9-27:20
+ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:22:9-29:20
+	android:screenOrientation
+		ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:23:13-47
+	android:configChanges
+		ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:24:13-59
 	android:name
 		ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:22:19-59
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:23:9-26:25
+ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:25:9-28:25
 action#android.intent.action.MAIN
-ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:24:13-65
+ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:26:13-65
 	android:name
-		ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:24:21-62
+		ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:26:21-62
 category#android.intent.category.LAUNCHER
-ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:25:13-73
+ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:27:13-73
 	android:name
-		ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:25:23-70
+		ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:27:23-70
 activity#com.example.healthandfitnessapp.activities.HomeActivity
-ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:28:9-60
+ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:30:9-32:61
+	android:screenOrientation
+		ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:31:13-47
+	android:configChanges
+		ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:32:13-59
 	android:name
-		ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:28:19-58
+		ADDED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:30:19-58
 uses-sdk
 INJECTED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\AndroidHealthApp\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml

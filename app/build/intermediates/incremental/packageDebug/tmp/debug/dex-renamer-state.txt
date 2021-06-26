@@ -1,4 +1,4 @@
-#Mon Jun 07 19:54:22 EEST 2021
-base.0=E\:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Sat Jun 26 16:54:27 EEST 2021
+base.0=E\:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

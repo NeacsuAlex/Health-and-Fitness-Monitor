@@ -28,14 +28,20 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Design.NoActionBar" >
-        <activity android:name="com.example.healthandfitnessapp.activities.LoginActivity" >
+        <activity
+            android:name="com.example.healthandfitnessapp.activities.LoginActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensor" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.healthandfitnessapp.activities.HomeActivity" />
+        <activity
+            android:name="com.example.healthandfitnessapp.activities.HomeActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensor" />
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -208,6 +214,10 @@
                 android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
 
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.example.healthandfitnessapp.com.squareup.picasso"
+            android:exported="false" />
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
             android:authorities="com.example.healthandfitnessapp.firebaseinitprovider"

@@ -2121,6 +2121,8 @@ id graph
 id graph_wrap
 id group1
 id group2
+id group3
+id group4
 id group_divider
 id grouping
 id groups
@@ -2132,6 +2134,7 @@ id heading
 id hideable
 id home
 id homeAsUp
+id home_frame_layout
 id honorRequest
 id horizontal
 id icon
@@ -2237,10 +2240,14 @@ id multiply
 id name
 id name_layout
 id nav_achievements
+id nav_alarm
 id nav_exercices
 id nav_help
+id nav_notifications
 id nav_settings
+id nav_sign_out
 id nav_statistics
+id nav_travel
 id nav_view
 id navigation_header_container
 id never
@@ -2356,6 +2363,8 @@ id startVertical
 id start_timer
 id staticLayout
 id staticPostLayout
+id statistics_fragment
+id statistics_frame_layout
 id status_bar_latest_event_content
 id stop
 id stop_timer
@@ -2520,12 +2529,19 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+<<<<<<< HEAD
+layout fragment_achievements
+layout fragment_alarm
+=======
 layout expand_button
+>>>>>>> NAC
 layout fragment_exercices
 layout fragment_login
+layout fragment_notifications
 layout fragment_register
 layout fragment_reset_password
 layout fragment_statistics
+layout fragment_travel
 layout fui_activity_invisible
 layout fui_activity_register_email
 layout fui_activity_register_phone

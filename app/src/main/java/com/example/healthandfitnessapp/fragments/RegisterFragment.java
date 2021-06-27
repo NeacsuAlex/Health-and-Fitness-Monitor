@@ -141,7 +141,7 @@ public class RegisterFragment extends Fragment {
         mAuth.createUserWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
-                User user = new User(username,email,0L,0L,0L,0L,0L);
+                User user = new User(username,email,0L,0L,0L,0L,0L, 0L);
                 String userID=mAuth.getUid();
                 mDatabase.child("users").child(userID).setValue(user);
 

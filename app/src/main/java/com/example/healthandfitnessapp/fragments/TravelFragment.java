@@ -198,8 +198,8 @@ public class TravelFragment extends Fragment implements LocationListener {
             longitude = locationService.getLongitude();
         }
 
-        latitudeTextView.setText("Latitude: "+latitude);
-        longitudeTextView.setText("Longitude: "+longitude);
+        latitudeTextView.setText("Latitude: \n"+latitude);
+        longitudeTextView.setText("Longitude: \n"+longitude);
 
     }
 

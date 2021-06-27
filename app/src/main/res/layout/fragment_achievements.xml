@@ -5,10 +5,12 @@
     android:layout_height="match_parent"
     tools:context=".fragments.AchievementsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:id="@+id/statistics_frame_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        tools:context=".activities.HomeActivity"
+        android:background="@color/purple_200"
+        android:padding="20dp"/>
 
 </FrameLayout>

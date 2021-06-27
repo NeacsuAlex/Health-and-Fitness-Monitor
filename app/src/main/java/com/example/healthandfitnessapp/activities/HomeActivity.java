@@ -14,7 +14,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.healthandfitnessapp.fragments.AlarmFragment;
+import com.example.healthandfitnessapp.fragments.NotificationsFragment;
 import com.example.healthandfitnessapp.R;
+import com.example.healthandfitnessapp.fragments.AchievementsFragment;
 import com.example.healthandfitnessapp.fragments.ExercisesFragment;
 import com.example.healthandfitnessapp.fragments.StatisticsFragment;
 import com.example.healthandfitnessapp.fragments.TravelFragment;
@@ -79,6 +82,41 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
                         OpenExercisesFragment();
                         return true;
                     }
+                    case R.id.nav_achievements:
+                    {
+                        OpenAchievementsFragment();
+                        return true;
+                    }
+                    case R.id.nav_notifications:
+                    {
+                        OpenNotificationsFragment();
+                        return true;
+                    }
+                    case R.id.nav_travel:
+                    {
+                        OpenTravelFragment();
+                        return true;
+                    }
+                    case R.id.nav_alarm:
+                    {
+                        OpenAlarmFragment();
+                        return true;
+                    }
+                    case R.id.nav_settings:
+                    {
+                        OpenSettingsFragment();
+                        return true;
+                    }
+                    case R.id.nav_help:
+                    {
+                        OpenHelpActivity();
+                        return true;
+                    }
+                    case R.id.nav_sign_out:
+                    {
+                        SignOut();
+                        return true;
+                    }
                     default: break;
                 }
                 return false;
@@ -135,9 +173,9 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
     public void OpenStatisticsFragment() {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        String tag = TravelFragment.class.getName();
+        String tag = StatisticsFragment.class.getName();
         FragmentTransaction addTransaction = transaction.add(
-                R.id.home_frame_layout, TravelFragment.newInstance("", ""), tag
+                R.id.home_frame_layout, StatisticsFragment.newInstance("", ""), tag
         ).addToBackStack(null);
 
         addTransaction.commit();
@@ -153,5 +191,68 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
         ).addToBackStack(null);
 
         addTransaction.commit();
+    }
+
+    @Override
+    public void OpenAchievementsFragment() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        String tag = AchievementsFragment.class.getName();
+        FragmentTransaction addTransaction = transaction.add(
+                R.id.home_frame_layout, AchievementsFragment.newInstance("", ""), tag
+        ).addToBackStack(null);
+
+        addTransaction.commit();
+    }
+
+    @Override
+    public void OpenNotificationsFragment() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        String tag = NotificationsFragment.class.getName();
+        FragmentTransaction addTransaction = transaction.add(
+                R.id.home_frame_layout, NotificationsFragment.newInstance("", ""), tag
+        ).addToBackStack(null);
+
+        addTransaction.commit();
+    }
+
+    @Override
+    public void OpenTravelFragment() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        String tag = TravelFragment.class.getName();
+        FragmentTransaction addTransaction = transaction.add(
+                R.id.home_frame_layout, TravelFragment.newInstance("", ""), tag
+        ).addToBackStack(null);
+
+        addTransaction.commit();
+    }
+
+    @Override
+    public void OpenAlarmFragment() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        String tag = AlarmFragment.class.getName();
+        FragmentTransaction addTransaction = transaction.add(
+                R.id.home_frame_layout, AlarmFragment.newInstance("", ""), tag
+        ).addToBackStack(null);
+
+        addTransaction.commit();
+    }
+
+    @Override
+    public void OpenSettingsFragment() {
+
+    }
+
+    @Override
+    public void OpenHelpActivity() {
+
+    }
+
+    @Override
+    public void SignOut() {
+
     }
 }

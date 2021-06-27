@@ -12,13 +12,12 @@ public class User {
     public Long caloriesBurned;
     public Long drinkerWater;
     public Long completedExercises;
-    public Long sleepTime;
 
     public User() {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)
     }
 
-    public User(String username,String email, Long km,Long steps, Long caloriesBurned, Long drinkerWater, Long completedExercises, Long sleepTime) {
+    public User(String username,String email, Long km,Long steps, Long caloriesBurned, Long drinkerWater, Long completedExercises) {
         this.username=username;
         this.email = email;
         this.km=km;
@@ -26,7 +25,6 @@ public class User {
         this.caloriesBurned=caloriesBurned;
         this.drinkerWater=drinkerWater;
         this.completedExercises=completedExercises;
-        this.sleepTime=sleepTime;
     }
 
 }

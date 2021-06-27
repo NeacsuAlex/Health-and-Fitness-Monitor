@@ -2,6 +2,7 @@ package com.example.healthandfitnessapp.fragments;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 
@@ -11,7 +12,10 @@ import androidx.preference.PreferenceFragmentCompat;
 import com.example.healthandfitnessapp.R;
 import com.example.healthandfitnessapp.models.User;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -81,6 +85,17 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
         if (key.equals("email")) {
             EditTextPreference preference = findPreference(key);
             mDatabase.child(mAuth.getUid()).child("email").setValue(preference.getText());
+
+            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            user.updateEmail(preference.getText())
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Log.d("tag", "User email address updated.");
+                            }
+                        }
+                    });
         }
     }
 }

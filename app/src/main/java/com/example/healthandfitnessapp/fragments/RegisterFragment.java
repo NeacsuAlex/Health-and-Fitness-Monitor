@@ -56,7 +56,7 @@ public class RegisterFragment extends Fragment {
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
 
-    private NotificationService notificationService=new NotificationService();
+    private NotificationService notificationService = new NotificationService();
 
     public RegisterFragment() {
         // Required empty public constructor
@@ -141,12 +141,12 @@ public class RegisterFragment extends Fragment {
         mAuth.createUserWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
-                User user = new User(username,email,0L,0L,0L,0L,0L);
-                String userID=mAuth.getUid();
+                User user = new User(username, email, 0L, 0L, 0L, 0L, 0L);
+                String userID = mAuth.getUid();
                 mDatabase.child("users").child(userID).setValue(user);
 
                 if (activityFragmentLoginCommunication != null) {
-                   activityFragmentLoginCommunication.openLoginFragment();
+                    activityFragmentLoginCommunication.openLoginFragment();
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {

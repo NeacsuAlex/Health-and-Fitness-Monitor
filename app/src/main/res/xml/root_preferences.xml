@@ -1,0 +1,62 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        app:icon="@drawable/ic_account"
+        app:title="Account">
+
+        <EditTextPreference
+            app:defaultValue="@string/username"
+            app:key="username"
+            app:title="Update username"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:defaultValue="@string/user_email"
+            app:key="email"
+            app:title="Update email"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:icon="@drawable/ic_notification"
+        app:title="Notifications">
+
+        <SwitchPreferenceCompat
+            app:key="notifications"
+            app:summaryOff="You will receive all notifications"
+            app:summaryOn="You will no longer receive any notifications"
+            app:title="Disable notifications" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:icon="@drawable/ic_volume"
+        app:title="Audio">
+
+        <SeekBarPreference
+            app:defaultValue="70"
+            app:key="volume_notifications"
+            app:showSeekBarValue="true"
+            app:title="Notification volume" />
+
+        <SeekBarPreference
+            app:defaultValue="70"
+            app:key="volume_alarm"
+            app:showSeekBarValue="true"
+            app:title="Alarm volume" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:icon="@drawable/ic_background"
+        app:title="Background">
+
+        <SwitchPreferenceCompat
+            app:key="background"
+            app:summaryOff="Dark mode off"
+            app:summaryOn="Dark mode on"
+            app:title="Dark mode" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

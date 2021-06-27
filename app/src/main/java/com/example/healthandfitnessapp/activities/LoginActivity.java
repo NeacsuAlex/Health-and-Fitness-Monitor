@@ -1,17 +1,18 @@
 package com.example.healthandfitnessapp.activities;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
-import android.media.RingtoneManager;
-import android.net.Uri;
 import android.os.Bundle;
+
 import com.example.healthandfitnessapp.R;
 import com.example.healthandfitnessapp.fragments.ExercisesFragment;
 import com.example.healthandfitnessapp.fragments.LoginFragment;
 import com.example.healthandfitnessapp.fragments.RegisterFragment;
 import com.example.healthandfitnessapp.fragments.ResetPasswordFragment;
+import com.example.healthandfitnessapp.fragments.SettingsFragment;
 import com.example.healthandfitnessapp.interfaces.ActivityFragmentLoginCommunication;
 import com.example.healthandfitnessapp.services.NotificationService;
 import com.example.healthandfitnessapp.services.SoundService;
@@ -19,8 +20,8 @@ import com.example.healthandfitnessapp.services.SoundService;
 
 public class LoginActivity extends AppCompatActivity implements ActivityFragmentLoginCommunication {
 
-    private NotificationService notificationService=new NotificationService();
-    private SoundService soundService=new SoundService();
+    private NotificationService notificationService = new NotificationService();
+    private SoundService soundService = new SoundService();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,9 +55,9 @@ public class LoginActivity extends AppCompatActivity implements ActivityFragment
     public void openRegisterFragment() {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        String tag = ExercisesFragment.class.getName();
+        String tag = RegisterFragment.class.getName();
         FragmentTransaction addTransaction = transaction.replace(
-                R.id.login_frame_layout, ExercisesFragment.newInstance("", ""), tag
+                R.id.login_frame_layout, RegisterFragment.newInstance("",""), tag
         ).addToBackStack(null);
 
         addTransaction.commit();

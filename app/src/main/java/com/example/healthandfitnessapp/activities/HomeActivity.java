@@ -9,6 +9,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,6 +20,7 @@ import com.example.healthandfitnessapp.fragments.NotificationsFragment;
 import com.example.healthandfitnessapp.R;
 import com.example.healthandfitnessapp.fragments.AchievementsFragment;
 import com.example.healthandfitnessapp.fragments.ExercisesFragment;
+import com.example.healthandfitnessapp.fragments.SettingsFragment;
 import com.example.healthandfitnessapp.fragments.StatisticsFragment;
 import com.example.healthandfitnessapp.fragments.TravelFragment;
 import com.example.healthandfitnessapp.interfaces.ActivityFragmentHomeComunication;
@@ -59,10 +61,10 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
         userEmail = (TextView) headerView.findViewById(R.id.user_email);
 
         navigationView.bringToFront();
-        Toolbar toolbar=findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        drawerLayout=findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        drawerLayout = findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         drawerLayout.closeDrawer(GravityCompat.START);
@@ -70,54 +72,45 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId())
-                {
-                    case R.id.nav_statistics:
-                    {
+                switch (item.getItemId()) {
+                    case R.id.nav_statistics: {
                         OpenStatisticsFragment();
                         return true;
                     }
-                    case R.id.nav_exercices:
-                    {
+                    case R.id.nav_exercices: {
                         OpenExercisesFragment();
                         return true;
                     }
-                    case R.id.nav_achievements:
-                    {
+                    case R.id.nav_achievements: {
                         OpenAchievementsFragment();
                         return true;
                     }
-                    case R.id.nav_notifications:
-                    {
+                    case R.id.nav_notifications: {
                         OpenNotificationsFragment();
                         return true;
                     }
-                    case R.id.nav_travel:
-                    {
+                    case R.id.nav_travel: {
                         OpenTravelFragment();
                         return true;
                     }
-                    case R.id.nav_alarm:
-                    {
+                    case R.id.nav_alarm: {
                         OpenAlarmFragment();
                         return true;
                     }
-                    case R.id.nav_settings:
-                    {
+                    case R.id.nav_settings: {
                         OpenSettingsFragment();
                         return true;
                     }
-                    case R.id.nav_help:
-                    {
+                    case R.id.nav_help: {
                         OpenHelpActivity();
                         return true;
                     }
-                    case R.id.nav_sign_out:
-                    {
+                    case R.id.nav_sign_out: {
                         SignOut();
                         return true;
                     }
-                    default: break;
+                    default:
+                        break;
                 }
                 return false;
             }
@@ -129,12 +122,10 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                User user=new User();
-                for(DataSnapshot key:snapshot.getChildren())
-                {
-                    if(key.getKey().equals(mAuth.getUid()))
-                    {
-                        user=key.getValue(User.class);
+                User user = new User();
+                for (DataSnapshot key : snapshot.getChildren()) {
+                    if (key.getKey().equals(mAuth.getUid())) {
+                        user = key.getValue(User.class);
                         break;
                     }
                 }
@@ -150,7 +141,6 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
     }
 
 
-
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
 
@@ -159,12 +149,9 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
 
     @Override
     public void onBackPressed() {
-        if(drawerLayout.isDrawerOpen(GravityCompat.START))
-        {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
-        }
-        else
-        {
+        } else {
             super.onBackPressed();
         }
     }
@@ -174,11 +161,11 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         String tag = StatisticsFragment.class.getName();
-        FragmentTransaction addTransaction = transaction.add(
+        FragmentTransaction replaceTransaction = transaction.replace(
                 R.id.home_frame_layout, StatisticsFragment.newInstance("", ""), tag
         ).addToBackStack(null);
 
-        addTransaction.commit();
+        replaceTransaction.commit();
     }
 
     @Override
@@ -186,11 +173,11 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         String tag = ExercisesFragment.class.getName();
-        FragmentTransaction addTransaction = transaction.add(
+        FragmentTransaction replaceTransaction = transaction.replace(
                 R.id.home_frame_layout, ExercisesFragment.newInstance("", ""), tag
         ).addToBackStack(null);
 
-        addTransaction.commit();
+        replaceTransaction.commit();
     }
 
     @Override
@@ -198,11 +185,11 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         String tag = AchievementsFragment.class.getName();
-        FragmentTransaction addTransaction = transaction.add(
+        FragmentTransaction replaceTransaction = transaction.replace(
                 R.id.home_frame_layout, AchievementsFragment.newInstance("", ""), tag
         ).addToBackStack(null);
 
-        addTransaction.commit();
+        replaceTransaction.commit();
     }
 
     @Override
@@ -210,11 +197,11 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         String tag = NotificationsFragment.class.getName();
-        FragmentTransaction addTransaction = transaction.add(
+        FragmentTransaction replaceTransaction = transaction.replace(
                 R.id.home_frame_layout, NotificationsFragment.newInstance("", ""), tag
         ).addToBackStack(null);
 
-        addTransaction.commit();
+        replaceTransaction.commit();
     }
 
     @Override
@@ -222,11 +209,11 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         String tag = TravelFragment.class.getName();
-        FragmentTransaction addTransaction = transaction.add(
+        FragmentTransaction replaceTransaction = transaction.replace(
                 R.id.home_frame_layout, TravelFragment.newInstance("", ""), tag
         ).addToBackStack(null);
 
-        addTransaction.commit();
+        replaceTransaction.commit();
     }
 
     @Override
@@ -234,16 +221,23 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         String tag = AlarmFragment.class.getName();
-        FragmentTransaction addTransaction = transaction.add(
+        FragmentTransaction replaceTransaction = transaction.replace(
                 R.id.home_frame_layout, AlarmFragment.newInstance("", ""), tag
         ).addToBackStack(null);
 
-        addTransaction.commit();
+        replaceTransaction.commit();
     }
 
     @Override
     public void OpenSettingsFragment() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        String tag = SettingsFragment.class.getName();
+        FragmentTransaction replaceTransaction = transaction.replace(
+                R.id.home_frame_layout, new SettingsFragment(), tag
+        ).addToBackStack(null);
 
+        replaceTransaction.commit();
     }
 
     @Override
@@ -253,6 +247,9 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
 
     @Override
     public void SignOut() {
-
+        FirebaseAuth.getInstance().signOut();
+        Intent intent = new Intent(this, LoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 }

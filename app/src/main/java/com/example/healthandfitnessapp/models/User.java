@@ -18,6 +18,7 @@ public class User {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)
     }
 
+<<<<<<< HEAD
     public User(String username,String email, Long km,Long steps, Long caloriesBurned, Long drinkerWater, Long completedExercises, Long sleepTime) {
         this.username=username;
         this.email = email;
@@ -27,6 +28,16 @@ public class User {
         this.drinkerWater=drinkerWater;
         this.completedExercises=completedExercises;
         this.sleepTime=sleepTime;
+=======
+    public User(String username, String email, Long km, Long steps, Long caloriesBurned, Long drinkerWater, Long completedExercises, Long sleepTime) {
+        this.username = username;
+        this.email = email;
+        this.km = km;
+        this.steps = steps;
+        this.caloriesBurned = caloriesBurned;
+        this.drinkerWater = drinkerWater;
+        this.completedExercises = completedExercises;
+        this.sleepTime = sleepTime;
+>>>>>>> NAC
     }
-
 }

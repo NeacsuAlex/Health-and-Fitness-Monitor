@@ -1,12 +1,9 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+            "outputFile": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw360dp-v13\\values-sw360dp-v13.xml",
             "map": [
                 {
-<<<<<<< HEAD
-                    "source": "C:\\Users\\Bogdan\\.gradle\\caches\\transforms-2\\files-2.1\\3f4158eb6f71e7f1d9e52d8196e72fa0\\jetified-firebase-ui-auth-6.4.0\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
-=======
                     "source": "C:\\Users\\alexn\\.gradle\\caches\\transforms-2\\files-2.1\\390351377238a9d14ac501ec338fc8e7\\preference-1.1.1\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2",
@@ -18,7 +15,6 @@
                 },
                 {
                     "source": "C:\\Users\\alexn\\.gradle\\caches\\transforms-2\\files-2.1\\3f4158eb6f71e7f1d9e52d8196e72fa0\\jetified-firebase-ui-auth-6.4.0\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
->>>>>>> NAC
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",

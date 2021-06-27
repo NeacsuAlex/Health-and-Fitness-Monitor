@@ -88,7 +88,7 @@ public class LoginFragment extends Fragment {
         return fragment;
     }
 
-    /*@Override ->When we will have sign-out functionality we verify if we are already logged in the app
+    @Override
     public void onStart() {
         super.onStart();
         FirebaseUser user = mAuth.getCurrentUser();
@@ -96,7 +96,7 @@ public class LoginFragment extends Fragment {
             if (activityFragmentLoginCommunication != null) {
                 activityFragmentLoginCommunication.openHomeActivity();
             }
-    }*/
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

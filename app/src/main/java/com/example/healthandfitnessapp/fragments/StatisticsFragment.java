@@ -140,7 +140,11 @@ public class StatisticsFragment extends Fragment {
         });
     }
 
+<<<<<<< HEAD
      private void InitWaterStatistics()
+=======
+    private void InitWaterStatistics()
+>>>>>>> NAC
     {
         waterText.setText(water_counter+"");
         decrese_water_counter.setOnClickListener(new View.OnClickListener() {

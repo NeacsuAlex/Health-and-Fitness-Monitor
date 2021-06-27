@@ -104,7 +104,7 @@ public class ExercisesFragment extends Fragment implements OnItemsClickedListene
         RecyclerView recyclerView = view.findViewById(R.id.fitness_list);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL, false);
 
-        durationText =view.findViewById(R.id.durationText);
+        durationText =view.findViewById(R.id.durationTextView);
         fitnessTitleText =view.findViewById(R.id.fitnessTitleTextView);
         fitnessDescriptionText =view.findViewById(R.id.fitnessDescriptionTextView);
         difficultyText =view.findViewById(R.id.difficultyTextView);

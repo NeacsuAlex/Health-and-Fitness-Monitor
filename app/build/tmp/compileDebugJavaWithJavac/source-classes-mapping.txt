@@ -50,8 +50,16 @@ com/example/healthandfitnessapp/fragments/ExercisesFragment.java
  com.example.healthandfitnessapp.fragments.ExercisesFragment
  com.example.healthandfitnessapp.fragments.ExercisesFragment$1
  com.example.healthandfitnessapp.fragments.ExercisesFragment$2
+<<<<<<< HEAD
 com/example/healthandfitnessapp/interfaces/ActivityFragmentHomeComunication.java
  com.example.healthandfitnessapp.interfaces.ActivityFragmentHomeComunication
+=======
+com/example/healthandfitnessapp/fragments/SettingsFragment.java
+ com.example.healthandfitnessapp.fragments.SettingsFragment
+ com.example.healthandfitnessapp.fragments.SettingsFragment$1
+com/example/healthandfitnessapp/services/LocationService.java
+ com.example.healthandfitnessapp.services.LocationService
+>>>>>>> NAC
 com/example/healthandfitnessapp/services/SoundService.java
  com.example.healthandfitnessapp.services.SoundService
 com/example/healthandfitnessapp/services/LocationService.java

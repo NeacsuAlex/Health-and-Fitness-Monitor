@@ -1,5 +1,10 @@
-#Sun Jun 27 16:15:48 EEST 2021
+<<<<<<< HEAD
+#Sun Jun 27 13:03:46 EEST 2021
 base.0=E\:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+=======
+#Sun Jun 27 16:02:15 EEST 2021
+base.0=E\:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+>>>>>>> NAC
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex

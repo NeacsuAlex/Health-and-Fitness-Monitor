@@ -148,12 +148,12 @@
         "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\layout\\fragment_exercices.xml"
     },
     {
-        "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_feedback.xml.flat",
-        "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\drawable\\ic_feedback.xml"
-    },
-    {
         "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_alarm_clock.xml.flat",
         "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\drawable\\ic_alarm_clock.xml"
+    },
+    {
+        "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_feedback.xml.flat",
+        "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\drawable\\ic_feedback.xml"
     },
     {
         "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_register.xml.flat",

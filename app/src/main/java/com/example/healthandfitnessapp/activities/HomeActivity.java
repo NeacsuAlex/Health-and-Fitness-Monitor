@@ -17,11 +17,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-<<<<<<< HEAD
+
 import com.example.healthandfitnessapp.fragments.AboutUsFragment;
-import com.example.healthandfitnessapp.fragments.AlarmFragment;
-=======
->>>>>>> PMB
+
 import com.example.healthandfitnessapp.fragments.NotificationsFragment;
 import com.example.healthandfitnessapp.R;
 import com.example.healthandfitnessapp.fragments.AchievementsFragment;

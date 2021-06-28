@@ -42,9 +42,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Design.NoActionBar" >
-<<<<<<< HEAD
         <activity android:name="com.example.healthandfitnessapp.activities.HelpAndFeedbackActivity" />
-=======
         <activity android:name="com.example.healthandfitnessapp.activities.AlarmActivity" />
 
         <meta-data
@@ -52,7 +50,6 @@
             android:value="AIzaSyDdlx0-yzdwP56o5qvqkEE6vevRYxiumtM" />
 
         <activity android:name="com.example.healthandfitnessapp.activities.MapsActivity" />
->>>>>>> PMB
         <activity
             android:name="com.example.healthandfitnessapp.activities.LoginActivity"
             android:configChanges="orientation|screenSize"
@@ -73,6 +70,7 @@
             android:enabled="true" />
 
         <receiver android:name="com.example.healthandfitnessapp.services.AlarmReceiver" />
+
         <!-- Autocomplete -->
         <activity
             android:name="com.google.android.libraries.places.widget.AutocompleteActivity"

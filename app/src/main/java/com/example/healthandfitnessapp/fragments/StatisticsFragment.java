@@ -5,11 +5,10 @@ import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-<<<<<<< HEAD
-=======
+
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.widget.SwitchCompat;
->>>>>>> PMB
+
 import androidx.fragment.app.Fragment;
 
 import android.text.Editable;
@@ -19,12 +18,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-<<<<<<< HEAD
+
 import android.widget.TextView;
 
 import com.example.healthandfitnessapp.R;
 import com.example.healthandfitnessapp.models.User;
-=======
+
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -34,15 +33,13 @@ import com.example.healthandfitnessapp.activities.HomeActivity;
 import com.example.healthandfitnessapp.models.BMI;
 import com.example.healthandfitnessapp.models.User;
 import com.example.healthandfitnessapp.services.NotificationService;
->>>>>>> PMB
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-<<<<<<< HEAD
-=======
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -55,7 +52,7 @@ import java.util.TimerTask;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
->>>>>>> PMB
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -76,24 +73,22 @@ public class StatisticsFragment extends Fragment {
     private DatabaseReference mDatabase;
     private FirebaseAuth mAuth;
 
-<<<<<<< HEAD
-=======
+
     TextView heightTextView, weightTextView;
     EditText heightEditTextView, weightEditTextView;
     SwitchCompat heightSwitch, weightSwitch;
     TextView bmiResult;
 
->>>>>>> PMB
+
     Button decrese_water_counter, decrese_calories_counter, decrese_sleep_counter;
     Button increase_water_counter, increase_calories_counter, increase_sleep_counter;
     Long water_counter, step_counter, calories_counter, sleep_counter;
     TextView waterText, stepText, caloriesText, sleepText;
 
-<<<<<<< HEAD
-=======
+
     boolean usingCM, usingKG;
 
->>>>>>> PMB
+
     public StatisticsFragment() {
         /*Runnable runnable = new Runnable() {
             public void run() {
@@ -375,8 +370,7 @@ public class StatisticsFragment extends Fragment {
                 mDatabase.child(mAuth.getUid()).child("caloriesBurned").setValue(Long.valueOf(caloriesText.getText().toString()));
             }
         });
-<<<<<<< HEAD
-=======
+
     }
 
     private void ResetStatistics()
@@ -399,6 +393,6 @@ public class StatisticsFragment extends Fragment {
         InitWaterStatistics();
         InitSleepStatistics();
         InitCaloriesStatistics();
->>>>>>> PMB
+
     }
 }

@@ -21,9 +21,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-<<<<<<< HEAD
+
         <activity android:name=".activities.HelpAndFeedbackActivity"></activity>
-=======
+
         <activity android:name=".activities.AlarmActivity"></activity>
 
         <meta-data
@@ -31,7 +31,7 @@
             android:value="AIzaSyDdlx0-yzdwP56o5qvqkEE6vevRYxiumtM" />
 
         <activity android:name=".activities.MapsActivity" />
->>>>>>> PMB
+
         <activity
             android:name=".activities.LoginActivity"
             android:configChanges="orientation|screenSize"
@@ -46,13 +46,12 @@
             android:name=".activities.HomeActivity"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="sensor" />
-<<<<<<< HEAD
-=======
+
         <service
             android:name=".services.AlarmService"
             android:enabled="true" />
         <receiver android:name=".services.AlarmReceiver" />
->>>>>>> PMB
+
     </application>
 
 </manifest>

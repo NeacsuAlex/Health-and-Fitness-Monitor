@@ -47,4 +47,19 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="rate_your_experience">Rate Your Experience</string>
+    <string name="are_you_satisfied_with_the_service">Are you satisfied with the service?</string>
+    <string name="tell_us_what_can_be_improved">Tell us what can be improved!</string>
+    <string name="send_review">Send Review</string>
+    <string name="tell_us_on_how_we_can_improve">Tell us on how we can improve...</string>
+    <string name="about_us">About us</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="lorem_ipsum1">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="meet_the_team">Meet the team</string>
+    <string name="neacsu_alexandru_cristian">Neacsu Alexandru Cristian</string>
+    <string name="alex_neacsu_email">alexneacsu2000@gmail.com</string>
+    <string name="petre_mihai_bogdan">Petre Mihai Bogdan</string>
+    <string name="petre_bogdan_email">petrebogdan55@yahoo.com</string>
+    <string name="users_reviews">Users Reviews</string>
+    <string name="write_review">Write Review</string>
 </resources>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true"
+    tools:context=".fragments.AboutUsFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cloud_burst">
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:background="@color/turquoise"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/aboutUsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elegantTextHeight="true"
+            android:text="@string/about_us"
+            android:textAllCaps="true"
+            android:textColor="@color/alice_blue"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/view2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/view2" />
+
+    <TextView
+        android:id="@+id/aboutUsDetailsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="20dp"
+        android:text="@string/lorem_ipsum"
+        android:textColor="@color/alice_blue"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/aboutUsDetailsTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="20dp"
+        android:text="@string/lorem_ipsum1"
+        android:textColor="@color/alice_blue"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aboutUsDetailsTextView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:background="@color/turquoise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aboutUsDetailsTextView1" />
+
+    <TextView
+        android:id="@+id/meetTheTeamTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/meet_the_team"
+        android:elegantTextHeight="true"
+        android:textAllCaps="true"
+        android:textColor="@color/alice_blue"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:background="@color/light_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+        <ImageView
+            android:id="@+id/neacsuAlexImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:contentDescription="@string/neacsu_alexandru_cristian"
+            android:src="@mipmap/ic_launcher_round"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view4"
+            app:layout_constraintVertical_bias="0.03" />
+
+        <TextView
+            android:id="@+id/neacsuAlexTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/neacsu_alexandru_cristian"
+            android:textColor="@color/alice_blue"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/neacsuAlexImageView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/neacsuAlexEmailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alex_neacsu_email"
+            android:textColor="@color/alice_blue"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/view7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/neacsuAlexTextView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/petreBogdanImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:contentDescription="@string/petre_mihai_bogdan"
+            android:src="@mipmap/ic_launcher_round"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/neacsuAlexEmailTextView"
+            app:layout_constraintVertical_bias="0.10" />
+
+        <TextView
+            android:id="@+id/petreMihaiTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/petre_mihai_bogdan"
+            android:textColor="@color/alice_blue"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/view6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/petreBogdanImageView"
+            app:layout_constraintVertical_bias="0.10" />
+
+        <TextView
+            android:id="@+id/petreMihaiEmailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/petre_bogdan_email"
+            android:textColor="@color/alice_blue"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/view7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/petreMihaiTextView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view6"
+            android:background="@color/turquoise" />
+
+        <TextView
+            android:id="@+id/userReviewsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elegantTextHeight="true"
+            android:text="@string/users_reviews"
+            android:textColor="@color/alice_blue"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/view7"
+            app:layout_constraintEnd_toEndOf="@id/view7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view7" />
+
+        <Button
+            android:id="@+id/openReviewButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/button_login_bg"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="@string/write_review"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/reviews_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/openReviewButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

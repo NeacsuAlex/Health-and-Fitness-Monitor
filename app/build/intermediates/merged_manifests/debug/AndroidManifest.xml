@@ -28,6 +28,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Design.NoActionBar" >
+        <activity android:name="com.example.healthandfitnessapp.activities.HelpAndFeedbackActivity" />
         <activity
             android:name="com.example.healthandfitnessapp.activities.LoginActivity"
             android:configChanges="orientation|screenSize"

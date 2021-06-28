@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.healthandfitnessapp.fragments.AboutUsFragment;
 import com.example.healthandfitnessapp.fragments.AlarmFragment;
 import com.example.healthandfitnessapp.fragments.NotificationsFragment;
 import com.example.healthandfitnessapp.R;
@@ -23,6 +24,7 @@ import com.example.healthandfitnessapp.fragments.ExercisesFragment;
 import com.example.healthandfitnessapp.fragments.SettingsFragment;
 import com.example.healthandfitnessapp.fragments.StatisticsFragment;
 import com.example.healthandfitnessapp.fragments.TravelFragment;
+import com.example.healthandfitnessapp.fragments.WriteFeedbackFragment;
 import com.example.healthandfitnessapp.interfaces.ActivityFragmentHomeComunication;
 import com.example.healthandfitnessapp.models.User;
 import com.google.android.material.navigation.NavigationView;
@@ -242,7 +244,9 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
 
     @Override
     public void OpenHelpActivity() {
-
+        Intent intent = new Intent(this, HelpAndFeedbackActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 
     @Override

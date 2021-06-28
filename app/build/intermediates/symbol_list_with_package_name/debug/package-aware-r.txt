@@ -1050,6 +1050,7 @@ color abc_tint_spinner
 color abc_tint_switch_track
 color accent_material_dark
 color accent_material_light
+color alice_blue
 color androidx_core_ripple_material_light
 color androidx_core_secondary_text_default_material_light
 color background_floating_material_dark
@@ -1151,6 +1152,7 @@ color fui_linkColor
 color fui_transparent
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color light_blue
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1272,6 +1274,7 @@ color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
+color turquoise
 color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
@@ -1809,6 +1812,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable dotted
+drawable edit_text_bg
 drawable fui_ic_anonymous_white_24dp
 drawable fui_ic_apple_white_24dp
 drawable fui_ic_check_circle_black_128dp
@@ -1906,6 +1910,10 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
+id aboutUsDetailsTextView
+id aboutUsDetailsTextView1
+id aboutUsTextView
+id about_feedback_frame_layout
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -2106,7 +2114,6 @@ id fitnessDetailTextView
 id fitnessImageView
 id fitnessTextView
 id fitnessTitleTextView
-id fitness_list
 id fixed
 id flip
 id floating
@@ -2152,6 +2159,8 @@ id ignore
 id ignoreRequest
 id image
 id imageView
+id improveEditText
+id improveTextView
 id increase_calories_counter
 id increase_sleep_counter
 id increase_water_counter
@@ -2215,6 +2224,7 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id media_actions
+id meetTheTeamTextView
 id message
 id microsoft_signin_button
 id middle
@@ -2263,6 +2273,9 @@ id nav_statistics
 id nav_travel
 id nav_view
 id navigation_header_container
+id neacsuAlexEmailTextView
+id neacsuAlexImageView
+id neacsuAlexTextView
 id never
 id noScroll
 id none
@@ -2272,6 +2285,7 @@ id notification_main_column
 id notification_main_column_container
 id off
 id on
+id openReviewButton
 id outline
 id outward
 id packed
@@ -2288,6 +2302,9 @@ id pathRelative
 id pause_timer
 id peekHeight
 id percent
+id petreBogdanImageView
+id petreMihaiEmailTextView
+id petreMihaiTextView
 id phone_button
 id phone_layout
 id phone_number
@@ -2298,6 +2315,8 @@ id programmeOverviewTextView
 id progress_circular
 id progress_horizontal
 id radio
+id rateExperienceTextView
+id ratingBar
 id ratio
 id rectangles
 id recycler_view
@@ -2308,6 +2327,7 @@ id resend_barrier
 id resend_code
 id resetPasswordButton
 id reverseSawtooth
+id reviews_list
 id right
 id rightToLeft
 id right_icon
@@ -2315,6 +2335,7 @@ id right_side
 id root
 id rounded
 id row_index_key
+id satisfiedTextView
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -2340,6 +2361,7 @@ id seekbar_value
 id select_dialog_listview
 id selected
 id selection_type
+id sendReviewButton
 id send_code
 id send_sms_tos
 id shortcut
@@ -2453,8 +2475,16 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id userReviewsTextView
 id user_email
 id user_name
+id view
+id view1
+id view2
+id view4
+id view5
+id view6
+id view7
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
@@ -2531,6 +2561,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_help_and_feedback
 layout activity_home
 layout activity_login
 layout browser_actions_context_menu_page
@@ -2552,6 +2583,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout expand_button
+layout fragment_about_us
 layout fragment_achievements
 layout fragment_alarm
 layout fragment_exercices
@@ -2561,6 +2593,7 @@ layout fragment_register
 layout fragment_reset_password
 layout fragment_statistics
 layout fragment_travel
+layout fragment_write_feedback
 layout fui_activity_invisible
 layout fui_activity_register_email
 layout fui_activity_register_phone
@@ -2713,9 +2746,12 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string about_us
+string alex_neacsu_email
 string already_have_an_account
 string app_name
 string appbar_scrolling_view_behavior
+string are_you_satisfied_with_the_service
 string attachment_summary_off
 string attachment_summary_on
 string attachment_title
@@ -2874,6 +2910,8 @@ string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
 string login
+string lorem_ipsum
+string lorem_ipsum1
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection
@@ -2889,6 +2927,7 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string meet_the_team
 string messages_header
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
@@ -2927,6 +2966,7 @@ string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string navigation_drawer_close
 string navigation_drawer_open
+string neacsu_alexandru_cristian
 string not_set
 string password
 string password_reset_text
@@ -2935,14 +2975,18 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string petre_bogdan_email
+string petre_mihai_bogdan
 string preference_copied
 string programme_details
 string programme_overview
 string project_id
+string rate_your_experience
 string register
 string reply_title
 string reset_password
 string search_menu_title
+string send_review
 string sign_up
 string signature_title
 string start_programme
@@ -2950,12 +2994,16 @@ string status_bar_notification_info_overflow
 string summary_collapsed_preference_list
 string sync_header
 string sync_title
+string tell_us_on_how_we_can_improve
+string tell_us_what_can_be_improved
 string title_fitness
 string user_email
 string user_name
 string username
+string users_reviews
 string v7_preference_off
 string v7_preference_on
+string write_review
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

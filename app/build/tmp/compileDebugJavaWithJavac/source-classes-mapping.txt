@@ -9,10 +9,25 @@ com/example/healthandfitnessapp/fragments/LoginFragment.java
  com.example.healthandfitnessapp.fragments.LoginFragment$5
  com.example.healthandfitnessapp.fragments.LoginFragment$6
  com.example.healthandfitnessapp.fragments.LoginFragment$7
+<<<<<<< HEAD
 com/example/healthandfitnessapp/interfaces/ActivityFragmentLoginCommunication.java
  com.example.healthandfitnessapp.interfaces.ActivityFragmentLoginCommunication
 com/example/healthandfitnessapp/interfaces/ActivityFragmentHomeComunication.java
  com.example.healthandfitnessapp.interfaces.ActivityFragmentHomeComunication
+=======
+com/example/healthandfitnessapp/activities/HelpAndFeedbackActivity.java
+ com.example.healthandfitnessapp.activities.HelpAndFeedbackActivity
+com/example/healthandfitnessapp/fragments/RegisterFragment.java
+ com.example.healthandfitnessapp.fragments.RegisterFragment
+ com.example.healthandfitnessapp.fragments.RegisterFragment$1
+ com.example.healthandfitnessapp.fragments.RegisterFragment$2
+ com.example.healthandfitnessapp.fragments.RegisterFragment$3
+ com.example.healthandfitnessapp.fragments.RegisterFragment$4
+com/example/healthandfitnessapp/models/User.java
+ com.example.healthandfitnessapp.models.User
+com/example/healthandfitnessapp/interfaces/ActivityFragmentHelpFeedbackCommunication.java
+ com.example.healthandfitnessapp.interfaces.ActivityFragmentHelpFeedbackCommunication
+>>>>>>> NAC
 com/example/healthandfitnessapp/fragments/AchievementsFragment.java
  com.example.healthandfitnessapp.fragments.AchievementsFragment
 com/example/healthandfitnessapp/fragments/TravelFragment.java
@@ -82,3 +97,37 @@ com/example/healthandfitnessapp/fragments/StatisticsFragment.java
  com.example.healthandfitnessapp.fragments.StatisticsFragment$5
  com.example.healthandfitnessapp.fragments.StatisticsFragment$6
  com.example.healthandfitnessapp.fragments.StatisticsFragment$7
+<<<<<<< HEAD
+=======
+com/example/healthandfitnessapp/fragments/AlarmFragment.java
+ com.example.healthandfitnessapp.fragments.AlarmFragment
+com/example/healthandfitnessapp/fragments/ResetPasswordFragment.java
+ com.example.healthandfitnessapp.fragments.ResetPasswordFragment
+ com.example.healthandfitnessapp.fragments.ResetPasswordFragment$1
+ com.example.healthandfitnessapp.fragments.ResetPasswordFragment$2
+ com.example.healthandfitnessapp.fragments.ResetPasswordFragment$3
+com/example/healthandfitnessapp/fragments/NotificationsFragment.java
+ com.example.healthandfitnessapp.fragments.NotificationsFragment
+com/example/healthandfitnessapp/models/BMI.java
+ com.example.healthandfitnessapp.models.BMI
+ com.example.healthandfitnessapp.models.BMI$BMI_Category
+com/example/healthandfitnessapp/fragments/ExercisesFragment.java
+ com.example.healthandfitnessapp.fragments.ExercisesFragment
+ com.example.healthandfitnessapp.fragments.ExercisesFragment$1
+ com.example.healthandfitnessapp.fragments.ExercisesFragment$2
+com/example/healthandfitnessapp/interfaces/ActivityFragmentHomeComunication.java
+ com.example.healthandfitnessapp.interfaces.ActivityFragmentHomeComunication
+com/example/healthandfitnessapp/interfaces/ActivityFragmentLoginCommunication.java
+ com.example.healthandfitnessapp.interfaces.ActivityFragmentLoginCommunication
+com/example/healthandfitnessapp/VolleyConfigSingleton.java
+ com.example.healthandfitnessapp.VolleyConfigSingleton
+ com.example.healthandfitnessapp.VolleyConfigSingleton$1
+com/example/healthandfitnessapp/fragments/WriteFeedbackFragment.java
+ com.example.healthandfitnessapp.fragments.WriteFeedbackFragment
+ com.example.healthandfitnessapp.fragments.WriteFeedbackFragment$1
+com/example/healthandfitnessapp/models/Review.java
+ com.example.healthandfitnessapp.models.Review
+com/example/healthandfitnessapp/fragments/AboutUsFragment.java
+ com.example.healthandfitnessapp.fragments.AboutUsFragment
+ com.example.healthandfitnessapp.fragments.AboutUsFragment$1
+>>>>>>> NAC

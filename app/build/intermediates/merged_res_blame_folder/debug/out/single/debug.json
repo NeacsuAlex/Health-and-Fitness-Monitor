@@ -100,6 +100,10 @@
         "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_maps.xml.flat",
+        "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\layout\\activity_maps.xml"
+    },
+    {
         "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_login_bg.xml.flat",
         "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\drawable\\button_login_bg.xml"
     },

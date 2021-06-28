@@ -3,6 +3,7 @@ package com.example.healthandfitnessapp.fragments;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -25,6 +26,7 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.example.healthandfitnessapp.R;
+import com.example.healthandfitnessapp.activities.MapsActivity;
 import com.example.healthandfitnessapp.services.LocationService;
 
 import java.util.Formatter;
@@ -84,6 +86,16 @@ public class TravelFragment extends Fragment implements LocationListener {
         startChronometer=(Button)view.findViewById(R.id.start_timer);
         pauseChronometer=(Button)view.findViewById(R.id.pause_timer);
         stopChronometer=(Button)view.findViewById(R.id.stop_timer);
+
+        Button mapsButton=(Button)view.findViewById(R.id.maps_button);
+        mapsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), MapsActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
 
         isChronometerRunning=false;
         pausePressed=false;

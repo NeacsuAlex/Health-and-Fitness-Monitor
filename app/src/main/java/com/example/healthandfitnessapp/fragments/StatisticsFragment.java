@@ -1,8 +1,10 @@
 package com.example.healthandfitnessapp.fragments;
 
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -19,6 +21,17 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -45,7 +58,24 @@ public class StatisticsFragment extends Fragment {
     TextView waterText, stepText, caloriesText, sleepText;
 
     public StatisticsFragment() {
-        // Required empty public constructor
+        /*Runnable runnable = new Runnable() {
+            public void run() {
+                CheckForResetStatistics();
+            }
+        };
+
+        ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
+        executor.scheduleAtFixedRate(runnable, 0, 3, TimeUnit.SECONDS);*/
+
+    }
+
+    private TimerTask CheckForResetStatistics() {
+        Calendar now = Calendar.getInstance();
+        if(now.get(Calendar.MINUTE)%5==0 && now.get(Calendar.SECOND)>=35 && now.get(Calendar.SECOND)<=39)
+        {
+            ResetStatistics();
+        }
+        return null;
     }
 
     /**
@@ -202,5 +232,27 @@ public class StatisticsFragment extends Fragment {
                 mDatabase.child(mAuth.getUid()).child("caloriesBurned").setValue(Long.valueOf(caloriesText.getText().toString()));
             }
         });
+    }
+
+    private void ResetStatistics()
+    {
+        water_counter=0L;
+        sleep_counter=0L;
+        step_counter=0L;
+        calories_counter=0L;
+
+        sleepText.setText("0");
+        stepText.setText("0");
+        caloriesText.setText("0");
+        waterText.setText("0");
+
+        mDatabase.child(mAuth.getUid()).child("caloriesBurned").setValue(Long.valueOf(caloriesText.getText().toString()));
+        mDatabase.child(mAuth.getUid()).child("sleepTime").setValue(Long.valueOf(sleepText.getText().toString()));
+        mDatabase.child(mAuth.getUid()).child("drinkerWater").setValue(Long.valueOf(waterText.getText().toString()));
+        mDatabase.child(mAuth.getUid()).child("steps").setValue(Long.valueOf(stepText.getText().toString()));
+
+        InitWaterStatistics();
+        InitSleepStatistics();
+        InitCaloriesStatistics();
     }
 }

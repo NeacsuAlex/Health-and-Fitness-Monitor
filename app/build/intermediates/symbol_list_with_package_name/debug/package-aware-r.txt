@@ -3095,6 +3095,7 @@ layout fui_welcome_back_idp_prompt_layout
 layout fui_welcome_back_password_prompt_layout
 layout image_frame
 layout item_fitness
+layout item_review
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider

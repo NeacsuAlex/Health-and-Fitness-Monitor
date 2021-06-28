@@ -43,10 +43,13 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.Executors;
@@ -85,29 +88,13 @@ public class StatisticsFragment extends Fragment {
     Long water_counter, step_counter, calories_counter, sleep_counter;
     TextView waterText, stepText, caloriesText, sleepText;
 
+    Long day;
 
     boolean usingCM, usingKG;
 
 
     public StatisticsFragment() {
-        /*Runnable runnable = new Runnable() {
-            public void run() {
-                CheckForResetStatistics();
-            }
-        };
 
-        ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
-        executor.scheduleAtFixedRate(runnable, 0, 3, TimeUnit.SECONDS);*/
-
-    }
-
-    private TimerTask CheckForResetStatistics() {
-        Calendar now = Calendar.getInstance();
-        if(now.get(Calendar.MINUTE)%5==0 && now.get(Calendar.SECOND)>=35 && now.get(Calendar.SECOND)<=39)
-        {
-            ResetStatistics();
-        }
-        return null;
     }
 
     /**
@@ -298,6 +285,15 @@ public class StatisticsFragment extends Fragment {
                 step_counter=Long.valueOf(stepText.getText().toString()).longValue();
                 caloriesText.setText(user.caloriesBurned.toString());
                 calories_counter=Long.valueOf(caloriesText.getText().toString()).longValue();
+                day=user.date;
+                final Calendar now = GregorianCalendar.getInstance();
+                Long dayNumber = Long.valueOf(now.get(Calendar.DAY_OF_MONTH));
+                if(day!=dayNumber)
+                {
+                    mDatabase.child(mAuth.getUid()).child("date").setValue(dayNumber);
+                    ResetStatistics();
+                    day=dayNumber;
+                }
             }
 
             @Override
@@ -309,7 +305,6 @@ public class StatisticsFragment extends Fragment {
     }
 
     private void InitWaterStatistics()
-
     {
         waterText.setText(water_counter+"");
         decrese_water_counter.setOnClickListener(new View.OnClickListener() {

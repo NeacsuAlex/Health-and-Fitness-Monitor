@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
+            "outputFile": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\alexn\\.gradle\\caches\\transforms-2\\files-2.1\\4580f025c8aac8020e11b39ede2c1054\\jetified-firebase-ui-auth-6.4.0\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\Bogdan\\.gradle\\caches\\transforms-2\\files-2.1\\4580f025c8aac8020e11b39ede2c1054\\jetified-firebase-ui-auth-6.4.0\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,6,10,14",
                         "startColumns": "4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\alexn\\.gradle\\caches\\transforms-2\\files-2.1\\e57912b876197dca24d1ccd67441b37b\\appcompat-1.2.0\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\Bogdan\\.gradle\\caches\\transforms-2\\files-2.1\\e57912b876197dca24d1ccd67441b37b\\appcompat-1.2.0\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",

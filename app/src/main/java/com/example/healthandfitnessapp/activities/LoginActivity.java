@@ -8,11 +8,9 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.healthandfitnessapp.R;
-import com.example.healthandfitnessapp.fragments.ExercisesFragment;
 import com.example.healthandfitnessapp.fragments.LoginFragment;
 import com.example.healthandfitnessapp.fragments.RegisterFragment;
 import com.example.healthandfitnessapp.fragments.ResetPasswordFragment;
-import com.example.healthandfitnessapp.fragments.SettingsFragment;
 import com.example.healthandfitnessapp.interfaces.ActivityFragmentLoginCommunication;
 import com.example.healthandfitnessapp.services.NotificationService;
 import com.example.healthandfitnessapp.services.SoundService;
@@ -32,10 +30,8 @@ public class LoginActivity extends AppCompatActivity implements ActivityFragment
 
     @Override
     public void openHomeActivity() {
-        int reqCode = 1;
         Intent intent = new Intent(this, HomeActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        notificationService.showNotification(this, "Title", "This is the message to display", intent, reqCode);
         startActivity(intent);
     }
 

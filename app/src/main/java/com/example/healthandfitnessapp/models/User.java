@@ -27,5 +27,6 @@ public class User {
         this.drinkerWater = drinkerWater;
         this.completedExercises = completedExercises;
         this.sleepTime = sleepTime;
+
     }
 }

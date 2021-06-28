@@ -8,15 +8,18 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.preference.PreferenceManager;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+
 import com.example.healthandfitnessapp.fragments.AboutUsFragment;
-import com.example.healthandfitnessapp.fragments.AlarmFragment;
+
 import com.example.healthandfitnessapp.fragments.NotificationsFragment;
 import com.example.healthandfitnessapp.R;
 import com.example.healthandfitnessapp.fragments.AchievementsFragment;
@@ -27,6 +30,7 @@ import com.example.healthandfitnessapp.fragments.TravelFragment;
 import com.example.healthandfitnessapp.fragments.WriteFeedbackFragment;
 import com.example.healthandfitnessapp.interfaces.ActivityFragmentHomeComunication;
 import com.example.healthandfitnessapp.models.User;
+import com.example.healthandfitnessapp.services.SettingsManager;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -50,6 +54,9 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        SettingsManager.receiveNotifications = prefs.getBoolean("notifications", true);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -220,14 +227,9 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
 
     @Override
     public void OpenAlarmFragment() {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        String tag = AlarmFragment.class.getName();
-        FragmentTransaction replaceTransaction = transaction.replace(
-                R.id.home_frame_layout, AlarmFragment.newInstance("", ""), tag
-        ).addToBackStack(null);
-
-        replaceTransaction.commit();
+        Intent intent = new Intent(this, AlarmActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 
     @Override

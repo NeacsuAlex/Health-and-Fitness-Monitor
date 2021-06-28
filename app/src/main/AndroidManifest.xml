@@ -5,10 +5,12 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <uses-feature android:name="android.hardware.location.gps" />
 
@@ -19,7 +21,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
+
         <activity android:name=".activities.HelpAndFeedbackActivity"></activity>
+
+        <activity android:name=".activities.AlarmActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDdlx0-yzdwP56o5qvqkEE6vevRYxiumtM" />
+
+        <activity android:name=".activities.MapsActivity" />
+
         <activity
             android:name=".activities.LoginActivity"
             android:configChanges="orientation|screenSize"
@@ -34,6 +46,12 @@
             android:name=".activities.HomeActivity"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="sensor" />
+
+        <service
+            android:name=".services.AlarmService"
+            android:enabled="true" />
+        <receiver android:name=".services.AlarmReceiver" />
+
     </application>
 
 </manifest>

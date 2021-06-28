@@ -8,8 +8,12 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceManager;
+import androidx.preference.SwitchPreferenceCompat;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,6 +29,7 @@ import com.example.healthandfitnessapp.fragments.StatisticsFragment;
 import com.example.healthandfitnessapp.fragments.TravelFragment;
 import com.example.healthandfitnessapp.interfaces.ActivityFragmentHomeComunication;
 import com.example.healthandfitnessapp.models.User;
+import com.example.healthandfitnessapp.services.SettingsManager;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -48,6 +53,9 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        SettingsManager.receiveNotifications = prefs.getBoolean("notifications", true);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

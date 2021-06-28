@@ -1,5 +1,6 @@
 package com.example.healthandfitnessapp.fragments;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -20,8 +21,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.healthandfitnessapp.R;
+import com.example.healthandfitnessapp.activities.HomeActivity;
 import com.example.healthandfitnessapp.models.BMI;
 import com.example.healthandfitnessapp.models.User;
+import com.example.healthandfitnessapp.services.NotificationService;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -248,6 +251,7 @@ public class StatisticsFragment extends Fragment {
             DecimalFormat df=new DecimalFormat();
             df.setMaximumFractionDigits(2);
             bmiResult.setText("BMI: "+df.format(bmi)+"\n"+category);
+
         }
         else
         {

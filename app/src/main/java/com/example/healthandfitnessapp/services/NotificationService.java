@@ -24,6 +24,7 @@ public class NotificationService extends AppCompatActivity {
     }
 
     public void showNotification(Context context, String title, String message, Intent intent, int reqCode) {
+        if(!SettingsManager.receiveNotifications) return;
         PendingIntent pendingIntent = PendingIntent.getActivity(context, reqCode, intent, PendingIntent.FLAG_ONE_SHOT);
         String CHANNEL_ID = "channel_name";// The id of the channel.
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(context, CHANNEL_ID)
@@ -31,7 +32,7 @@ public class NotificationService extends AppCompatActivity {
                 .setContentTitle(title)
                 .setContentText(message)
                 .setAutoCancel(true)
-                .setSound(soundService.playSound(RingtoneManager.TYPE_NOTIFICATION))
+                .setSound(soundService.playSound(context, RingtoneManager.TYPE_NOTIFICATION))
                 .setContentIntent(pendingIntent);
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

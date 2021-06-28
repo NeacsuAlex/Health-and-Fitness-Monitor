@@ -101,7 +101,7 @@ public class ExercisesFragment extends Fragment implements OnItemsClickedListene
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_exercices, container, false);
-        RecyclerView recyclerView = view.findViewById(R.id.fitness_list);
+        RecyclerView recyclerView = view.findViewById(R.id.reviews_list);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL, false);
 
         durationText =view.findViewById(R.id.durationTextView);

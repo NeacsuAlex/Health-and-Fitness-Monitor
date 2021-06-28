@@ -5,15 +5,22 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.fragment.app.Fragment;
 
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.healthandfitnessapp.R;
+import com.example.healthandfitnessapp.models.BMI;
 import com.example.healthandfitnessapp.models.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -22,6 +29,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -52,10 +60,17 @@ public class StatisticsFragment extends Fragment {
     private DatabaseReference mDatabase;
     private FirebaseAuth mAuth;
 
+    TextView heightTextView, weightTextView;
+    EditText heightEditTextView, weightEditTextView;
+    SwitchCompat heightSwitch, weightSwitch;
+    TextView bmiResult;
+
     Button decrese_water_counter, decrese_calories_counter, decrese_sleep_counter;
     Button increase_water_counter, increase_calories_counter, increase_sleep_counter;
     Long water_counter, step_counter, calories_counter, sleep_counter;
     TextView waterText, stepText, caloriesText, sleepText;
+
+    boolean usingCM, usingKG;
 
     public StatisticsFragment() {
         /*Runnable runnable = new Runnable() {
@@ -127,12 +142,117 @@ public class StatisticsFragment extends Fragment {
         increase_calories_counter=view.findViewById(R.id.increase_calories_counter);
         caloriesText.setText(calories_counter+"");
 
+        bmiResult=view.findViewById(R.id.BMIresult);
+
         ReadStatisticsFromDatabase();
         InitWaterStatistics();
         InitSleepStatistics();
         InitCaloriesStatistics();
 
+        usingCM=true;
+        usingKG=true;
+        heightTextView=view.findViewById(R.id.heightTextView);
+        heightEditTextView=view.findViewById(R.id.heightEditTextView);
+        heightSwitch=(SwitchCompat)view.findViewById(R.id.switchHeight);
+        weightTextView=view.findViewById(R.id.weightTextView);
+        weightEditTextView=view.findViewById(R.id.weightEditTextView);
+        weightSwitch=(SwitchCompat)view.findViewById(R.id.switchWeight);
+        heightSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                useCm();
+            }
+        });
+        weightSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                useKg();
+            }
+        });
+        heightEditTextView.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                CalculateBMI();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        weightEditTextView.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                CalculateBMI();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
         return view;
+    }
+
+    private void useCm() {
+        if(heightSwitch.isChecked())
+        {
+            heightTextView.setText("Height (cm)");
+            heightSwitch.setText("Use cm");
+            usingCM=true;
+        }
+        else
+        {
+            heightTextView.setText("Height (feet)");
+            heightSwitch.setText("Use feet");
+            usingCM=false;
+        }
+        CalculateBMI();
+    }
+
+    private void useKg() {
+        if(weightSwitch.isChecked())
+        {
+            weightTextView.setText("Weight (kg)");
+            weightSwitch.setText("Use kg");
+            usingKG=true;
+        }
+        else
+        {
+            weightTextView.setText("Weight (lb)");
+            weightSwitch.setText("Use lb");
+            usingKG=false;
+        }
+        CalculateBMI();
+    }
+
+    private void CalculateBMI()
+    {
+        String height = heightEditTextView.getText().toString();
+        String weight = weightEditTextView.getText().toString();
+        if(!height.isEmpty() && !weight.isEmpty())
+        {
+            float bmi = BMI.calculateBMI(Float.parseFloat(weight), Float.parseFloat(height), usingKG, usingCM);
+            String category =BMI.getBMICategory(bmi).toString();
+            DecimalFormat df=new DecimalFormat();
+            df.setMaximumFractionDigits(2);
+            bmiResult.setText("BMI: "+df.format(bmi)+"\n"+category);
+        }
+        else
+        {
+            bmiResult.setText("");
+        }
     }
 
     private void ReadStatisticsFromDatabase()

@@ -1,11 +1,11 @@
 [
     {
-        "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_reset_password.xml.flat",
-        "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\layout\\fragment_reset_password.xml"
-    },
-    {
         "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_reset_password.xml.flat",
+        "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\layout\\fragment_reset_password.xml"
     },
     {
         "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",

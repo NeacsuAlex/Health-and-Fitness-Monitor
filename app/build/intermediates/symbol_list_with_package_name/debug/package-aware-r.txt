@@ -2298,6 +2298,7 @@ drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
+id BMIresult
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
@@ -2392,6 +2393,7 @@ id baseline
 id beginOnFirstDraw
 id beginning
 id blocking
+id bmiTextView
 id bottom
 id bounce
 id browser_actions_header_text
@@ -2546,6 +2548,8 @@ id header
 id header_text
 id header_title
 id heading
+id heightEditTextView
+id heightTextView
 id hideable
 id home
 id homeAsUp
@@ -2595,6 +2599,8 @@ id light
 id line1
 id line3
 id linear
+id linear_layout_5
+id linear_layout_6
 id listMode
 id list_item
 id loginButton
@@ -2815,6 +2821,8 @@ id stop_timer
 id stretch
 id submenuarrow
 id submit_area
+id switchHeight
+id switchWeight
 id switchWidget
 id switch_unit_meter
 id tabMode
@@ -2889,6 +2897,8 @@ id user_name
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
+id weightEditTextView
+id weightTextView
 id welcome_back_email_link_body
 id welcome_back_idp_button
 id welcome_back_idp_prompt

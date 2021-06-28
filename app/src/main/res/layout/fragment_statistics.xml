@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.StatisticsFragment">
+    tools:context=".fragments.StatisticsFragment"
+    >
 
     <RelativeLayout
         android:id="@+id/statistics_frame_layout"
@@ -63,7 +64,7 @@
                 android:textSize="25dp"/>
         </LinearLayout>
         <TextView
-            android:paddingTop="30dp"
+            android:paddingTop="10dp"
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -93,7 +94,7 @@
                 android:textColor="@color/black"/>
         </LinearLayout>
         <TextView
-            android:paddingTop="30dp"
+            android:paddingTop="10dp"
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -135,7 +136,7 @@
                 android:textSize="25dp"/>
         </LinearLayout>
         <TextView
-            android:paddingTop="30dp"
+            android:paddingTop="10dp"
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -176,6 +177,94 @@
                 android:text="+"
                 android:textSize="25dp"/>
         </LinearLayout>
+        <TextView
+            android:layout_below="@+id/layout_4"
+            android:paddingTop="10dp"
+            android:id="@+id/bmiTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BMI Calculator"
+            android:textSize="40dp"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            />
+        <LinearLayout
+            android:id="@+id/linear_layout_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bmiTextView"
+            android:layout_centerHorizontal="true">
+        <TextView
+            android:paddingTop="10dp"
+            android:id="@+id/heightTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Height (cm)"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            />
+
+            <EditText
+                android:id="@+id/heightEditTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="123456"
+                android:inputType="number"
+                android:maxLength="6"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear_layout_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_layout_5"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:paddingTop="10dp"
+                android:id="@+id/weightTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight (kg)"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                />
+
+            <EditText
+                android:id="@+id/weightEditTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="123456"
+                android:inputType="number"
+                android:maxLength="6"/>
+        </LinearLayout>
+        <TextView
+            android:layout_below="@+id/linear_layout_6"
+            android:paddingTop="10dp"
+            android:id="@+id/BMIresult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="15dp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+            />
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/BMIresult"
+            android:layout_centerHorizontal="true"
+            android:text="Use cm"
+            android:textColor="@color/black"
+            android:checked="true"
+            android:id="@+id/switchHeight"/>
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/switchHeight"
+            android:layout_centerHorizontal="true"
+            android:text="Use kg"
+            android:textColor="@color/black"
+            android:checked="true"
+            android:id="@+id/switchWeight"/>
     </RelativeLayout>
 
-</FrameLayout>
+</ScrollView>

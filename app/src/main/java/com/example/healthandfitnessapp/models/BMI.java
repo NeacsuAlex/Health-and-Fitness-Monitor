@@ -16,7 +16,7 @@ public class BMI {
         //convert cm to m
         height/=100f;
 
-        return (weight/(height*height));
+        return (weight/height/height);
     }
 
     public enum BMI_Category

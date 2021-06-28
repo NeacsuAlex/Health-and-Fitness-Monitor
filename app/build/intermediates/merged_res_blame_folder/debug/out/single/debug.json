@@ -20,6 +20,10 @@
         "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\drawable\\ic_login_background.xml"
     },
     {
+        "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_alarm.xml.flat",
+        "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\layout\\activity_alarm.xml"
+    },
+    {
         "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_notification.xml.flat",
         "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\drawable\\ic_notification.xml"
     },
@@ -34,10 +38,6 @@
     {
         "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_exercices.xml.flat",
         "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\layout\\fragment_exercices.xml"
-    },
-    {
-        "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_alarm.xml.flat",
-        "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\layout\\fragment_alarm.xml"
     },
     {
         "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_statistics.xml.flat",
@@ -68,12 +68,12 @@
         "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\layout\\fragment_achievements.xml"
     },
     {
-        "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
         "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "E:\\Health-and-Fitness-Monitor\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
         "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_notifications.xml.flat",
@@ -90,6 +90,10 @@
     {
         "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
         "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph.xml.flat",
+        "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\navigation\\nav_graph.xml"
     },
     {
         "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_sign_out.xml.flat",

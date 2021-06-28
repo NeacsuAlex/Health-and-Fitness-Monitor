@@ -16,10 +16,14 @@ public class SoundService {
 
     }
 
-  public android.net.Uri playSound(Context context, int ringtoneManagerID)
+  public android.net.Uri playSound(Context context, int ringtoneManagerID, boolean isAlarm)
     {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        int volume = prefs.getInt("volume_notifications", 70);
+        int volume;
+        if(!isAlarm)
+            volume = prefs.getInt("volume_notifications", 70);
+        else
+            volume = prefs.getInt("volume_alarm", 70);
 
         AudioManager manager = (AudioManager)context.getSystemService(Context.AUDIO_SERVICE);
         manager.setStreamVolume(AudioManager.STREAM_MUSIC, volume, 0);

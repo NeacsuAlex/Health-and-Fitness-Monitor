@@ -1,14 +1,15 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-44:12
+ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-51:12
 MERGED from [com.google.android.libraries.places:places:1.1.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\e139f93bd30f36a42b909d6b714c2c1a\jetified-places-1.1.0\AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\b0913771ea797b2b26954ae078685cb6\jetified-play-services-maps-17.0.1\AndroidManifest.xml:17:1-44:12
 MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\bbfc287d0d9c0b70c7800ba9b2132b26\jetified-play-services-location-18.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.firebaseui:firebase-ui-auth:6.4.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\4580f025c8aac8020e11b39ede2c1054\jetified-firebase-ui-auth-6.4.0\AndroidManifest.xml:2:1-109:12
 MERGED from [com.google.android.gms:play-services-auth:19.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\bd7b0cdf54d01606171705438dde8e2e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:17:1-40:12
+MERGED from [androidx.navigation:navigation-ui:2.2.2] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\ca8a6d482db4de2ece67c812900c812e\navigation-ui-2.2.2\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\3ca4c5d6cf0cd3be3cb0e15184d8ea1e\material-1.3.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\102089b6cb9cf47beeff85d1cea97dfd\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.preference:preference:1.1.1] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\975d564dae29fc50bf17a14c1c5eb701\preference-1.1.1\AndroidManifest.xml:17:1-24:12
@@ -17,6 +18,7 @@ MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Bogdan\.gradle\caches\
 MERGED from [com.google.firebase:firebase-auth:20.0.4] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\08ab563daed613bf0fd8d9cf5e01f00e\jetified-firebase-auth-20.0.4\AndroidManifest.xml:17:1-83:12
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\0f0cbfe6bdcd95c319bedceb729c14e4\jetified-firebase-database-19.7.0\AndroidManifest.xml:15:1-38:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\1d72b1ad240b7931757204e384fc6219\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-fragment:2.2.2] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\c803946befad20c44f918ad9690ce8a7\navigation-fragment-2.2.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\5b395165a6bfa9113b40f4cf07b775c8\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\97b73fa6e60ca248c877e02dfc2b184f\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
 MERGED from [com.android.volley:volley:1.2.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\44b5f004a7592ba0671b5378007440c7\jetified-volley-1.2.0\AndroidManifest.xml:2:1-7:12
@@ -56,7 +58,9 @@ MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Bogdan
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\e78b3ec1af70e0b37559bb9795ebecf0\customview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\88ae4ed2962606c0e466a552ea4f51d5\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\3c9eee0e6496b99771e969ec1f90937f\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.2.2] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\550d3b5d152b0f59d26f3d453632068c\navigation-runtime-2.2.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.1.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\31751751acd2fc8c45235be780bcd01c\jetified-activity-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common:2.2.2] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\9125c779fc8f8e0defd3a232475644c1\navigation-common-2.2.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core:1.3.1] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\c02def824610c8a7f692625198841bc4\core-1.3.1\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\bcb2b18b0c03306b0296011f3c655476\exifinterface-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\2ba59224728720f9d5ce5fabc66cd547\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -67,28 +71,28 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\Bogdan\.gradl
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\d0e7b0ddf58d03bc684bc27f36b4dc7f\jetified-lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\7ccb69b3aaed26a59bad13accb509526\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\41f3416bb987d9ca4a4395c1f94106a6\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\4f5c94c590f45f4e49b5bbdecd27f045\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\bdaef055dd9c14e264a78ad70b561bfc\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\ed53d6ad2788d14b78a99855d238dafd\jetified-lifecycle-service-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\f6f64ccd9bb24098e1391cbf048567ca\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\4f5c94c590f45f4e49b5bbdecd27f045\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\b8e6fc86b7781b3e37df8e0d0df509a4\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\9cbae412d79796d62896cbe05c89cf85\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\b9db85734a16e1816efd3831625152ff\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\88580957209b3ed5e2a69385750d2bcd\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-51:12
 	package
 		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:3:5-46
 		INJECTED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml
 		INJECTED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-44:12
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-51:12
 		INJECTED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-44:12
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:1-51:12
 		INJECTED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:2:11-69
@@ -122,26 +126,34 @@ MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\Bogdan\.grad
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\0f0cbfe6bdcd95c319bedceb729c14e4\jetified-firebase-database-19.7.0\AndroidManifest.xml:26:5-67
 	android:name
 		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:7:22-64
+uses-permission#android.permission.VIBRATE
+ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:8:5-66
+	android:name
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:8:22-63
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:8:5-81
+ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:9:5-81
 	android:name
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:8:22-78
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:9:22-78
 uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
-ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:9:5-98
+ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:10:5-98
 	android:name
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:9:22-95
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:10:22-95
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:11:5-79
+ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:12:5-79
 MERGED from [com.google.android.libraries.places:places:1.1.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\e139f93bd30f36a42b909d6b714c2c1a\jetified-places-1.1.0\AndroidManifest.xml:9:5-79
 MERGED from [com.google.android.libraries.places:places:1.1.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\e139f93bd30f36a42b909d6b714c2c1a\jetified-places-1.1.0\AndroidManifest.xml:9:5-79
 	android:name
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:11:22-76
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:12:22-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:13:5-68
+	android:name
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:13:22-65
 uses-feature#android.hardware.location.gps
-ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:13:5-66
+ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:15:5-66
 	android:name
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:13:19-63
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:15:19-63
 application
-ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:15:5-42:19
+ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:17:5-49:19
 MERGED from [com.google.android.libraries.places:places:1.1.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\e139f93bd30f36a42b909d6b714c2c1a\jetified-places-1.1.0\AndroidManifest.xml:13:5-24:19
 MERGED from [com.google.android.libraries.places:places:1.1.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\e139f93bd30f36a42b909d6b714c2c1a\jetified-places-1.1.0\AndroidManifest.xml:13:5-24:19
 MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\b0913771ea797b2b26954ae078685cb6\jetified-play-services-maps-17.0.1\AndroidManifest.xml:36:5-42:19
@@ -193,53 +205,67 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Bogdan\.gradle
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.1] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\c02def824610c8a7f692625198841bc4\core-1.3.1\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:20:9-35
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:22:9-35
 	android:label
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:18:9-41
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:20:9-41
 	android:roundIcon
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:19:9-54
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:21:9-54
 	android:icon
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:17:9-43
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:19:9-43
 	android:allowBackup
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:18:9-35
 	android:theme
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:21:9-56
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:23:9-56
+activity#com.example.healthandfitnessapp.activities.AlarmActivity
+ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:24:9-71
+	android:name
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:24:19-59
 meta-data#com.google.android.geo.API_KEY
-ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:23:9-25:70
+ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:26:9-28:71
 	android:value
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:25:13-68
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:28:13-68
 	android:name
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:24:13-58
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:27:13-58
 activity#com.example.healthandfitnessapp.activities.MapsActivity
-ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:27:9-70
+ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:30:9-61
 	android:name
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:27:19-58
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:30:19-58
 activity#com.example.healthandfitnessapp.activities.LoginActivity
-ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:28:9-37:20
+ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:31:9-40:20
 	android:screenOrientation
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:31:13-47
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:34:13-47
 	android:configChanges
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:30:13-59
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:33:13-59
 	android:name
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:29:13-53
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:32:13-53
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:32:13-36:29
+ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:35:13-39:29
 action#android.intent.action.MAIN
-ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:33:17-69
+ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:36:17-69
 	android:name
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:33:25-66
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:36:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:35:17-77
+ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:38:17-77
 	android:name
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:35:27-74
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:38:27-74
 activity#com.example.healthandfitnessapp.activities.HomeActivity
-ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:38:9-41:50
+ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:41:9-44:50
 	android:screenOrientation
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:41:13-47
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:44:13-47
 	android:configChanges
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:40:13-59
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:43:13-59
 	android:name
-		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:39:13-52
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:42:13-52
+service#com.example.healthandfitnessapp.services.AlarmService
+ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:45:9-47:38
+	android:enabled
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:47:13-35
+	android:name
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:46:13-50
+receiver#com.example.healthandfitnessapp.services.AlarmReceiver
+ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:48:9-60
+	android:name
+		ADDED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml:48:19-57
 uses-sdk
 INJECTED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\Health-and-Fitness-Monitor\app\src\main\AndroidManifest.xml
@@ -254,6 +280,8 @@ MERGED from [com.firebaseui:firebase-ui-auth:6.4.0] C:\Users\Bogdan\.gradle\cach
 MERGED from [com.firebaseui:firebase-ui-auth:6.4.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\4580f025c8aac8020e11b39ede2c1054\jetified-firebase-ui-auth-6.4.0\AndroidManifest.xml:8:5-10:41
 MERGED from [com.google.android.gms:play-services-auth:19.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\bd7b0cdf54d01606171705438dde8e2e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:19.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\bd7b0cdf54d01606171705438dde8e2e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-ui:2.2.2] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\ca8a6d482db4de2ece67c812900c812e\navigation-ui-2.2.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.2.2] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\ca8a6d482db4de2ece67c812900c812e\navigation-ui-2.2.2\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\3ca4c5d6cf0cd3be3cb0e15184d8ea1e\material-1.3.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\3ca4c5d6cf0cd3be3cb0e15184d8ea1e\material-1.3.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\102089b6cb9cf47beeff85d1cea97dfd\constraintlayout-2.0.4\AndroidManifest.xml:5:5-7:41
@@ -270,6 +298,8 @@ MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\Bogdan\.grad
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\0f0cbfe6bdcd95c319bedceb729c14e4\jetified-firebase-database-19.7.0\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\1d72b1ad240b7931757204e384fc6219\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\1d72b1ad240b7931757204e384fc6219\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment:2.2.2] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\c803946befad20c44f918ad9690ce8a7\navigation-fragment-2.2.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.2.2] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\c803946befad20c44f918ad9690ce8a7\navigation-fragment-2.2.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\5b395165a6bfa9113b40f4cf07b775c8\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\5b395165a6bfa9113b40f4cf07b775c8\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\97b73fa6e60ca248c877e02dfc2b184f\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
@@ -348,8 +378,12 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Bogd
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\88ae4ed2962606c0e466a552ea4f51d5\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\3c9eee0e6496b99771e969ec1f90937f\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\3c9eee0e6496b99771e969ec1f90937f\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.2.2] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\550d3b5d152b0f59d26f3d453632068c\navigation-runtime-2.2.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.2.2] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\550d3b5d152b0f59d26f3d453632068c\navigation-runtime-2.2.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.1.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\31751751acd2fc8c45235be780bcd01c\jetified-activity-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.1.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\31751751acd2fc8c45235be780bcd01c\jetified-activity-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.2.2] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\9125c779fc8f8e0defd3a232475644c1\navigation-common-2.2.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.2.2] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\9125c779fc8f8e0defd3a232475644c1\navigation-common-2.2.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.3.1] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\c02def824610c8a7f692625198841bc4\core-1.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.3.1] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\c02def824610c8a7f692625198841bc4\core-1.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\bcb2b18b0c03306b0296011f3c655476\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
@@ -370,14 +404,14 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\Bogdan\.
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\7ccb69b3aaed26a59bad13accb509526\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\41f3416bb987d9ca4a4395c1f94106a6\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\41f3416bb987d9ca4a4395c1f94106a6\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\4f5c94c590f45f4e49b5bbdecd27f045\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\4f5c94c590f45f4e49b5bbdecd27f045\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\bdaef055dd9c14e264a78ad70b561bfc\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\bdaef055dd9c14e264a78ad70b561bfc\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\ed53d6ad2788d14b78a99855d238dafd\jetified-lifecycle-service-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\ed53d6ad2788d14b78a99855d238dafd\jetified-lifecycle-service-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\f6f64ccd9bb24098e1391cbf048567ca\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\f6f64ccd9bb24098e1391cbf048567ca\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\4f5c94c590f45f4e49b5bbdecd27f045\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\4f5c94c590f45f4e49b5bbdecd27f045\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\b8e6fc86b7781b3e37df8e0d0df509a4\documentfile-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\b8e6fc86b7781b3e37df8e0d0df509a4\documentfile-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\Bogdan\.gradle\caches\transforms-2\files-2.1\9cbae412d79796d62896cbe05c89cf85\print-1.0.0\AndroidManifest.xml:20:5-44

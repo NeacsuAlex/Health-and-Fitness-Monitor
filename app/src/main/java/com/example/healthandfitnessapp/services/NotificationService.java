@@ -32,7 +32,7 @@ public class NotificationService extends AppCompatActivity {
                 .setContentTitle(title)
                 .setContentText(message)
                 .setAutoCancel(true)
-                .setSound(soundService.playSound(context, RingtoneManager.TYPE_NOTIFICATION))
+                .setSound(soundService.playSound(context, RingtoneManager.TYPE_NOTIFICATION, false))
                 .setContentIntent(pendingIntent);
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

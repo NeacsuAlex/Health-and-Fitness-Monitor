@@ -8,9 +8,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
-import androidx.preference.SwitchPreferenceCompat;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,7 +17,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.healthandfitnessapp.fragments.AlarmFragment;
 import com.example.healthandfitnessapp.fragments.NotificationsFragment;
 import com.example.healthandfitnessapp.R;
 import com.example.healthandfitnessapp.fragments.AchievementsFragment;
@@ -226,14 +223,9 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
 
     @Override
     public void OpenAlarmFragment() {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        String tag = AlarmFragment.class.getName();
-        FragmentTransaction replaceTransaction = transaction.replace(
-                R.id.home_frame_layout, AlarmFragment.newInstance("", ""), tag
-        ).addToBackStack(null);
-
-        replaceTransaction.commit();
+        Intent intent = new Intent(this, AlarmActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 
     @Override

@@ -6,12 +6,18 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.preference.EditTextPreference;
+import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.example.healthandfitnessapp.R;
 import com.example.healthandfitnessapp.models.User;
 
+import com.example.healthandfitnessapp.services.NotificationService;
+import com.example.healthandfitnessapp.services.SettingsManager;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -54,6 +60,22 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
+
+        SwitchPreferenceCompat notificationSwitch=(SwitchPreferenceCompat) findPreference("notifications");
+        notificationSwitch.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+                if((boolean) newValue)
+                {
+                    SettingsManager.receiveNotifications=true;
+                }
+                else
+                {
+                    SettingsManager.receiveNotifications=false;
+                }
+                return true;
             }
         });
     }

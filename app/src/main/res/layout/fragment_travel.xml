@@ -100,6 +100,18 @@
             android:layout_below="@id/latitude_text"
             android:text="Longitude: 0"/>
 
+        <Button
+            android:id="@+id/maps_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:text="Open Maps"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:layout_below="@id/longitude_text"
+            />
+
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/switch_unit_meter"
             android:layout_width="wrap_content"

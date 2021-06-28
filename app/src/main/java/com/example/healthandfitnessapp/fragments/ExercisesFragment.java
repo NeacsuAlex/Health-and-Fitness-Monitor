@@ -23,10 +23,13 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.healthandfitnessapp.R;
+import com.example.healthandfitnessapp.activities.HomeActivity;
 import com.example.healthandfitnessapp.adapters.MyAdapter;
 import com.example.healthandfitnessapp.constants.Constants;
 import com.example.healthandfitnessapp.interfaces.OnItemsClickedListener;
 import com.example.healthandfitnessapp.models.FitnessProgramme;
+import com.example.healthandfitnessapp.services.NotificationService;
+import com.example.healthandfitnessapp.services.SettingsManager;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -122,6 +125,10 @@ public class ExercisesFragment extends Fragment implements OnItemsClickedListene
             @Override
             public void onClick(View v) {
                 if (selectedFitnessProgramme != null) {
+                    Intent intent = new Intent(getContext(), HomeActivity.class);
+                    NotificationService notificationService=new NotificationService();
+                    if(SettingsManager.receiveNotifications)
+                        notificationService.showNotification(getContext(), "You start a new programme!", fitnessTitleText.getText().toString(), intent, 1);
                     watchYoutubeVideo(selectedFitnessProgramme.urlVideo);
                 }
             }

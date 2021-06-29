@@ -48,6 +48,7 @@
         "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\drawable-v24\\ic_feedback.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_notifications.xml.flat",
         "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\layout\\fragment_notifications.xml"
     },
@@ -58,6 +59,18 @@
     {
         "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_sign_out.xml.flat",
         "source": "E:\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\drawable\\ic_sign_out.xml"
+=======
+        "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_background.xml.flat",
+        "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\drawable\\ic_background.xml"
+    },
+    {
+        "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_statistics.xml.flat",
+        "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\drawable\\ic_statistics.xml"
+    },
+    {
+        "merged": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_exercises.xml.flat",
+        "source": "E:\\AndroidHealthApp\\Health-and-Fitness-Monitor\\app\\src\\main\\res\\drawable\\ic_exercises.xml"
+>>>>>>> NAC
     },
     {
         "merged": "E:\\Health-and-Fitness-Monitor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",

@@ -2576,6 +2576,7 @@ id fragment_container_view_tag
 id fragment_phone
 id fragment_register_email
 id frameLayout
+id futureFeatureTextView
 id ghost_view
 id ghost_view_holder
 id gone
@@ -3296,6 +3297,7 @@ string copy
 string default_web_client_id
 string difficulty
 string difficulty_text
+string distance_per_second_0_m
 string don_t_have_an_account
 string duration
 string duration_text
@@ -3408,6 +3410,7 @@ string fui_welcome_back_email_link_prompt_body
 string fui_welcome_back_idp_header
 string fui_welcome_back_idp_prompt
 string fui_welcome_back_password_prompt_body
+string future_feature
 string gcm_defaultSenderId
 string general_settings
 string google
@@ -3423,7 +3426,9 @@ string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
+string latitude_0
 string login
+string longitude_0
 string lorem_ipsum
 string lorem_ipsum1
 string material_clock_display_divider
@@ -3443,6 +3448,7 @@ string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
 string meet_the_team
 string messages_header
+string metric_units
 string minus_sign
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
@@ -3485,9 +3491,13 @@ string navigation_drawer_close
 string navigation_drawer_open
 string neacsu_alexandru_cristian
 string not_set
+<<<<<<< HEAD
 string notificationDate
 string notificationMessage
 string notificationTitle
+=======
+string open_maps
+>>>>>>> NAC
 string password
 string password_reset_text
 string password_toggle_content_description
@@ -3495,6 +3505,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string pause
 string petre_bogdan_email
 string petre_mihai_bogdan
 string places_autocomplete_clear_button
@@ -3519,11 +3530,15 @@ string send_review
 string sign_up
 string signature_title
 string sleep_time_min
+string space_hint
+string speed_0_km_h
 string stars
+string start
 string start_programme
 string statistics
 string status_bar_notification_info_overflow
 string step_counter
+string stop
 string summary_collapsed_preference_list
 string sync_header
 string sync_title

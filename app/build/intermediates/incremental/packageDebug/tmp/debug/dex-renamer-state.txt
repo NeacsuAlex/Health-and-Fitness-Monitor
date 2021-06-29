@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Tue Jun 29 15:35:55 EEST 2021
+=======
+#Tue Jun 29 16:00:53 EEST 2021
+>>>>>>> NAC
 path.2=classes2.dex
 path.1=classes.dex
 path.0=classes.dex

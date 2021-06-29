@@ -1,43 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.AlarmActivity">
 
     <TimePicker
+        android:id="@+id/alarmTimePicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/alarmTimePicker"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <ToggleButton
+        android:id="@+id/alarmToggle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Alarm On/Off"
-        android:id="@+id/alarmToggle"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/alarmTimePicker"
-        android:onClick="onToggleClicked" />
+        android:layout_centerHorizontal="true"
+        android:background="@color/alice_blue"
+        android:onClick="onToggleClicked"
+        android:text="@string/alarm_on_off"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintBottom_toTopOf="@+id/backButtonAlarm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alarmTimePicker" />
 
     <TextView
+        android:id="@+id/alarmText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text=""
-        android:id="@+id/alarmText"
+        android:layout_below="@+id/alarmToggle"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/alarmToggle" />
+        android:layout_marginBottom="16dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        app:layout_constraintBottom_toTopOf="@+id/alarmToggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alarmTimePicker" />
+
     <Button
         android:id="@+id/backButtonAlarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back"
         android:layout_below="@+id/alarmText"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/button_login_bg"
         android:gravity="center"
-        android:layout_centerHorizontal="true"/>
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:text="@string/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alarmTimePicker"
+        app:layout_constraintVertical_bias="0.8" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

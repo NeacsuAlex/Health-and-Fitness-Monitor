@@ -62,4 +62,23 @@
     <string name="petre_bogdan_email">petrebogdan55@yahoo.com</string>
     <string name="users_reviews">Users Reviews</string>
     <string name="write_review">Write Review</string>
+    <string name="stars">Stars</string>
+    <string name="back">Back</string>
+    <string name="alarm_on_off">Alarm On/Off</string>
+    <string name="height_cm">Height (cm)</string>
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="_0">0</string>
+    <string name="sleep_time_min">Sleep Time (min)</string>
+    <string name="zero">0</string>
+    <string name="statistics">Statistics</string>
+    <string name="use_kg">Use kg</string>
+    <string name="use_cm">Use cm</string>
+    <string name="weight_kg">Weight (kg)</string>
+    <string name="calories_burned">Calories Burned</string>
+    <string name="_123456">123456</string>
+    <string name="step_counter">Step Counter</string>
+    <string name="water_counter">Water Counter</string>
+    <string name="zero_sign">0</string>
+    <string name="plus_sign">+</string>
+    <string name="minus_sign">-</string>
 </resources>

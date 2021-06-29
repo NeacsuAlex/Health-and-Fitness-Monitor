@@ -29,6 +29,7 @@ import com.example.healthandfitnessapp.constants.Constants;
 import com.example.healthandfitnessapp.interfaces.OnItemsClickedListener;
 import com.example.healthandfitnessapp.models.Element;
 import com.example.healthandfitnessapp.models.FitnessProgramme;
+import com.example.healthandfitnessapp.models.Notification;
 import com.example.healthandfitnessapp.services.NotificationService;
 import com.example.healthandfitnessapp.services.SettingsManager;
 import com.google.firebase.database.DataSnapshot;
@@ -41,7 +42,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 
 import static com.example.healthandfitnessapp.constants.Constants.DEFAULT_YOUTUBE_URL;
 
@@ -130,8 +135,12 @@ public class ExercisesFragment extends Fragment implements OnItemsClickedListene
                 if (selectedFitnessProgramme != null) {
                     Intent intent = new Intent(getContext(), HomeActivity.class);
                     NotificationService notificationService=new NotificationService();
-                    if(SettingsManager.receiveNotifications)
+                    if(SettingsManager.receiveNotifications) {
+                        long millis=System.currentTimeMillis();
+                        java.sql.Date date=new java.sql.Date(millis);
                         notificationService.showNotification(getContext(), "You start a new programme!", fitnessTitleText.getText().toString(), intent, 1);
+                        NotificationsFragment.AddNotification(new Notification("You start a new programme!",fitnessTitleText.getText().toString(),date));
+                    }
                     watchYoutubeVideo(selectedFitnessProgramme.urlVideo);
                 }
             }

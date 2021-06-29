@@ -2,13 +2,24 @@ package com.example.healthandfitnessapp.fragments;
 
 import android.os.Bundle;
 
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.healthandfitnessapp.R;
+import com.example.healthandfitnessapp.adapters.MyAdapter;
+import com.example.healthandfitnessapp.models.Element;
+import com.example.healthandfitnessapp.models.Notification;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +36,12 @@ public class NotificationsFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private static ArrayList<Element> elements = new ArrayList<>();
+    private static MyAdapter myAdapter = null;
+
+    private static TextView noNotificationText;
+    private static View view=null;
 
     public NotificationsFragment() {
         // Required empty public constructor
@@ -61,6 +78,31 @@ public class NotificationsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_notifications, container, false);
+        view= inflater.inflate(R.layout.fragment_notifications, container, false);
+        RecyclerView recyclerView = view.findViewById(R.id.notifications_list);
+        //elements.clear();
+        myAdapter = new MyAdapter(this.elements);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(view.getContext(), LinearLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setAdapter(this.myAdapter);
+        recyclerView.post(() -> myAdapter.notifyDataSetChanged());
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
+        dividerItemDecoration.setDrawable(ContextCompat.getDrawable(view.getContext(), R.drawable.divider));
+        recyclerView.addItemDecoration(dividerItemDecoration);
+        noNotificationText=view.findViewById(R.id.noNotificationsTextView);
+        if(elements.size()==0)
+            noNotificationText.setVisibility(View.VISIBLE);
+        else
+            noNotificationText.setVisibility(View.INVISIBLE);
+        return view;
     }
+
+    public static void AddNotification(Notification notification)
+    {
+        elements.add(notification);
+        myAdapter = new MyAdapter(elements);
+        myAdapter.notifyDataSetChanged();
+    }
+
+
 }

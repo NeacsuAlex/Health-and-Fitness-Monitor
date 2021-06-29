@@ -12,6 +12,8 @@ import androidx.legacy.content.WakefulBroadcastReceiver;
 
 import com.example.healthandfitnessapp.activities.AlarmActivity;
 import com.example.healthandfitnessapp.activities.HomeActivity;
+import com.example.healthandfitnessapp.fragments.NotificationsFragment;
+import com.example.healthandfitnessapp.models.Notification;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -47,7 +49,12 @@ public class AlarmReceiver extends WakefulBroadcastReceiver {
                 Intent intent = new Intent(context, AlarmActivity.class);
                 NotificationService notificationService=new NotificationService();
                 if(SettingsManager.receiveNotifications)
+                {
+                    long millis=System.currentTimeMillis();
+                    java.sql.Date date=new java.sql.Date(millis);
+                    NotificationsFragment.AddNotification(new Notification("Alarm stopped!","Alarm stopped!",date));
                     notificationService.showNotification(context, "Alarm stopped!", "Alarm stopped!", intent, 1);
+                }
                 t.cancel();
             }
         }, 15000);

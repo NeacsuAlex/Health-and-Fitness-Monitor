@@ -12,6 +12,8 @@ import androidx.core.app.NotificationCompat;
 import com.example.healthandfitnessapp.R;
 import com.example.healthandfitnessapp.activities.AlarmActivity;
 import com.example.healthandfitnessapp.activities.HomeActivity;
+import com.example.healthandfitnessapp.fragments.NotificationsFragment;
+import com.example.healthandfitnessapp.models.Notification;
 
 public class AlarmService extends IntentService {
     private NotificationManager alarmNotificationManager;
@@ -35,7 +37,12 @@ public class AlarmService extends IntentService {
         Intent intent = new Intent(getApplicationContext(), AlarmActivity.class);
         NotificationService notificationService=new NotificationService();
         if(SettingsManager.receiveNotifications)
+        {
+            long millis=System.currentTimeMillis();
+            java.sql.Date date=new java.sql.Date(millis);
+            NotificationsFragment.AddNotification(new Notification("You got a new alarm!","New alarm! Wake up!",date));
             notificationService.showNotification(getApplicationContext(), "You got a new alarm!", "New alarm! Wake up!", intent, 1);
+        }
 
     }
 }

@@ -81,4 +81,7 @@
     <string name="zero_sign">0</string>
     <string name="plus_sign">+</string>
     <string name="minus_sign">-</string>
+    <string name="notificationTitle">Title</string>
+    <string name="notificationDate">Date</string>
+    <string name="notificationMessage">Message</string>
 </resources>

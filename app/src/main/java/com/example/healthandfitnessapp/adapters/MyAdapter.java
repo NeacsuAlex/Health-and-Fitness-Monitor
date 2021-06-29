@@ -15,6 +15,7 @@ import com.example.healthandfitnessapp.constants.Constants;
 import com.example.healthandfitnessapp.interfaces.OnItemsClickedListener;
 import com.example.healthandfitnessapp.models.Element;
 import com.example.healthandfitnessapp.models.FitnessProgramme;
+import com.example.healthandfitnessapp.models.Notification;
 import com.example.healthandfitnessapp.models.Review;
 import com.squareup.picasso.Picasso;
 
@@ -41,6 +42,9 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         if (elementList.get(position) instanceof Review) {
             return 1;
         }
+        if (elementList.get(position) instanceof Notification) {
+            return 2;
+        }
         return super.getItemViewType(position);
     }
 
@@ -56,6 +60,10 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             View view = inflater.inflate(R.layout.item_review, parent, false);
             return new ReviewViewHolder(view);
         }
+        if (viewType == 2) {
+            View view = inflater.inflate(R.layout.item_notification, parent, false);
+            return new NotificationViewHolder(view);
+        }
         return null;
 
     }
@@ -70,6 +78,10 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         if (holder instanceof ReviewViewHolder) {
             Review review = (Review) elementList.get(position);
             ((ReviewViewHolder) holder).bind(review);
+        }
+        if (holder instanceof NotificationViewHolder) {
+            Notification notification = (Notification) elementList.get(position);
+            ((NotificationViewHolder) holder).bind(notification);
         }
     }
 
@@ -125,6 +137,28 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             textReview.setText(review.review);
             textUsername.setText(review.username);
             nrStars.setText(review.nrStars.toString()+" Stars");
+
+        }
+    }
+
+    class NotificationViewHolder extends RecyclerView.ViewHolder {
+        private final TextView title;
+        private final TextView message;
+        private final TextView date;
+        private final View view;
+
+        NotificationViewHolder(View view) {
+            super(view);
+            title = view.findViewById(R.id.notificationTitleTextView);
+            message = view.findViewById(R.id.notificationMessageTextView);
+            date = view.findViewById(R.id.notificationDateTextView);
+            this.view = view;
+        }
+
+        void bind(Notification notification) {
+            title.setText(notification.title);
+            message.setText(notification.message);
+            date.setText(notification.date.toString());
 
         }
     }

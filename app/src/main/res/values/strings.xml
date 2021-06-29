@@ -81,4 +81,6 @@
     <string name="zero_sign">0</string>
     <string name="plus_sign">+</string>
     <string name="minus_sign">-</string>
+    <string name="space_hint">_____</string>
+    <string name="future_feature">Future Feature</string>
 </resources>

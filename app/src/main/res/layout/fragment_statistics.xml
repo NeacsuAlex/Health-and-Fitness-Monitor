@@ -230,7 +230,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:autofillHints=""
-                android:hint="@string/_123456"
+                android:hint="@string/space_hint"
                 android:inputType="number"
                 android:maxLength="6"
                 android:textColor="@color/alice_blue"
@@ -259,10 +259,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:autofillHints=""
-                android:hint="@string/_123456"
+                android:hint="@string/space_hint"
                 android:inputType="number"
                 android:maxLength="6"
-                android:textColor="@color/alice_blue" />
+                android:textColor="@color/alice_blue"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <TextView

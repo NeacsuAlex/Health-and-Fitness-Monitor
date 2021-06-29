@@ -11,9 +11,10 @@ com/example/healthandfitnessapp/fragments/LoginFragment.java
  com.example.healthandfitnessapp.fragments.LoginFragment$4
  com.example.healthandfitnessapp.fragments.LoginFragment$5
  com.example.healthandfitnessapp.fragments.LoginFragment$6
+ com.example.healthandfitnessapp.fragments.LoginFragment$6$1
  com.example.healthandfitnessapp.fragments.LoginFragment$7
-com/example/healthandfitnessapp/models/Review.java
- com.example.healthandfitnessapp.models.Review
+com/example/healthandfitnessapp/activities/HelpAndFeedbackActivity.java
+ com.example.healthandfitnessapp.activities.HelpAndFeedbackActivity
 com/example/healthandfitnessapp/fragments/RegisterFragment.java
  com.example.healthandfitnessapp.fragments.RegisterFragment
  com.example.healthandfitnessapp.fragments.RegisterFragment$1
@@ -103,16 +104,13 @@ com/example/healthandfitnessapp/interfaces/ActivityFragmentHomeComunication.java
  com.example.healthandfitnessapp.interfaces.ActivityFragmentHomeComunication
 com/example/healthandfitnessapp/interfaces/ActivityFragmentLoginCommunication.java
  com.example.healthandfitnessapp.interfaces.ActivityFragmentLoginCommunication
-com/example/healthandfitnessapp/VolleyConfigSingleton.java
- com.example.healthandfitnessapp.VolleyConfigSingleton
- com.example.healthandfitnessapp.VolleyConfigSingleton$1
 com/example/healthandfitnessapp/fragments/WriteFeedbackFragment.java
  com.example.healthandfitnessapp.fragments.WriteFeedbackFragment
  com.example.healthandfitnessapp.fragments.WriteFeedbackFragment$1
 com/example/healthandfitnessapp/services/SettingsManager.java
  com.example.healthandfitnessapp.services.SettingsManager
-com/example/healthandfitnessapp/activities/HelpAndFeedbackActivity.java
- com.example.healthandfitnessapp.activities.HelpAndFeedbackActivity
+com/example/healthandfitnessapp/models/Review.java
+ com.example.healthandfitnessapp.models.Review
 com/example/healthandfitnessapp/fragments/AboutUsFragment.java
  com.example.healthandfitnessapp.fragments.AboutUsFragment
  com.example.healthandfitnessapp.fragments.AboutUsFragment$1

@@ -4,11 +4,15 @@ import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
+import android.os.Build;
 
+import androidx.annotation.RequiresApi;
 import androidx.legacy.content.WakefulBroadcastReceiver;
+import androidx.preference.PreferenceManager;
 
 import com.example.healthandfitnessapp.activities.AlarmActivity;
 import com.example.healthandfitnessapp.activities.HomeActivity;
@@ -23,6 +27,7 @@ import static com.firebase.ui.auth.AuthUI.getApplicationContext;
 public class AlarmReceiver extends WakefulBroadcastReceiver {
 
     AlarmActivity inst;
+    @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
     public void onReceive(final Context context, Intent intent) {
         //this will update the UI with message
@@ -36,10 +41,12 @@ public class AlarmReceiver extends WakefulBroadcastReceiver {
         if (alarmUri == null) {
             alarmUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         }
+        //Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
         Ringtone ringtone = RingtoneManager.getRingtone(context, alarmUri);
-        ringtone.play();
-
-        Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
+        
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        float volume = (float)(prefs.getInt("volume_alarm", 70))/100f;
+        ringtone.setVolume(volume);
         ringtone.play();
         final Timer t = new Timer();
         t.schedule(new TimerTask() {

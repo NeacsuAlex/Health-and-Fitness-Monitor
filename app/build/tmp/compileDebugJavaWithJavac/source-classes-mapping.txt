@@ -63,9 +63,10 @@ com/example/healthandfitnessapp/adapters/MyAdapter.java
  com.example.healthandfitnessapp.adapters.MyAdapter$ReviewViewHolder
 com/example/healthandfitnessapp/models/Element.java
  com.example.healthandfitnessapp.models.Element
-com/example/healthandfitnessapp/activities/AlarmActivity.java
- com.example.healthandfitnessapp.activities.AlarmActivity
- com.example.healthandfitnessapp.activities.AlarmActivity$1
+com/example/healthandfitnessapp/activities/HomeActivity.java
+ com.example.healthandfitnessapp.activities.HomeActivity
+ com.example.healthandfitnessapp.activities.HomeActivity$1
+ com.example.healthandfitnessapp.activities.HomeActivity$2
 com/example/healthandfitnessapp/activities/MapsActivity.java
  com.example.healthandfitnessapp.activities.MapsActivity
  com.example.healthandfitnessapp.activities.MapsActivity$1
@@ -113,10 +114,9 @@ com/example/healthandfitnessapp/fragments/ExercisesFragment.java
  com.example.healthandfitnessapp.fragments.ExercisesFragment
  com.example.healthandfitnessapp.fragments.ExercisesFragment$1
  com.example.healthandfitnessapp.fragments.ExercisesFragment$2
+com/example/healthandfitnessapp/activities/AlarmActivity.java
+ com.example.healthandfitnessapp.activities.AlarmActivity
+ com.example.healthandfitnessapp.activities.AlarmActivity$1
 com/example/healthandfitnessapp/services/AlarmReceiver.java
  com.example.healthandfitnessapp.services.AlarmReceiver
  com.example.healthandfitnessapp.services.AlarmReceiver$1
-com/example/healthandfitnessapp/activities/HomeActivity.java
- com.example.healthandfitnessapp.activities.HomeActivity
- com.example.healthandfitnessapp.activities.HomeActivity$1
- com.example.healthandfitnessapp.activities.HomeActivity$2

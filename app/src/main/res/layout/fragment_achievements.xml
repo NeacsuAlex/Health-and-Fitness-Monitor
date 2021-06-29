@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.AchievementsFragment">
+    tools:context=".fragments.AchievementsFragment"
+    android:background="@color/dark_blue">
 
-    <RelativeLayout
-        android:id="@+id/statistics_frame_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".activities.HomeActivity"
-        android:background="@color/purple_200"
-        android:padding="20dp"/>
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/futureFeatureTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/future_feature"
+        android:textColor="@color/alice_blue"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

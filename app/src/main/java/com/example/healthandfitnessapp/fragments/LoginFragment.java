@@ -2,10 +2,12 @@ package com.example.healthandfitnessapp.fragments;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 
 import android.text.TextUtils;
 import android.util.Log;
@@ -20,7 +22,9 @@ import android.widget.Toast;
 import com.example.healthandfitnessapp.R;
 import com.example.healthandfitnessapp.activities.LoginActivity;
 import com.example.healthandfitnessapp.interfaces.ActivityFragmentLoginCommunication;
+import com.example.healthandfitnessapp.models.User;
 import com.example.healthandfitnessapp.services.NotificationService;
+import com.example.healthandfitnessapp.services.SettingsManager;
 import com.example.healthandfitnessapp.services.SoundService;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -35,6 +39,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import static androidx.constraintlayout.widget.StateSet.TAG;
 
@@ -173,6 +182,33 @@ public class LoginFragment extends Fragment {
                 if (task.isSuccessful()) {
                     Toast.makeText(getContext(), "Update the profile " +
                             "for better experience", Toast.LENGTH_SHORT).show();
+
+                    DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference().child("users");
+
+                    mDatabase.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            User user = new User();
+                            for (DataSnapshot key : snapshot.getChildren()) {
+                                if (key.getKey().equals(mAuth.getUid())) {
+                                    user = key.getValue(User.class);
+                                    break;
+                                }
+                            }
+
+                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putString("username",user.username);
+                            editor.putString("email",user.email);
+                            editor.commit();
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
+
                     if (activityFragmentLoginCommunication != null) {
                         activityFragmentLoginCommunication.openHomeActivity();
                     }

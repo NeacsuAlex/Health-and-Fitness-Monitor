@@ -43,7 +43,7 @@ public class AlarmReceiver extends WakefulBroadcastReceiver {
         }
         //Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
         Ringtone ringtone = RingtoneManager.getRingtone(context, alarmUri);
-        
+
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         float volume = (float)(prefs.getInt("volume_alarm", 70))/100f;
         ringtone.setVolume(volume);

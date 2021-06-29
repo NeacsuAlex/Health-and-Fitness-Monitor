@@ -1,6 +1,12 @@
 package com.example.healthandfitnessapp.fragments;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -9,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.widget.SwitchCompat;
 
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.text.Editable;
@@ -76,6 +83,9 @@ public class StatisticsFragment extends Fragment {
     private DatabaseReference mDatabase;
     private FirebaseAuth mAuth;
 
+    private Sensor stepSensor;
+    private SensorManager sensorManager;
+    private double MagnitudePrevious = 0;
 
     TextView heightTextView, weightTextView;
     EditText heightEditTextView, weightEditTextView;
@@ -148,7 +158,44 @@ public class StatisticsFragment extends Fragment {
 
         bmiResult=view.findViewById(R.id.BMIresult);
 
+
         ReadStatisticsFromDatabase();
+        if(ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACTIVITY_RECOGNITION) == PackageManager.PERMISSION_DENIED){
+            //ask for permission
+            requestPermissions(new String[]{Manifest.permission.ACTIVITY_RECOGNITION}, 0);
+        }
+        sensorManager = (SensorManager) getActivity().getSystemService(getActivity().SENSOR_SERVICE);
+        stepSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        SensorEventListener stepDetector = new SensorEventListener() {
+            @Override
+            public void onSensorChanged(SensorEvent sensorEvent) {
+                if (sensorEvent!= null){
+                    float x_acceleration = sensorEvent.values[0];
+                    float y_acceleration = sensorEvent.values[1];
+                    float z_acceleration = sensorEvent.values[2];
+
+                    double Magnitude = Math.sqrt(x_acceleration*x_acceleration + y_acceleration*y_acceleration + z_acceleration*z_acceleration);
+                    double MagnitudeDelta = Magnitude - MagnitudePrevious;
+                    MagnitudePrevious = Magnitude;
+
+                    if (MagnitudeDelta > 6){
+                        if(step_counter!=null)
+                        {
+                            step_counter++;
+                            stepText.setText(step_counter.toString());
+                            mDatabase.child(mAuth.getUid()).child("steps").setValue(Long.valueOf(stepText.getText().toString()));
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
+            }
+        };
+        sensorManager.registerListener(stepDetector, stepSensor, SensorManager.SENSOR_DELAY_NORMAL);
+
         InitWaterStatistics();
         InitSleepStatistics();
         InitCaloriesStatistics();

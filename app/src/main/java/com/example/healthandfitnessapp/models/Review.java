@@ -1,6 +1,6 @@
 package com.example.healthandfitnessapp.models;
 
-public class Review {
+public class Review extends Element {
     public String username;
     public String review;
     public Long nrStars;

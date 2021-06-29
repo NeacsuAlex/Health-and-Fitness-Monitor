@@ -27,6 +27,7 @@ import com.example.healthandfitnessapp.activities.HomeActivity;
 import com.example.healthandfitnessapp.adapters.MyAdapter;
 import com.example.healthandfitnessapp.constants.Constants;
 import com.example.healthandfitnessapp.interfaces.OnItemsClickedListener;
+import com.example.healthandfitnessapp.models.Element;
 import com.example.healthandfitnessapp.models.FitnessProgramme;
 import com.example.healthandfitnessapp.services.NotificationService;
 import com.example.healthandfitnessapp.services.SettingsManager;
@@ -41,6 +42,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+
+import static com.example.healthandfitnessapp.constants.Constants.DEFAULT_YOUTUBE_URL;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,7 +61,7 @@ public class ExercisesFragment extends Fragment implements OnItemsClickedListene
     private String mParam1;
     private String mParam2;
     private View view;
-    private ArrayList<FitnessProgramme> elements = new ArrayList<>();
+    private ArrayList<Element> elements = new ArrayList<>();
     private MyAdapter myAdapter = null;
     private FitnessProgramme selectedFitnessProgramme;
     private DatabaseReference mDatabase;
@@ -138,7 +141,7 @@ public class ExercisesFragment extends Fragment implements OnItemsClickedListene
     }
 
     private void setFirstFitnessProgramme() {
-        selectedFitnessProgramme=elements.get(0);
+        selectedFitnessProgramme= (FitnessProgramme) elements.get(0);
         durationText.setText(selectedFitnessProgramme.duration);
         fitnessTitleText.setText(selectedFitnessProgramme.title);
         fitnessDescriptionText.setText(selectedFitnessProgramme.description);
@@ -167,7 +170,7 @@ public class ExercisesFragment extends Fragment implements OnItemsClickedListene
     public void watchYoutubeVideo(String id) {
         Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + id));
         Intent webIntent = new Intent(Intent.ACTION_VIEW,
-                Uri.parse("http://www.youtube.com/watch?v=" + id));
+                Uri.parse(DEFAULT_YOUTUBE_URL + id));
         try {
             startActivity(appIntent);
         } catch (ActivityNotFoundException ex) {
@@ -182,39 +185,5 @@ public class ExercisesFragment extends Fragment implements OnItemsClickedListene
         fitnessDescriptionText.setText(fitnessProgramme.description);
         difficultyText.setText(fitnessProgramme.difficulty);
         selectedFitnessProgramme=fitnessProgramme;
-    }
-
-    private void getDefaultComments() throws InterruptedException {
-        RequestQueue queue = Volley.newRequestQueue(requireContext());
-        String url = Constants.DEFAULT_FITNESS_URL;
-        StringRequest getAlbumsRequest = new StringRequest(
-                Request.Method.GET,
-                url,
-                response -> {
-                    try {
-                        handleCommentsResponse(response);
-                    } catch (JSONException exception) {
-                        Log.e(Constants.DEFAULT_FITNESS_LOG_ERROR, exception.getMessage());
-                    }
-                },
-                error -> Toast.makeText(getContext(), Constants.DEFAULT_FITNESS_LOADING_ERROR, Toast.LENGTH_SHORT).show()
-        );
-        queue.add(getAlbumsRequest);
-    }
-
-    private void handleCommentsResponse(String response) throws JSONException {
-        JSONArray fitnessJSONArray = new JSONArray(response);
-        for (int index = 0; index < fitnessJSONArray.length(); ++index) {
-            JSONObject fitnessJSON = (JSONObject) fitnessJSONArray.get(index);
-            String description = fitnessJSON.getString("description");
-            String duration = fitnessJSON.getString("duration");
-            String title = fitnessJSON.getString("title");
-            String urlThumbnail = fitnessJSON.getString("urlThumbnail");
-            String urlVideo = fitnessJSON.getString("urlVideo");
-            String difficulty = fitnessJSON.getString("difficulty");
-            FitnessProgramme fitnessProgramme=new FitnessProgramme(title,description,urlVideo,urlThumbnail,duration,difficulty);
-            elements.add(fitnessProgramme);
-        }
-        myAdapter.notifyDataSetChanged();
     }
 }

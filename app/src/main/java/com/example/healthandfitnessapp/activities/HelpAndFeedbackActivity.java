@@ -25,7 +25,7 @@ public class HelpAndFeedbackActivity extends AppCompatActivity implements Activi
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         String tag = AboutUsFragment.class.getName();
-        FragmentTransaction addTransaction = transaction.add(
+        FragmentTransaction addTransaction = transaction.replace(
                 R.id.about_feedback_frame_layout, AboutUsFragment.newInstance("", ""), tag
         );
 

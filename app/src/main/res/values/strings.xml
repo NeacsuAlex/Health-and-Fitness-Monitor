@@ -83,4 +83,13 @@
     <string name="minus_sign">-</string>
     <string name="space_hint">_____</string>
     <string name="future_feature">Future Feature</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
+    <string name="open_maps">Open Maps</string>
+    <string name="speed_0_km_h">Speed: 0 km/h</string>
+    <string name="start">Start</string>
+    <string name="metric_units">Metric Units</string>
+    <string name="distance_per_second_0_m">Distance per second: 0 m</string>
+    <string name="longitude_0">Longitude: 0</string>
+    <string name="latitude_0">Latitude: 0</string>
 </resources>

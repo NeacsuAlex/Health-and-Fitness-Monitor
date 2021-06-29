@@ -13,26 +13,34 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.healthandfitnessapp.R;
 import com.example.healthandfitnessapp.constants.Constants;
 import com.example.healthandfitnessapp.interfaces.OnItemsClickedListener;
+import com.example.healthandfitnessapp.models.Element;
 import com.example.healthandfitnessapp.models.FitnessProgramme;
+import com.example.healthandfitnessapp.models.Review;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    ArrayList<FitnessProgramme> elementList;
+    ArrayList<Element> elementList;
     OnItemsClickedListener onItemsClickedListener;
 
-    public MyAdapter(ArrayList<FitnessProgramme> elementList, OnItemsClickedListener onItemsClickedListener) {
+    public MyAdapter(ArrayList<Element> elementList, OnItemsClickedListener onItemsClickedListener) {
         this.elementList = elementList;
         this.onItemsClickedListener = onItemsClickedListener;
     }
 
-    public MyAdapter(ArrayList<FitnessProgramme> elementList) {
+    public MyAdapter(ArrayList<Element> elementList) {
         this.elementList = elementList;
     }
 
     @Override
     public int getItemViewType(int position) {
+        if (elementList.get(position) instanceof FitnessProgramme) {
+            return 0;
+        }
+        if (elementList.get(position) instanceof Review) {
+            return 1;
+        }
         return super.getItemViewType(position);
     }
 
@@ -40,10 +48,15 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view;
-        view = inflater.inflate(R.layout.item_fitness, parent, false);
-        FitnessProgrammeViewHolder fitnessProgrammeViewHolder = new FitnessProgrammeViewHolder(view);
-        return fitnessProgrammeViewHolder;
+        if (viewType == 0) {
+            View view = inflater.inflate(R.layout.item_fitness, parent, false);
+            return new FitnessProgrammeViewHolder(view);
+        }
+        if (viewType == 1) {
+            View view = inflater.inflate(R.layout.item_review, parent, false);
+            return new ReviewViewHolder(view);
+        }
+        return null;
 
     }
 
@@ -52,6 +65,11 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         if (holder instanceof FitnessProgrammeViewHolder) {
             FitnessProgramme fitnessProgramme = (FitnessProgramme) elementList.get(position);
             ((FitnessProgrammeViewHolder) holder).bind(fitnessProgramme);
+        }
+
+        if (holder instanceof ReviewViewHolder) {
+            Review review = (Review) elementList.get(position);
+            ((ReviewViewHolder) holder).bind(review);
         }
     }
 
@@ -86,6 +104,28 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                     notifyItemChanged(getAdapterPosition());
                 }
             });
+        }
+    }
+
+    class ReviewViewHolder extends RecyclerView.ViewHolder {
+        private final TextView textReview;
+        private final TextView textUsername;
+        private final TextView nrStars;
+        private final View view;
+
+        ReviewViewHolder(View view) {
+            super(view);
+            textReview = view.findViewById(R.id.reviewTextView);
+            textUsername = view.findViewById(R.id.usernameTextView);
+            nrStars = view.findViewById(R.id.starTextView);
+            this.view = view;
+        }
+
+        void bind(Review review) {
+            textReview.setText(review.review);
+            textUsername.setText(review.username);
+            nrStars.setText(review.nrStars.toString()+" Stars");
+
         }
     }
 }

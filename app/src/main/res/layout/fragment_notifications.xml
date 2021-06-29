@@ -18,23 +18,30 @@
             android:layout_height="wrap_content"
             android:elegantTextHeight="true"
             android:gravity="center"
-            android:text="No notifications at the moment!"
+            android:text="@string/no_notifications_at_the_moment"
+            android:textColor="@color/alice_blue"
             android:textSize="20sp"
+            android:textStyle="bold"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/notificationTextViewTitle" />
+
         <TextView
             android:id="@+id/notificationTextViewTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Notifications"
-            android:textSize="30sp"
             android:elegantTextHeight="true"
             android:gravity="center"
+            android:text="@string/notifications"
+            android:textColor="@color/alice_blue"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.050000012" />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/notifications_list"
         android:layout_width="wrap_content"

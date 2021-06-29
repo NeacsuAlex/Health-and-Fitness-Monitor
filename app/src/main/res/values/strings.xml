@@ -92,4 +92,6 @@
     <string name="distance_per_second_0_m">Distance per second: 0 m</string>
     <string name="longitude_0">Longitude: 0</string>
     <string name="latitude_0">Latitude: 0</string>
+    <string name="no_notifications_at_the_moment">No notifications at the moment!</string>
+    <string name="notifications">Notifications</string>
 </resources>

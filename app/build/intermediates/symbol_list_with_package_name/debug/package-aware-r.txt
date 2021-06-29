@@ -3490,14 +3490,10 @@ string nav_app_bar_open_drawer_description
 string navigation_drawer_close
 string navigation_drawer_open
 string neacsu_alexandru_cristian
+string no_notifications_at_the_moment
 string not_set
-<<<<<<< HEAD
-string notificationDate
-string notificationMessage
-string notificationTitle
-=======
+string notifications
 string open_maps
->>>>>>> NAC
 string password
 string password_reset_text
 string password_toggle_content_description

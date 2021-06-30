@@ -72,24 +72,12 @@ com/example/healthandfitnessapp/activities/MapsActivity.java
  com.example.healthandfitnessapp.activities.MapsActivity$2$1
 com/example/healthandfitnessapp/constants/Constants.java
  com.example.healthandfitnessapp.constants.Constants
-com/example/healthandfitnessapp/activities/HomeActivity.java
- com.example.healthandfitnessapp.activities.HomeActivity
- com.example.healthandfitnessapp.activities.HomeActivity$1
- com.example.healthandfitnessapp.activities.HomeActivity$2
-com/example/healthandfitnessapp/fragments/StatisticsFragment.java
- com.example.healthandfitnessapp.fragments.StatisticsFragment
- com.example.healthandfitnessapp.fragments.StatisticsFragment$1
- com.example.healthandfitnessapp.fragments.StatisticsFragment$10
- com.example.healthandfitnessapp.fragments.StatisticsFragment$11
- com.example.healthandfitnessapp.fragments.StatisticsFragment$12
- com.example.healthandfitnessapp.fragments.StatisticsFragment$2
- com.example.healthandfitnessapp.fragments.StatisticsFragment$3
- com.example.healthandfitnessapp.fragments.StatisticsFragment$4
- com.example.healthandfitnessapp.fragments.StatisticsFragment$5
- com.example.healthandfitnessapp.fragments.StatisticsFragment$6
- com.example.healthandfitnessapp.fragments.StatisticsFragment$7
- com.example.healthandfitnessapp.fragments.StatisticsFragment$8
- com.example.healthandfitnessapp.fragments.StatisticsFragment$9
+com/example/healthandfitnessapp/fragments/AboutUsFragment.java
+ com.example.healthandfitnessapp.fragments.AboutUsFragment
+ com.example.healthandfitnessapp.fragments.AboutUsFragment$1
+ com.example.healthandfitnessapp.fragments.AboutUsFragment$2
+com/example/healthandfitnessapp/models/Review.java
+ com.example.healthandfitnessapp.models.Review
 com/example/healthandfitnessapp/fragments/ResetPasswordFragment.java
  com.example.healthandfitnessapp.fragments.ResetPasswordFragment
  com.example.healthandfitnessapp.fragments.ResetPasswordFragment$1
@@ -113,9 +101,21 @@ com/example/healthandfitnessapp/fragments/WriteFeedbackFragment.java
  com.example.healthandfitnessapp.fragments.WriteFeedbackFragment$1
 com/example/healthandfitnessapp/services/SettingsManager.java
  com.example.healthandfitnessapp.services.SettingsManager
-com/example/healthandfitnessapp/models/Review.java
- com.example.healthandfitnessapp.models.Review
-com/example/healthandfitnessapp/fragments/AboutUsFragment.java
- com.example.healthandfitnessapp.fragments.AboutUsFragment
- com.example.healthandfitnessapp.fragments.AboutUsFragment$1
- com.example.healthandfitnessapp.fragments.AboutUsFragment$2
+com/example/healthandfitnessapp/activities/HomeActivity.java
+ com.example.healthandfitnessapp.activities.HomeActivity
+ com.example.healthandfitnessapp.activities.HomeActivity$1
+ com.example.healthandfitnessapp.activities.HomeActivity$2
+com/example/healthandfitnessapp/fragments/StatisticsFragment.java
+ com.example.healthandfitnessapp.fragments.StatisticsFragment
+ com.example.healthandfitnessapp.fragments.StatisticsFragment$1
+ com.example.healthandfitnessapp.fragments.StatisticsFragment$10
+ com.example.healthandfitnessapp.fragments.StatisticsFragment$11
+ com.example.healthandfitnessapp.fragments.StatisticsFragment$12
+ com.example.healthandfitnessapp.fragments.StatisticsFragment$2
+ com.example.healthandfitnessapp.fragments.StatisticsFragment$3
+ com.example.healthandfitnessapp.fragments.StatisticsFragment$4
+ com.example.healthandfitnessapp.fragments.StatisticsFragment$5
+ com.example.healthandfitnessapp.fragments.StatisticsFragment$6
+ com.example.healthandfitnessapp.fragments.StatisticsFragment$7
+ com.example.healthandfitnessapp.fragments.StatisticsFragment$8
+ com.example.healthandfitnessapp.fragments.StatisticsFragment$9

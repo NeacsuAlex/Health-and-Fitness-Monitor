@@ -327,6 +327,7 @@ public class StatisticsFragment extends Fragment {
                     mDatabase.child(mAuth.getUid()).child("date").setValue(dayNumber);
                     ResetStatistics();
                     day = dayNumber;
+                    step_counter=0L;
                 }
             }
 

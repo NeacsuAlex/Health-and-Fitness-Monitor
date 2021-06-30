@@ -1,140 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.TravelFragment"
-    android:id="@+id/statistics_fragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/statistics_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragments.TravelFragment">
 
-    <RelativeLayout
-        android:id="@+id/statistics_frame_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/dark_blue"
-        android:padding="20dp"
-        tools:context=".activities.HomeActivity">
 
-        <LinearLayout
-            android:id="@+id/LinearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/speed_text"
-            android:layout_alignParentBottom="false"
-            android:layout_marginBottom="100dp">
+    <Button
+        android:id="@+id/start_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/button_login_bg"
+        android:text="@string/start"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/pause_timer"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07" />
 
-            <Button
-                android:id="@+id/start_timer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_login_bg"
-                android:text="@string/start"
-                android:textSize="15sp" />
+    <Button
+        android:id="@+id/pause_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/button_login_bg"
+        android:text="@string/pause"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/stop_timer"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/start_timer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07" />
 
-            <Button
-                android:id="@+id/pause_timer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginBottom="100dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_login_bg"
-                android:text="@string/pause"
-                android:textSize="15sp" />
+    <Button
+        android:id="@+id/stop_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/button_login_bg"
+        android:text="@string/stop"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/pause_timer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07" />
 
-            <Button
-                android:id="@+id/stop_timer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_login_bg"
-                android:text="@string/stop"
-                android:textSize="15sp" />
 
-        </LinearLayout>
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_centerInParent="true"
+        android:textColor="@color/alice_blue"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pause_timer"
+        app:layout_constraintVertical_bias="0.10" />
 
-        <Chronometer
-            android:id="@+id/chronometer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/speed_text"
-            android:layout_centerInParent="true"
-            android:layout_marginBottom="20dp"
-            android:textColor="@color/alice_blue"
-            android:textSize="30sp" />
+    <TextView
+        android:id="@+id/speed_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/speed_0_km_h"
+        android:textColor="@color/alice_blue"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chronometer"
+        app:layout_constraintVertical_bias="0.02" />
 
-        <TextView
-            android:id="@+id/speed_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/distance_text"
-            android:layout_centerInParent="true"
-            android:text="@string/speed_0_km_h"
-            android:textColor="@color/alice_blue"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+    <TextView
+        android:id="@+id/distance_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/distance_per_second_0_m"
+        android:textColor="@color/alice_blue"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speed_text"
+        app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/distance_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/distance_per_second_0_m"
-            android:textColor="@color/alice_blue"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+    <TextView
+        android:id="@+id/latitude_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/distance_text"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/latitude_0"
+        android:textColor="@color/alice_blue"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distance_text"
+        app:layout_constraintVertical_bias="0.05" />
 
-        <TextView
-            android:id="@+id/latitude_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/distance_text"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="30dp"
-            android:text="@string/latitude_0"
-            android:textColor="@color/alice_blue"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+    <TextView
+        android:id="@+id/longitude_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/latitude_text"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="32dp"
+        android:text="@string/longitude_0"
+        android:textColor="@color/alice_blue"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/latitude_text"
+        app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/longitude_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/latitude_text"
-            android:layout_centerInParent="true"
-            android:text="@string/longitude_0"
-            android:textColor="@color/alice_blue"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+    <Button
+        android:id="@+id/maps_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/longitude_text"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_login_bg"
+        android:padding="10dp"
+        android:text="@string/open_maps"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/longitude_text"
+        app:layout_constraintVertical_bias="0.25" />
 
-        <Button
-            android:id="@+id/maps_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/longitude_text"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/button_login_bg"
-            android:padding="10dp"
-            android:text="@string/open_maps"
-            android:textSize="15sp" />
-
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/switch_unit_meter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:checked="true"
-            android:gravity="center"
-            android:text="@string/metric_units"
-            android:textColor="@color/alice_blue"
-            android:textSize="25sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_unit_meter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:checked="true"
+        android:gravity="center"
+        android:text="@string/metric_units"
+        android:textColor="@color/alice_blue"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maps_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

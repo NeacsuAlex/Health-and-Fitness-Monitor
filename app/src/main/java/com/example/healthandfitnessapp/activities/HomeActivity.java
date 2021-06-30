@@ -16,8 +16,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
+import com.example.healthandfitnessapp.constants.Constants;
 import com.example.healthandfitnessapp.fragments.AboutUsFragment;
 
 import com.example.healthandfitnessapp.fragments.NotificationsFragment;
@@ -144,7 +146,7 @@ public class HomeActivity extends AppCompatActivity implements ActivityFragmentH
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                Toast.makeText(getApplicationContext(), Constants.DEFAULT_RETRIEVE_DATA_ERROR, Toast.LENGTH_SHORT).show();
             }
         });
     }

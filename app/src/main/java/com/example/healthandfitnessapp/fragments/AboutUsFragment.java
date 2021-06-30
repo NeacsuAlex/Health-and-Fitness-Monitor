@@ -96,7 +96,7 @@ public class AboutUsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_about_us, container, false);
+        View view = inflater.inflate(R.layout.fragment_about_us, container, false);
 
         RecyclerView recyclerView = view.findViewById(R.id.reviews_list);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL, false);
@@ -121,7 +121,7 @@ public class AboutUsFragment extends Fragment {
 
         getReviews();
 
-        openReviewButton=view.findViewById(R.id.openReviewButton);
+        openReviewButton = view.findViewById(R.id.openReviewButton);
         openReviewButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -147,7 +147,7 @@ public class AboutUsFragment extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                Toast.makeText(getContext(), Constants.DEFAULT_REVIEW_LOADING_ERROR, Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -177,7 +177,7 @@ public class AboutUsFragment extends Fragment {
             String username = fitnessJSON.getString("username");
             Number nrStars = fitnessJSON.getDouble("nrStars");
             String review = fitnessJSON.getString("review");
-            Review fitnessProgramme=new Review(username,review,nrStars.longValue());
+            Review fitnessProgramme = new Review(username, review, nrStars.longValue());
             elements.add(fitnessProgramme);
         }
         myAdapter.notifyDataSetChanged();

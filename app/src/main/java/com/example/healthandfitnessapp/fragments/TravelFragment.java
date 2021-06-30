@@ -44,7 +44,7 @@ public class TravelFragment extends Fragment implements LocationListener {
     private String mParam2;
 
     SwitchCompat switchUnitMeterCompat;
-    TextView speedTextView,latitudeTextView,longitudeTextView, distanceTextView;
+    TextView speedTextView, latitudeTextView, longitudeTextView, distanceTextView;
     Chronometer chronometer;
     Button startChronometer, pauseChronometer, stopChronometer;
     boolean isChronometerRunning, pausePressed;
@@ -77,17 +77,17 @@ public class TravelFragment extends Fragment implements LocationListener {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_travel, container, false);
-        switchUnitMeterCompat=view.findViewById(R.id.switch_unit_meter);
-        speedTextView=view.findViewById(R.id.speed_text);
-        latitudeTextView=view.findViewById(R.id.latitude_text);
-        longitudeTextView=view.findViewById(R.id.longitude_text);
-        distanceTextView=view.findViewById(R.id.distance_text);
-        chronometer = (Chronometer)view.findViewById(R.id.chronometer);
-        startChronometer=(Button)view.findViewById(R.id.start_timer);
-        pauseChronometer=(Button)view.findViewById(R.id.pause_timer);
-        stopChronometer=(Button)view.findViewById(R.id.stop_timer);
+        switchUnitMeterCompat = view.findViewById(R.id.switch_unit_meter);
+        speedTextView = view.findViewById(R.id.speed_text);
+        latitudeTextView = view.findViewById(R.id.latitude_text);
+        longitudeTextView = view.findViewById(R.id.longitude_text);
+        distanceTextView = view.findViewById(R.id.distance_text);
+        chronometer = (Chronometer) view.findViewById(R.id.chronometer);
+        startChronometer = (Button) view.findViewById(R.id.start_timer);
+        pauseChronometer = (Button) view.findViewById(R.id.pause_timer);
+        stopChronometer = (Button) view.findViewById(R.id.stop_timer);
 
-        Button mapsButton=(Button)view.findViewById(R.id.maps_button);
+        Button mapsButton = (Button) view.findViewById(R.id.maps_button);
         mapsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -97,15 +97,12 @@ public class TravelFragment extends Fragment implements LocationListener {
             }
         });
 
-        isChronometerRunning=false;
-        pausePressed=false;
+        isChronometerRunning = false;
+        pausePressed = false;
 
-        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.M&& ActivityCompat.checkSelfPermission(getContext(),Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED)
-        {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1000);
-        }
-        else
-        {
+        } else {
             InitSpeed();
         }
 
@@ -145,9 +142,8 @@ public class TravelFragment extends Fragment implements LocationListener {
 
     @Override
     public void onLocationChanged(Location location) {
-        if(location!=null)
-        {
-            LocationService locationService=new LocationService(location, this.useMetricUnits());
+        if (location != null) {
+            LocationService locationService = new LocationService(location, this.useMetricUnits());
             this.updateSpeed(locationService);
             this.updateLocation(locationService);
             this.updateDistance(locationService);
@@ -170,73 +166,61 @@ public class TravelFragment extends Fragment implements LocationListener {
     }
 
     @SuppressLint("MissingPermission")
-    private void InitSpeed()
-    {
-        LocationManager locationManager=(LocationManager)getActivity().getSystemService(Context.LOCATION_SERVICE);
-        if(locationManager!=null)
-        {
+    private void InitSpeed() {
+        LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+        if (locationManager != null) {
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
         }
     }
 
-    private void updateSpeed(LocationService locationService)
-    {
-        float currentSpeed=0f;
-        if(locationService!=null)
-        {
+    private void updateSpeed(LocationService locationService) {
+        float currentSpeed = 0f;
+        if (locationService != null) {
             locationService.setUserMetricUnits(this.useMetricUnits());
-            currentSpeed=locationService.getSpeed();
+            currentSpeed = locationService.getSpeed();
         }
 
-        Formatter formatter=new Formatter(new StringBuilder());
+        Formatter formatter = new Formatter(new StringBuilder());
         formatter.format(Locale.US, "%5.1f", currentSpeed);
-        String speed=formatter.toString();
-        speed=speed.replace(" ", "0");
+        String speed = formatter.toString();
+        speed = speed.replace(" ", "0");
 
-        if(this.useMetricUnits())
-        {
-            speedTextView.setText("Speed: "+speed+" km/h");
-        }
-        else
-        {
-            speedTextView.setText("Speed: "+speed+" miles/h");
+        if (this.useMetricUnits()) {
+            speedTextView.setText("Speed: " + speed + " km/h");
+        } else {
+            speedTextView.setText("Speed: " + speed + " miles/h");
         }
     }
 
     private void updateLocation(LocationService locationService) {
-        double latitude =0,longitude =0;
-        if(locationService!=null){
+        double latitude = 0, longitude = 0;
+        if (locationService != null) {
             latitude = locationService.getLatitude();
             longitude = locationService.getLongitude();
         }
 
-        latitudeTextView.setText("Latitude: \n"+latitude);
-        longitudeTextView.setText("Longitude: \n"+longitude);
+        latitudeTextView.setText("Latitude: \n" + latitude);
+        longitudeTextView.setText("Longitude: \n" + longitude);
 
     }
 
     private void updateDistance(LocationService locationService) {
-        float distance=0;
-        if(locationService!=null){
+        float distance = 0;
+        if (locationService != null) {
 
-            if(isChronometerRunning)
-            {
+            if (isChronometerRunning) {
                 int elapsedMillis = (int) (SystemClock.elapsedRealtime() - chronometer.getBase());
-                distance= locationService.getSpeed()*(elapsedMillis/1000);
+                distance = locationService.getSpeed() * (elapsedMillis / 1000);
             }
         }
 
-        if(this.useMetricUnits())
-        {
-            distanceTextView.setText("Distance: "+distance+" m");
-        }
-        else
-        {
-            distanceTextView.setText("Distance: "+distance+" ft");
+        if (this.useMetricUnits()) {
+            distanceTextView.setText("Distance: " + distance + " m");
+        } else {
+            distanceTextView.setText("Distance: " + distance + " ft");
         }
 
     }
-
 
 
     private boolean useMetricUnits() {
@@ -245,49 +229,39 @@ public class TravelFragment extends Fragment implements LocationListener {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if(requestCode==1000)
-        {
-            if(grantResults[0]==PackageManager.PERMISSION_GRANTED)
-            {
+        if (requestCode == 1000) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 InitSpeed();
-            }
-            else
-            {
+            } else {
                 getActivity().getFragmentManager().popBackStack();
             }
         }
     }
 
-    private void StartChronometer()
-    {
+    private void StartChronometer() {
         pauseChronometer.setText("Pause");
         chronometer.setBase(SystemClock.elapsedRealtime());
         chronometer.start();
-        isChronometerRunning=true;
+        isChronometerRunning = true;
     }
 
-    private void PauseChronometer()
-    {
-        pausePressed=!pausePressed;
-        if(pausePressed)
-        {
+    private void PauseChronometer() {
+        pausePressed = !pausePressed;
+        if (pausePressed) {
             pauseChronometer.setText("Resume");
             chronometer.stop();
-            isChronometerRunning=false;
-        }
-        else
-        {
+            isChronometerRunning = false;
+        } else {
             pauseChronometer.setText("Pause");
             chronometer.start();
-            isChronometerRunning=true;
+            isChronometerRunning = true;
         }
     }
 
-    private void StopChronometer()
-    {
+    private void StopChronometer() {
         pauseChronometer.setText("Pause");
         chronometer.stop();
-        isChronometerRunning=false;
+        isChronometerRunning = false;
     }
 
 }

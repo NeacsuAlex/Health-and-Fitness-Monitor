@@ -29,11 +29,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.healthandfitnessapp.R;
+import com.example.healthandfitnessapp.constants.Constants;
 import com.example.healthandfitnessapp.models.User;
 
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.healthandfitnessapp.R;
 import com.example.healthandfitnessapp.activities.HomeActivity;
@@ -139,28 +141,28 @@ public class StatisticsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_statistics, container, false);
 
-        waterText=view.findViewById(R.id.text_water_counter_edit);
-        decrese_water_counter=view.findViewById(R.id.decrease_water_counter);
-        increase_water_counter=view.findViewById(R.id.increase_water_counter);
+        waterText = view.findViewById(R.id.text_water_counter_edit);
+        decrese_water_counter = view.findViewById(R.id.decrease_water_counter);
+        increase_water_counter = view.findViewById(R.id.increase_water_counter);
 
-        stepText=view.findViewById(R.id.text_step_counter_edit);
-        stepText.setText(step_counter+"");
+        stepText = view.findViewById(R.id.text_step_counter_edit);
+        stepText.setText(step_counter + "");
 
-        sleepText=view.findViewById(R.id.text_sleep_counter_edit);
-        decrese_sleep_counter=view.findViewById(R.id.decrease_sleep_counter);
-        increase_sleep_counter=view.findViewById(R.id.increase_sleep_counter);
-        sleepText.setText(sleep_counter+"");
+        sleepText = view.findViewById(R.id.text_sleep_counter_edit);
+        decrese_sleep_counter = view.findViewById(R.id.decrease_sleep_counter);
+        increase_sleep_counter = view.findViewById(R.id.increase_sleep_counter);
+        sleepText.setText(sleep_counter + "");
 
-        caloriesText=view.findViewById(R.id.text_calories_counter_edit);
-        decrese_calories_counter=view.findViewById(R.id.decrease_calories_counter);
-        increase_calories_counter=view.findViewById(R.id.increase_calories_counter);
-        caloriesText.setText(calories_counter+"");
+        caloriesText = view.findViewById(R.id.text_calories_counter_edit);
+        decrese_calories_counter = view.findViewById(R.id.decrease_calories_counter);
+        increase_calories_counter = view.findViewById(R.id.increase_calories_counter);
+        caloriesText.setText(calories_counter + "");
 
-        bmiResult=view.findViewById(R.id.BMIresult);
+        bmiResult = view.findViewById(R.id.BMIresult);
 
 
         ReadStatisticsFromDatabase();
-        if(ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACTIVITY_RECOGNITION) == PackageManager.PERMISSION_DENIED){
+        if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACTIVITY_RECOGNITION) == PackageManager.PERMISSION_DENIED) {
             //ask for permission
             requestPermissions(new String[]{Manifest.permission.ACTIVITY_RECOGNITION}, 0);
         }
@@ -169,18 +171,17 @@ public class StatisticsFragment extends Fragment {
         SensorEventListener stepDetector = new SensorEventListener() {
             @Override
             public void onSensorChanged(SensorEvent sensorEvent) {
-                if (sensorEvent!= null){
+                if (sensorEvent != null) {
                     float x_acceleration = sensorEvent.values[0];
                     float y_acceleration = sensorEvent.values[1];
                     float z_acceleration = sensorEvent.values[2];
 
-                    double Magnitude = Math.sqrt(x_acceleration*x_acceleration + y_acceleration*y_acceleration + z_acceleration*z_acceleration);
+                    double Magnitude = Math.sqrt(x_acceleration * x_acceleration + y_acceleration * y_acceleration + z_acceleration * z_acceleration);
                     double MagnitudeDelta = Magnitude - MagnitudePrevious;
                     MagnitudePrevious = Magnitude;
 
-                    if (MagnitudeDelta > 6){
-                        if(step_counter!=null)
-                        {
+                    if (MagnitudeDelta > 6) {
+                        if (step_counter != null) {
                             step_counter++;
                             stepText.setText(step_counter.toString());
                             mDatabase.child(mAuth.getUid()).child("steps").setValue(Long.valueOf(stepText.getText().toString()));
@@ -200,14 +201,14 @@ public class StatisticsFragment extends Fragment {
         InitSleepStatistics();
         InitCaloriesStatistics();
 
-        usingCM=true;
-        usingKG=true;
-        heightTextView=view.findViewById(R.id.heightTextView);
-        heightEditTextView=view.findViewById(R.id.heightEditTextView);
-        heightSwitch=(SwitchCompat)view.findViewById(R.id.switchHeight);
-        weightTextView=view.findViewById(R.id.weightTextView);
-        weightEditTextView=view.findViewById(R.id.weightEditTextView);
-        weightSwitch=(SwitchCompat)view.findViewById(R.id.switchWeight);
+        usingCM = true;
+        usingKG = true;
+        heightTextView = view.findViewById(R.id.heightTextView);
+        heightEditTextView = view.findViewById(R.id.heightEditTextView);
+        heightSwitch = (SwitchCompat) view.findViewById(R.id.switchHeight);
+        weightTextView = view.findViewById(R.id.weightTextView);
+        weightEditTextView = view.findViewById(R.id.weightEditTextView);
+        weightSwitch = (SwitchCompat) view.findViewById(R.id.switchWeight);
         heightSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -257,66 +258,53 @@ public class StatisticsFragment extends Fragment {
     }
 
     private void useCm() {
-        if(heightSwitch.isChecked())
-        {
+        if (heightSwitch.isChecked()) {
             heightTextView.setText("Height (cm)");
             heightSwitch.setText("Use cm");
-            usingCM=true;
-        }
-        else
-        {
+            usingCM = true;
+        } else {
             heightTextView.setText("Height (feet)");
             heightSwitch.setText("Use feet");
-            usingCM=false;
+            usingCM = false;
         }
         CalculateBMI();
     }
 
     private void useKg() {
-        if(weightSwitch.isChecked())
-        {
+        if (weightSwitch.isChecked()) {
             weightTextView.setText("Weight (kg)");
             weightSwitch.setText("Use kg");
-            usingKG=true;
-        }
-        else
-        {
+            usingKG = true;
+        } else {
             weightTextView.setText("Weight (lb)");
             weightSwitch.setText("Use lb");
-            usingKG=false;
+            usingKG = false;
         }
         CalculateBMI();
     }
 
-    private void CalculateBMI()
-    {
+    private void CalculateBMI() {
         String height = heightEditTextView.getText().toString();
         String weight = weightEditTextView.getText().toString();
-        if(!height.isEmpty() && !weight.isEmpty())
-        {
+        if (!height.isEmpty() && !weight.isEmpty()) {
             float bmi = BMI.calculateBMI(Float.parseFloat(weight), Float.parseFloat(height), usingKG, usingCM);
-            String category =BMI.getBMICategory(bmi).toString();
-            DecimalFormat df=new DecimalFormat();
+            String category = BMI.getBMICategory(bmi).toString();
+            DecimalFormat df = new DecimalFormat();
             df.setMaximumFractionDigits(2);
-            bmiResult.setText("BMI: "+df.format(bmi)+"\n"+category);
+            bmiResult.setText("BMI: " + df.format(bmi) + "\n" + category);
 
-        }
-        else
-        {
+        } else {
             bmiResult.setText("");
         }
     }
 
-    private void ReadStatisticsFromDatabase()
-    {
+    private void ReadStatisticsFromDatabase() {
 
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference().child("users");
-        mDatabase.addValueEventListener(new ValueEventListener()
-        {
+        mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot)
-            {
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
                 User user = new User();
                 for (DataSnapshot key : snapshot.getChildren()) {
                     if (key.getKey().equals(mAuth.getUid())) {
@@ -325,102 +313,96 @@ public class StatisticsFragment extends Fragment {
                     }
                 }
                 waterText.setText(user.drinkerWater.toString());
-                water_counter=Long.valueOf(waterText.getText().toString()).longValue();
+                water_counter = Long.valueOf(waterText.getText().toString()).longValue();
                 sleepText.setText(user.sleepTime.toString());
-                sleep_counter=Long.valueOf(sleepText.getText().toString()).longValue();
+                sleep_counter = Long.valueOf(sleepText.getText().toString()).longValue();
                 stepText.setText(user.steps.toString());
-                step_counter=Long.valueOf(stepText.getText().toString()).longValue();
+                step_counter = Long.valueOf(stepText.getText().toString()).longValue();
                 caloriesText.setText(user.caloriesBurned.toString());
-                calories_counter=Long.valueOf(caloriesText.getText().toString()).longValue();
-                day=user.date;
+                calories_counter = Long.valueOf(caloriesText.getText().toString()).longValue();
+                day = user.date;
                 final Calendar now = GregorianCalendar.getInstance();
                 Long dayNumber = Long.valueOf(now.get(Calendar.DAY_OF_MONTH));
-                if(day!=dayNumber)
-                {
+                if (day != dayNumber) {
                     mDatabase.child(mAuth.getUid()).child("date").setValue(dayNumber);
                     ResetStatistics();
-                    day=dayNumber;
+                    day = dayNumber;
                 }
             }
 
             @Override
-            public void onCancelled(@NonNull DatabaseError error)
-            {
-
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(getContext(), Constants.DEFAULT_RETRIEVE_DATA_ERROR, Toast.LENGTH_SHORT).show();
             }
         });
     }
 
-    private void InitWaterStatistics()
-    {
-        waterText.setText(water_counter+"");
+    private void InitWaterStatistics() {
+        waterText.setText(water_counter + "");
         decrese_water_counter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                water_counter=(water_counter-1<0)?0:water_counter-1;
-                waterText.setText(water_counter+"");
+                water_counter = (water_counter - 1 < 0) ? 0 : water_counter - 1;
+                waterText.setText(water_counter + "");
                 mDatabase.child(mAuth.getUid()).child("drinkerWater").setValue(Long.valueOf(waterText.getText().toString()).longValue());
             }
         });
         increase_water_counter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                water_counter=water_counter+1;
-                waterText.setText(water_counter+"");
+                water_counter = water_counter + 1;
+                waterText.setText(water_counter + "");
                 mDatabase.child(mAuth.getUid()).child("drinkerWater").setValue(Long.valueOf(waterText.getText().toString()));
             }
         });
     }
 
-    private void InitSleepStatistics()
-    {
-        sleepText.setText(sleep_counter+"");
+    private void InitSleepStatistics() {
+        sleepText.setText(sleep_counter + "");
         decrese_sleep_counter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sleep_counter=(sleep_counter-10<0)?0:sleep_counter-10;
-                sleepText.setText(sleep_counter+"");
+                sleep_counter = (sleep_counter - 10 < 0) ? 0 : sleep_counter - 10;
+                sleepText.setText(sleep_counter + "");
                 mDatabase.child(mAuth.getUid()).child("sleepTime").setValue(Long.valueOf(sleepText.getText().toString()));
             }
         });
         increase_sleep_counter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sleep_counter=sleep_counter+10;
-                sleepText.setText(sleep_counter+"");
+                sleep_counter = sleep_counter + 10;
+                sleepText.setText(sleep_counter + "");
                 mDatabase.child(mAuth.getUid()).child("sleepTime").setValue(Long.valueOf(sleepText.getText().toString()));
             }
         });
     }
 
-    private void InitCaloriesStatistics()
-    {
-        caloriesText.setText(calories_counter+"");
+    private void InitCaloriesStatistics() {
+        caloriesText.setText(calories_counter + "");
         decrese_calories_counter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calories_counter=(calories_counter-5<0)?0:calories_counter-5;
-                caloriesText.setText(calories_counter+"");
+                calories_counter = (calories_counter - 5 < 0) ? 0 : calories_counter - 5;
+                caloriesText.setText(calories_counter + "");
                 mDatabase.child(mAuth.getUid()).child("caloriesBurned").setValue(Long.valueOf(caloriesText.getText().toString()));
             }
         });
         increase_calories_counter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calories_counter=calories_counter+5;
-                caloriesText.setText(calories_counter+"");
+                calories_counter = calories_counter + 5;
+                caloriesText.setText(calories_counter + "");
                 mDatabase.child(mAuth.getUid()).child("caloriesBurned").setValue(Long.valueOf(caloriesText.getText().toString()));
             }
         });
 
     }
 
-    private void ResetStatistics()
-    {
-        water_counter=0L;
-        sleep_counter=0L;
-        step_counter=0L;
-        calories_counter=0L;
+    private void ResetStatistics() {
+        water_counter = 0L;
+        sleep_counter = 0L;
+        step_counter = 0L;
+        calories_counter = 0L;
 
         sleepText.setText("0");
         stepText.setText("0");

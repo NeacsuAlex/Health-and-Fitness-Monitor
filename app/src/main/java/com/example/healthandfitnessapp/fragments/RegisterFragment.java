@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import com.example.healthandfitnessapp.R;
 import com.example.healthandfitnessapp.activities.LoginActivity;
+import com.example.healthandfitnessapp.constants.Constants;
 import com.example.healthandfitnessapp.interfaces.ActivityFragmentLoginCommunication;
 import com.example.healthandfitnessapp.models.User;
 import com.example.healthandfitnessapp.services.NotificationService;
@@ -146,14 +147,14 @@ public class RegisterFragment extends Fragment {
         mAuth.createUserWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
-                User user = new User(username, email, 0L, 0L, 0L, 0L, 0L,0L, 0L);
+                User user = new User(username, email, 0L, 0L, 0L, 0L, 0L, 0L, 0L);
                 String userID = mAuth.getUid();
                 mDatabase.child("users").child(userID).setValue(user);
 
                 SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
                 SharedPreferences.Editor editor = prefs.edit();
-                editor.putString("username",user.username);
-                editor.putString("email",user.email);
+                editor.putString("username", user.username);
+                editor.putString("email", user.email);
                 editor.commit();
 
                 if (activityFragmentLoginCommunication != null) {
@@ -163,7 +164,7 @@ public class RegisterFragment extends Fragment {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), Constants.DEFAULT_RETRIEVE_DATA_ERROR, Toast.LENGTH_SHORT).show();
             }
         });
 

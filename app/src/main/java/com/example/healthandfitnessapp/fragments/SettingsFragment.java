@@ -63,17 +63,14 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
             }
         });
 
-        SwitchPreferenceCompat notificationSwitch=(SwitchPreferenceCompat) findPreference("notifications");
+        SwitchPreferenceCompat notificationSwitch = (SwitchPreferenceCompat) findPreference("notifications");
         notificationSwitch.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(Preference preference, Object newValue) {
-                if((boolean) newValue)
-                {
-                    SettingsManager.receiveNotifications=true;
-                }
-                else
-                {
-                    SettingsManager.receiveNotifications=false;
+                if ((boolean) newValue) {
+                    SettingsManager.receiveNotifications = true;
+                } else {
+                    SettingsManager.receiveNotifications = false;
                 }
                 return true;
             }

@@ -11,9 +11,9 @@ public class Notification extends Element {
         // Default constructor required for calls to DataSnapshot.getValue(Review.class)
     }
 
-    public Notification(String title,String message, Date date){
-        this.title=title;
-        this.message=message;
-        this.date=date;
+    public Notification(String title, String message, Date date) {
+        this.title = title;
+        this.message = message;
+        this.date = date;
     }
 }

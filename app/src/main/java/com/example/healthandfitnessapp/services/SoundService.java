@@ -11,21 +11,19 @@ import androidx.preference.PreferenceManager;
 
 public class SoundService {
 
-    public SoundService()
-    {
+    public SoundService() {
 
     }
 
-  public android.net.Uri playSound(Context context, int ringtoneManagerID, boolean isAlarm)
-    {
+    public android.net.Uri playSound(Context context, int ringtoneManagerID, boolean isAlarm) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         int volume;
-        if(!isAlarm)
+        if (!isAlarm)
             volume = prefs.getInt("volume_notifications", 70);
         else
             volume = prefs.getInt("volume_alarm", 70);
 
-        AudioManager manager = (AudioManager)context.getSystemService(Context.AUDIO_SERVICE);
+        AudioManager manager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
         manager.setStreamVolume(AudioManager.STREAM_MUSIC, volume, 0);
 
         Uri notification = RingtoneManager
@@ -36,8 +34,7 @@ public class SoundService {
         return notification;
     }
 
-    public void playSound(Context context, android.net.Uri soundUri)
-    {
+    public void playSound(Context context, android.net.Uri soundUri) {
         final MediaPlayer mp = MediaPlayer.create(context, soundUri);
         mp.start();
     }

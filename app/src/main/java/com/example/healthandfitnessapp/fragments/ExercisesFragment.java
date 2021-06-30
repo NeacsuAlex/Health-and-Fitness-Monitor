@@ -115,16 +115,16 @@ public class ExercisesFragment extends Fragment implements OnItemsClickedListene
         RecyclerView recyclerView = view.findViewById(R.id.reviews_list);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL, false);
 
-        durationText =view.findViewById(R.id.durationTextView);
-        fitnessTitleText =view.findViewById(R.id.fitnessTitleTextView);
-        fitnessDescriptionText =view.findViewById(R.id.fitnessDescriptionTextView);
-        difficultyText =view.findViewById(R.id.difficultyTextView);
-        startProgrammeButton=view.findViewById(R.id.fitnessButton);
+        durationText = view.findViewById(R.id.durationTextView);
+        fitnessTitleText = view.findViewById(R.id.fitnessTitleTextView);
+        fitnessDescriptionText = view.findViewById(R.id.fitnessDescriptionTextView);
+        difficultyText = view.findViewById(R.id.difficultyTextView);
+        startProgrammeButton = view.findViewById(R.id.fitnessButton);
 
         elements.clear();
         mDatabase = FirebaseDatabase.getInstance().getReference("fitness");
         getImageData();
-        myAdapter = new MyAdapter(this.elements,this);
+        myAdapter = new MyAdapter(this.elements, this);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(this.myAdapter);
         recyclerView.post(() -> myAdapter.notifyDataSetChanged());
@@ -134,12 +134,12 @@ public class ExercisesFragment extends Fragment implements OnItemsClickedListene
             public void onClick(View v) {
                 if (selectedFitnessProgramme != null) {
                     Intent intent = new Intent(getContext(), HomeActivity.class);
-                    NotificationService notificationService=new NotificationService();
-                    if(SettingsManager.receiveNotifications) {
-                        long millis=System.currentTimeMillis();
-                        java.sql.Date date=new java.sql.Date(millis);
+                    NotificationService notificationService = new NotificationService();
+                    if (SettingsManager.receiveNotifications) {
+                        long millis = System.currentTimeMillis();
+                        java.sql.Date date = new java.sql.Date(millis);
                         notificationService.showNotification(getContext(), "You start a new programme!", fitnessTitleText.getText().toString(), intent, 1);
-                        NotificationsFragment.AddNotification(new Notification("You start a new programme!",fitnessTitleText.getText().toString(),date));
+                        NotificationsFragment.AddNotification(new Notification("You start a new programme!", fitnessTitleText.getText().toString(), date));
                     }
                     watchYoutubeVideo(selectedFitnessProgramme.urlVideo);
                 }
@@ -150,7 +150,7 @@ public class ExercisesFragment extends Fragment implements OnItemsClickedListene
     }
 
     private void setFirstFitnessProgramme() {
-        selectedFitnessProgramme= (FitnessProgramme) elements.get(0);
+        selectedFitnessProgramme = (FitnessProgramme) elements.get(0);
         durationText.setText(selectedFitnessProgramme.duration);
         fitnessTitleText.setText(selectedFitnessProgramme.title);
         fitnessDescriptionText.setText(selectedFitnessProgramme.description);
@@ -171,7 +171,7 @@ public class ExercisesFragment extends Fragment implements OnItemsClickedListene
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                Toast.makeText(getContext(), Constants.DEFAULT_RETRIEVE_DATA_ERROR, Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -193,6 +193,6 @@ public class ExercisesFragment extends Fragment implements OnItemsClickedListene
         fitnessTitleText.setText(fitnessProgramme.title);
         fitnessDescriptionText.setText(fitnessProgramme.description);
         difficultyText.setText(fitnessProgramme.difficulty);
-        selectedFitnessProgramme=fitnessProgramme;
+        selectedFitnessProgramme = fitnessProgramme;
     }
 }

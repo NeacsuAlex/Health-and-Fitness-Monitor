@@ -16,15 +16,14 @@ import com.example.healthandfitnessapp.R;
 
 public class NotificationService extends AppCompatActivity {
 
-    private SoundService soundService=new SoundService();
+    private SoundService soundService = new SoundService();
 
-    public NotificationService()
-    {
+    public NotificationService() {
 
     }
 
     public void showNotification(Context context, String title, String message, Intent intent, int reqCode) {
-        if(!SettingsManager.receiveNotifications) return;
+        if (!SettingsManager.receiveNotifications) return;
         PendingIntent pendingIntent = PendingIntent.getActivity(context, reqCode, intent, PendingIntent.FLAG_ONE_SHOT);
         String CHANNEL_ID = "channel_name";// The id of the channel.
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(context, CHANNEL_ID)

@@ -35,12 +35,11 @@ public class AlarmService extends IntentService {
                 new Intent(this, AlarmActivity.class), 0);
 
         Intent intent = new Intent(getApplicationContext(), AlarmActivity.class);
-        NotificationService notificationService=new NotificationService();
-        if(SettingsManager.receiveNotifications)
-        {
-            long millis=System.currentTimeMillis();
-            java.sql.Date date=new java.sql.Date(millis);
-            NotificationsFragment.AddNotification(new Notification("You got a new alarm!","New alarm! Wake up!",date));
+        NotificationService notificationService = new NotificationService();
+        if (SettingsManager.receiveNotifications) {
+            long millis = System.currentTimeMillis();
+            java.sql.Date date = new java.sql.Date(millis);
+            NotificationsFragment.AddNotification(new Notification("You got a new alarm!", "New alarm! Wake up!", date));
             notificationService.showNotification(getApplicationContext(), "You got a new alarm!", "New alarm! Wake up!", intent, 1);
         }
 

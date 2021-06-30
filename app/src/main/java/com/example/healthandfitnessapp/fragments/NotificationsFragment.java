@@ -41,7 +41,7 @@ public class NotificationsFragment extends Fragment {
     private static MyAdapter myAdapter = null;
 
     private static TextView noNotificationText;
-    private static View view=null;
+    private static View view = null;
 
     public NotificationsFragment() {
         // Required empty public constructor
@@ -78,7 +78,7 @@ public class NotificationsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view= inflater.inflate(R.layout.fragment_notifications, container, false);
+        view = inflater.inflate(R.layout.fragment_notifications, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.notifications_list);
         //elements.clear();
         myAdapter = new MyAdapter(this.elements);
@@ -89,16 +89,15 @@ public class NotificationsFragment extends Fragment {
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
         dividerItemDecoration.setDrawable(ContextCompat.getDrawable(view.getContext(), R.drawable.divider));
         recyclerView.addItemDecoration(dividerItemDecoration);
-        noNotificationText=view.findViewById(R.id.noNotificationsTextView);
-        if(elements.size()==0)
+        noNotificationText = view.findViewById(R.id.noNotificationsTextView);
+        if (elements.size() == 0)
             noNotificationText.setVisibility(View.VISIBLE);
         else
             noNotificationText.setVisibility(View.INVISIBLE);
         return view;
     }
 
-    public static void AddNotification(Notification notification)
-    {
+    public static void AddNotification(Notification notification) {
         elements.add(notification);
         myAdapter = new MyAdapter(elements);
         myAdapter.notifyDataSetChanged();

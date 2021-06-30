@@ -9,9 +9,9 @@ public class Review extends Element {
         // Default constructor required for calls to DataSnapshot.getValue(Review.class)
     }
 
-    public Review(String username,String review, Long nrStars){
-        this.nrStars=nrStars;
-        this.review=review;
-        this.username=username;
+    public Review(String username, String review, Long nrStars) {
+        this.nrStars = nrStars;
+        this.review = review;
+        this.username = username;
     }
 }

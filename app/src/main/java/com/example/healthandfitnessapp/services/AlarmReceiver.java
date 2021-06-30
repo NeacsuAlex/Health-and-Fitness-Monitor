@@ -27,6 +27,7 @@ import static com.firebase.ui.auth.AuthUI.getApplicationContext;
 public class AlarmReceiver extends WakefulBroadcastReceiver {
 
     AlarmActivity inst;
+
     @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
     public void onReceive(final Context context, Intent intent) {
@@ -45,7 +46,7 @@ public class AlarmReceiver extends WakefulBroadcastReceiver {
         Ringtone ringtone = RingtoneManager.getRingtone(context, alarmUri);
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        float volume = (float)(prefs.getInt("volume_alarm", 70))/100f;
+        float volume = (float) (prefs.getInt("volume_alarm", 70)) / 100f;
         ringtone.setVolume(volume);
         ringtone.play();
         final Timer t = new Timer();
@@ -54,12 +55,11 @@ public class AlarmReceiver extends WakefulBroadcastReceiver {
                 ringtone.stop();
 
                 Intent intent = new Intent(context, AlarmActivity.class);
-                NotificationService notificationService=new NotificationService();
-                if(SettingsManager.receiveNotifications)
-                {
-                    long millis=System.currentTimeMillis();
-                    java.sql.Date date=new java.sql.Date(millis);
-                    NotificationsFragment.AddNotification(new Notification("Alarm stopped!","Alarm stopped!",date));
+                NotificationService notificationService = new NotificationService();
+                if (SettingsManager.receiveNotifications) {
+                    long millis = System.currentTimeMillis();
+                    java.sql.Date date = new java.sql.Date(millis);
+                    NotificationsFragment.AddNotification(new Notification("Alarm stopped!", "Alarm stopped!", date));
                     notificationService.showNotification(context, "Alarm stopped!", "Alarm stopped!", intent, 1);
                 }
                 t.cancel();

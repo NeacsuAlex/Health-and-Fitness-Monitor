@@ -72,6 +72,7 @@ public class LoginFragment extends Fragment {
     private TextView forgotPassword;
 
     private FirebaseAuth mAuth;
+    private DatabaseReference mDatabase;
     private GoogleSignInClient mGoogleSignInClient;
     private final static int RC_SIGN_IN = 101;
 
@@ -131,6 +132,7 @@ public class LoginFragment extends Fragment {
         forgotPassword = view.findViewById(R.id.forgotPasswordView);
 
         mAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -198,8 +200,8 @@ public class LoginFragment extends Fragment {
 
                             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
                             SharedPreferences.Editor editor = prefs.edit();
-                            editor.putString("username",user.username);
-                            editor.putString("email",user.email);
+                            editor.putString("username", user.username);
+                            editor.putString("email", user.email);
                             editor.commit();
                         }
 
@@ -264,7 +266,23 @@ public class LoginFragment extends Fragment {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
+
+                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
+                            SharedPreferences.Editor editor = prefs.edit();
+                            GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(getActivity());
+                            if (account != null) {
+
+                                String username = account.getDisplayName();
+                                String email = account.getEmail();
+                                User user = new User(username, email, 0L, 0L, 0L, 0L, 0L, 0L, 0L);
+                                String userID = mAuth.getUid();
+                                mDatabase.child("users").child(userID).setValue(user);
+
+                                editor.putString("username", username);
+                                editor.putString("email", email);
+                                editor.commit();
+                            }
+
                             if (activityFragmentLoginCommunication != null) {
                                 activityFragmentLoginCommunication.openHomeActivity();
                             }

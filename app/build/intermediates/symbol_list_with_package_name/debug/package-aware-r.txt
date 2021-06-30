@@ -2345,7 +2345,6 @@ id BOTTOM_START
 id CTRL
 id FUNCTION
 id FitnessProgrammeTitleTextView
-id LinearLayout
 id META
 id NO_DEBUG
 id SHIFT
@@ -2571,7 +2570,6 @@ id forever
 id forgotPasswordTextView
 id forgotPasswordView
 id forgotTextView
-id fragment_container
 id fragment_container_view_tag
 id fragment_phone
 id fragment_register_email

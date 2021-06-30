@@ -44,7 +44,7 @@ public class AlarmActivity extends Activity {
         alarmTextView = (TextView) findViewById(R.id.alarmText);
         alarmToggle = (ToggleButton) findViewById(R.id.alarmToggle);
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-        Button backAlarmButton=(Button)findViewById(R.id.backButtonAlarm);
+        Button backAlarmButton = (Button) findViewById(R.id.backButtonAlarm);
         backAlarmButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

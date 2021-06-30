@@ -28,6 +28,6 @@ public class User {
         this.drinkerWater = drinkerWater;
         this.completedExercises = completedExercises;
         this.sleepTime = sleepTime;
-        this.date=date;
+        this.date = date;
     }
 }

@@ -81,9 +81,9 @@ public class WriteFeedbackFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_write_feedback, container, false);
 
-        sendReviewButton=view.findViewById(R.id.sendReviewButton);
-        ratingBar=view.findViewById(R.id.ratingBar);
-        improveEditText=view.findViewById(R.id.improveEditText);
+        sendReviewButton = view.findViewById(R.id.sendReviewButton);
+        ratingBar = view.findViewById(R.id.ratingBar);
+        improveEditText = view.findViewById(R.id.improveEditText);
 
         sendReviewButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,14 +106,13 @@ public class WriteFeedbackFragment extends Fragment {
         }
     }
 
-    private void writeReview()
-    {
+    private void writeReview() {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this.getActivity());
         databaseReference = FirebaseDatabase.getInstance().getReference().child("reviews");
-        String username= prefs.getString("username", "username");
-        String review=improveEditText.getText().toString();
-        long nrStars= (long)ratingBar.getRating();
-        databaseReference.push().setValue(new Review(username,review,nrStars));
+        String username = prefs.getString("username", "username");
+        String review = improveEditText.getText().toString();
+        long nrStars = (long) ratingBar.getRating();
+        databaseReference.push().setValue(new Review(username, review, nrStars));
 
     }
 }

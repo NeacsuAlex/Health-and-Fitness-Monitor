@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity implements ActivityFragment
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         String tag = RegisterFragment.class.getName();
         FragmentTransaction addTransaction = transaction.replace(
-                R.id.login_frame_layout, RegisterFragment.newInstance("",""), tag
+                R.id.login_frame_layout, RegisterFragment.newInstance("", ""), tag
         ).addToBackStack(null);
 
         addTransaction.commit();
